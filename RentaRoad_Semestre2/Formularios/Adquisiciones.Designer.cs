@@ -29,664 +29,559 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adquisiciones));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminarFila = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            label1 = new Label();
+            label10 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label14 = new Label();
+            textBox10 = new TextBox();
+            label5 = new Label();
+            textBox4 = new TextBox();
+            groupBox3 = new GroupBox();
+            button10 = new Button();
+            button9 = new Button();
+            button8 = new Button();
+            comboBox6 = new ComboBox();
+            button5 = new Button();
+            label11 = new Label();
+            textBox7 = new TextBox();
+            label7 = new Label();
+            numericUpDown2 = new NumericUpDown();
+            label6 = new Label();
+            comboBox3 = new ComboBox();
+            comboBox2 = new ComboBox();
+            dataGridView1 = new DataGridView();
+            groupBox4 = new GroupBox();
+            comboBox5 = new ComboBox();
+            label12 = new Label();
+            label2 = new Label();
+            label15 = new Label();
+            button3 = new Button();
+            button2 = new Button();
+            button4 = new Button();
+            textBox1 = new TextBox();
+            textBox5 = new TextBox();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            eliminarFila = new DataGridViewTextBoxColumn();
+            groupBox1.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox4.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(40, 78);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(788, 68);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de adquisición";
+            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(40, 98);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(788, 85);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Datos de adquisición";
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(180, 26);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(69, 26);
-            this.textBox3.TabIndex = 7;
+            textBox3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(180, 32);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(69, 32);
+            textBox3.TabIndex = 7;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "No. adquisición:";
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(21, 38);
+            label3.Name = "label3";
+            label3.Size = new Size(143, 19);
+            label3.TabIndex = 4;
+            label3.Text = "No. adquisición:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(439, 26);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(315, 26);
-            this.dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.Font = new Font("Century Gothic", 9F);
+            dateTimePicker1.Location = new Point(439, 32);
+            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(315, 26);
+            dateTimePicker1.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(261, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Fecha de pedido:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(261, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(156, 19);
+            label1.TabIndex = 1;
+            label1.Text = "Fecha de pedido:";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(32, 21);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(246, 40);
-            this.label10.TabIndex = 67;
-            this.label10.Text = "Adquisiciones";
+            label10.AutoSize = true;
+            label10.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(32, 26);
+            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(246, 40);
+            label10.TabIndex = 67;
+            label10.Text = "Adquisiciones";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(345, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 19);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Modelo:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(345, 42);
+            label8.Name = "label8";
+            label8.Size = new Size(77, 19);
+            label8.TabIndex = 12;
+            label8.Text = "Modelo:";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(24, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 19);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Marca:";
+            label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(24, 42);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 19);
+            label9.TabIndex = 13;
+            label9.Text = "Marca:";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(24, 145);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 19);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Precio unitario:";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            label14.AutoSize = true;
+            label14.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label14.ForeColor = Color.Black;
+            label14.Location = new Point(24, 181);
+            label14.Name = "label14";
+            label14.Size = new Size(139, 19);
+            label14.TabIndex = 18;
+            label14.Text = "Precio de renta:";
+            label14.Click += label14_Click;
             // 
             // textBox10
             // 
-            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(175, 142);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(109, 26);
-            this.textBox10.TabIndex = 25;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(309, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 19);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Precio subtotal:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(460, 142);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(109, 26);
-            this.textBox2.TabIndex = 51;
+            textBox10.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox10.Location = new Point(175, 178);
+            textBox10.Margin = new Padding(3, 2, 3, 2);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(109, 26);
+            textBox10.TabIndex = 25;
+            textBox10.TextChanged += textBox10_TextChanged;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(656, 544);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 28);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Total:";
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(656, 680);
+            label5.Name = "label5";
+            label5.Size = new Size(73, 28);
+            label5.TabIndex = 52;
+            label5.Text = "Total:";
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(740, 544);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 26);
-            this.textBox4.TabIndex = 53;
+            textBox4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(740, 680);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(109, 26);
+            textBox4.TabIndex = 53;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button10);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.comboBox6);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.numericUpDown2);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox10);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(40, 304);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(811, 201);
-            this.groupBox3.TabIndex = 51;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Paquete de autos";
+            groupBox3.Controls.Add(button10);
+            groupBox3.Controls.Add(button9);
+            groupBox3.Controls.Add(button8);
+            groupBox3.Controls.Add(comboBox6);
+            groupBox3.Controls.Add(button5);
+            groupBox3.Controls.Add(label11);
+            groupBox3.Controls.Add(textBox7);
+            groupBox3.Controls.Add(label7);
+            groupBox3.Controls.Add(numericUpDown2);
+            groupBox3.Controls.Add(label6);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Controls.Add(textBox10);
+            groupBox3.Controls.Add(comboBox3);
+            groupBox3.Controls.Add(comboBox2);
+            groupBox3.Controls.Add(label9);
+            groupBox3.Controls.Add(label8);
+            groupBox3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox3.Location = new Point(40, 380);
+            groupBox3.Margin = new Padding(3, 2, 3, 2);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(3, 2, 3, 2);
+            groupBox3.Size = new Size(811, 251);
+            groupBox3.TabIndex = 51;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Paquete de autos";
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(219, 66);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(35, 37);
-            this.button10.TabIndex = 91;
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
+            button10.BackColor = Color.FromArgb(0, 80, 200);
+            button10.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button10.ForeColor = Color.White;
+            button10.Image = (Image)resources.GetObject("button10.Image");
+            button10.ImageAlign = ContentAlignment.MiddleRight;
+            button10.Location = new Point(219, 82);
+            button10.Margin = new Padding(3, 2, 3, 2);
+            button10.Name = "button10";
+            button10.Size = new Size(35, 46);
+            button10.TabIndex = 91;
+            button10.TextAlign = ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(755, 27);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(35, 37);
-            this.button9.TabIndex = 90;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            button9.BackColor = Color.FromArgb(0, 80, 200);
+            button9.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button9.ForeColor = Color.White;
+            button9.Image = (Image)resources.GetObject("button9.Image");
+            button9.ImageAlign = ContentAlignment.MiddleRight;
+            button9.Location = new Point(755, 34);
+            button9.Margin = new Padding(3, 2, 3, 2);
+            button9.Name = "button9";
+            button9.Size = new Size(35, 46);
+            button9.TabIndex = 90;
+            button9.TextAlign = ContentAlignment.MiddleLeft;
+            button9.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(284, 27);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(35, 37);
-            this.button8.TabIndex = 89;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            button8.BackColor = Color.FromArgb(0, 80, 200);
+            button8.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.White;
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.ImageAlign = ContentAlignment.MiddleRight;
+            button8.Location = new Point(284, 34);
+            button8.Margin = new Padding(3, 2, 3, 2);
+            button8.Name = "button8";
+            button8.Size = new Size(35, 46);
+            button8.TabIndex = 89;
+            button8.TextAlign = ContentAlignment.MiddleLeft;
+            button8.UseVisualStyleBackColor = false;
             // 
             // comboBox6
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(104, 70);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(109, 28);
-            this.comboBox6.TabIndex = 79;
+            comboBox6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Location = new Point(104, 88);
+            comboBox6.Margin = new Padding(3, 2, 3, 2);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(109, 28);
+            comboBox6.TabIndex = 79;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(675, 137);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 37);
-            this.button5.TabIndex = 88;
-            this.button5.Text = "Añadir";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            button5.BackColor = Color.FromArgb(0, 80, 200);
+            button5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleRight;
+            button5.Location = new Point(641, 124);
+            button5.Margin = new Padding(3, 2, 3, 2);
+            button5.Name = "button5";
+            button5.Size = new Size(113, 46);
+            button5.TabIndex = 88;
+            button5.Text = "Añadir";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(337, 74);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 19);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "No. Asientos:";
+            label11.AutoSize = true;
+            label11.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(337, 92);
+            label11.Name = "label11";
+            label11.Size = new Size(117, 19);
+            label11.TabIndex = 76;
+            label11.Text = "No. Asientos:";
             // 
             // textBox7
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(460, 70);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(59, 26);
-            this.textBox7.TabIndex = 77;
+            textBox7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox7.Location = new Point(460, 88);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(59, 26);
+            textBox7.TabIndex = 77;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(24, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 19);
-            this.label7.TabIndex = 74;
-            this.label7.Text = "Color:";
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(24, 92);
+            label7.Name = "label7";
+            label7.Size = new Size(58, 19);
+            label7.TabIndex = 74;
+            label7.Text = "Color:";
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.numericUpDown2.Location = new System.Drawing.Point(124, 106);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(60, 26);
-            this.numericUpDown2.TabIndex = 73;
+            numericUpDown2.Font = new Font("Century Gothic", 9F);
+            numericUpDown2.Location = new Point(124, 132);
+            numericUpDown2.Margin = new Padding(3, 2, 3, 2);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(60, 26);
+            numericUpDown2.TabIndex = 73;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(24, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 19);
-            this.label6.TabIndex = 72;
-            this.label6.Text = "Cantidad:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(24, 138);
+            label6.Name = "label6";
+            label6.Size = new Size(89, 19);
+            label6.TabIndex = 72;
+            label6.Text = "Cantidad:";
             // 
             // comboBox3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(437, 30);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(311, 28);
-            this.comboBox3.TabIndex = 70;
+            comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(437, 38);
+            comboBox3.Margin = new Padding(3, 2, 3, 2);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(311, 28);
+            comboBox3.TabIndex = 70;
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(104, 30);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(173, 28);
-            this.comboBox2.TabIndex = 69;
+            comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(104, 38);
+            comboBox2.Margin = new Padding(3, 2, 3, 2);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(173, 28);
+            comboBox2.TabIndex = 69;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column6,
-            this.Column5,
-            this.Column4,
-            this.Column7,
-            this.eliminarFila});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 605);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(888, 345);
-            this.dataGridView1.TabIndex = 84;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Marca";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Modelo";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Color";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Cantidad de puertas";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Cantidad de autos";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Precio unitario";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Precio subtotal";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // eliminarFila
-            // 
-            this.eliminarFila.HeaderText = "Eliminar";
-            this.eliminarFila.MinimumWidth = 6;
-            this.eliminarFila.Name = "eliminarFila";
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column5, Column4, eliminarFila });
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 624);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new Size(888, 431);
+            dataGridView1.TabIndex = 84;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Controls.Add(this.comboBox5);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.comboBox4);
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(40, 161);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(811, 121);
-            this.groupBox4.TabIndex = 63;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Datos del proveedor";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(711, 26);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(35, 37);
-            this.button7.TabIndex = 84;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(432, 68);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 37);
-            this.button1.TabIndex = 83;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(393, 26);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(35, 37);
-            this.button6.TabIndex = 82;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            groupBox4.Controls.Add(textBox5);
+            groupBox4.Controls.Add(textBox1);
+            groupBox4.Controls.Add(comboBox5);
+            groupBox4.Controls.Add(label12);
+            groupBox4.Controls.Add(label2);
+            groupBox4.Controls.Add(label15);
+            groupBox4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox4.Location = new Point(41, 201);
+            groupBox4.Margin = new Padding(3, 2, 3, 2);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Padding = new Padding(3, 2, 3, 2);
+            groupBox4.Size = new Size(811, 151);
+            groupBox4.TabIndex = 63;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Datos del proveedor";
             // 
             // comboBox5
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(552, 31);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(151, 28);
-            this.comboBox5.TabIndex = 81;
+            comboBox5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(608, 42);
+            comboBox5.Margin = new Padding(3, 2, 3, 2);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(151, 28);
+            comboBox5.TabIndex = 81;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(453, 34);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(84, 19);
-            this.label12.TabIndex = 80;
-            this.label12.Text = "Telefono:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(147, 69);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(279, 28);
-            this.comboBox4.TabIndex = 79;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(208, 30);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 28);
-            this.comboBox1.TabIndex = 78;
+            label12.AutoSize = true;
+            label12.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(513, 45);
+            label12.Name = "label12";
+            label12.RightToLeft = RightToLeft.No;
+            label12.Size = new Size(84, 19);
+            label12.TabIndex = 80;
+            label12.Text = "Telefono:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 75);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(113, 19);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Código RUC:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(19, 98);
+            label2.Name = "label2";
+            label2.RightToLeft = RightToLeft.No;
+            label2.Size = new Size(113, 19);
+            label2.TabIndex = 63;
+            label2.Text = "Código RUC:";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(19, 34);
-            this.label15.Name = "label15";
-            this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label15.Size = new System.Drawing.Size(170, 19);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Nombre completo: ";
+            label15.AutoSize = true;
+            label15.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(19, 45);
+            label15.Name = "label15";
+            label15.RightToLeft = RightToLeft.No;
+            label15.Size = new Size(170, 19);
+            label15.TabIndex = 2;
+            label15.Text = "Nombre completo: ";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(39, 539);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 37);
-            this.button3.TabIndex = 86;
-            this.button3.Text = "Guardar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.FromArgb(0, 80, 200);
+            button3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleRight;
+            button3.Location = new Point(39, 674);
+            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Name = "button3";
+            button3.Size = new Size(129, 46);
+            button3.TabIndex = 86;
+            button3.Text = "Guardar";
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(200)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(299, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 37);
-            this.button2.TabIndex = 85;
-            this.button2.Text = "Nuevo pedido";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.FromArgb(0, 81, 200);
+            button2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleRight;
+            button2.Location = new Point(299, 29);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(179, 46);
+            button2.TabIndex = 85;
+            button2.Text = "Nuevo pedido";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(179, 539);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 37);
-            this.button4.TabIndex = 87;
-            this.button4.Text = "Cancelar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            button4.BackColor = Color.FromArgb(0, 80, 200);
+            button4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleRight;
+            button4.Location = new Point(179, 674);
+            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Name = "button4";
+            button4.Size = new Size(147, 46);
+            button4.TabIndex = 87;
+            button4.Text = "Cancelar";
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(189, 39);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(313, 32);
+            textBox1.TabIndex = 82;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(144, 90);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(232, 32);
+            textBox5.TabIndex = 83;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Marca";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Modelo";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Color";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad de autos";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Precio de renta";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            // 
+            // eliminarFila
+            // 
+            eliminarFila.HeaderText = "Eliminar";
+            eliminarFila.MinimumWidth = 6;
+            eliminarFila.Name = "eliminarFila";
             // 
             // Adquisiciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 950);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Adquisiciones";
-            this.Text = "Adquisiciones";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(888, 1055);
+            Controls.Add(label5);
+            Controls.Add(textBox4);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(groupBox4);
+            Controls.Add(dataGridView1);
+            Controls.Add(label10);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Adquisiciones";
+            Text = "Adquisiciones";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -702,8 +597,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -718,28 +611,23 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eliminarFila;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBox7;
+        private TextBox textBox5;
+        private TextBox textBox1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn eliminarFila;
     }
 }

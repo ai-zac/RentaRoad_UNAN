@@ -32,6 +32,7 @@
             label33 = new Label();
             pictureBox2 = new PictureBox();
             groupBox5 = new GroupBox();
+            comboBox1 = new ComboBox();
             comboBox7 = new ComboBox();
             label22 = new Label();
             button12 = new Button();
@@ -42,13 +43,12 @@
             label17 = new Label();
             label18 = new Label();
             dataGridView2 = new DataGridView();
-            label1 = new Label();
             Column11 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             Column10 = new DataGridViewTextBoxColumn();
-            comboBox1 = new ComboBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -96,6 +96,14 @@
             groupBox5.TabIndex = 94;
             groupBox5.TabStop = false;
             groupBox5.Text = "Datos del Auto";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(188, 104);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(412, 55);
+            comboBox1.TabIndex = 98;
             // 
             // comboBox7
             // 
@@ -219,17 +227,6 @@
             dataGridView2.TabIndex = 92;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(79, 60);
-            label1.Margin = new Padding(8, 0, 8, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(583, 81);
-            label1.TabIndex = 97;
-            label1.Text = "Salida de garaje";
-            // 
             // Column11
             // 
             Column11.HeaderText = "Fecha de salida";
@@ -261,13 +258,16 @@
             Column10.MinimumWidth = 6;
             Column10.Name = "Column10";
             // 
-            // comboBox1
+            // label1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(188, 104);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(412, 55);
-            comboBox1.TabIndex = 98;
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(79, 60);
+            label1.Margin = new Padding(8, 0, 8, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(583, 81);
+            label1.TabIndex = 97;
+            label1.Text = "Salida de garaje";
             // 
             // SalidaAutoGaraje
             // 

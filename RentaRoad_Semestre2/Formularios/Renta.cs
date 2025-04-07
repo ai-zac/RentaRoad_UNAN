@@ -105,7 +105,7 @@ namespace RentaRoad_Semestre3.Formularios
 
         private void BtnContado_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -216,6 +216,32 @@ namespace RentaRoad_Semestre3.Formularios
         private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
         {
             new FormularioPagoTarjetaCredito().ShowDialog();
+            Panelpagocliente.visible=false;
+        }
+
+        private void radiobtncontado_CheckedChanged(object sender, EventArgs e)
+        {
+          Panelpagocliente.Visible = true;
+        }
+
+        private void txtmontoingresado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radiobtncordoba_CheckedChanged(object sender, EventArgs e)
+        {
+            Panelpagocliente.Visible = true;
+        }
+
+        private void radiobtnusd_CheckedChanged(object sender, EventArgs e)
+        {
+            Panelpagocliente.Visible = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

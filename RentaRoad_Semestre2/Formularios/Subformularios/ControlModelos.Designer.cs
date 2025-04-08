@@ -29,207 +29,193 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlModelos));
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
+            button3 = new Button();
+            comboBox2 = new ComboBox();
+            label2 = new Label();
+            label8 = new Label();
+            button2 = new Button();
+            comboBox1 = new ComboBox();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 32);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Modelos de autos";
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(14, 25);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(247, 32);
+            label1.TabIndex = 89;
+            label1.Text = "Modelos de autos";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column4,
-            this.fechaCreacion,
-            this.fechaModificacion,
-            this.Column3});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 193);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(476, 439);
-            this.dataGridView1.TabIndex = 88;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column4, Column3 });
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 222);
+            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new Size(555, 507);
+            dataGridView1.TabIndex = 88;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(140, 135);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 30);
-            this.button1.TabIndex = 98;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.FromArgb(0, 80, 200);
+            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(163, 156);
+            button1.Margin = new Padding(2);
+            button1.Name = "button1";
+            button1.Size = new Size(38, 35);
+            button1.TabIndex = 98;
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(198, 88);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 30);
-            this.button3.TabIndex = 97;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.FromArgb(0, 80, 200);
+            button3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleRight;
+            button3.Location = new Point(231, 102);
+            button3.Margin = new Padding(2);
+            button3.Name = "button3";
+            button3.Size = new Size(38, 35);
+            button3.TabIndex = 97;
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = false;
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(19, 138);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(116, 25);
-            this.comboBox2.TabIndex = 94;
+            comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(22, 159);
+            comboBox2.Margin = new Padding(4, 3, 4, 3);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(135, 25);
+            comboBox2.TabIndex = 94;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 120);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 16);
-            this.label2.TabIndex = 96;
-            this.label2.Text = "Marca del modelo";
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(18, 138);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(128, 16);
+            label2.TabIndex = 96;
+            label2.Text = "Marca del modelo";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(15, 76);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 16);
-            this.label8.TabIndex = 95;
-            this.label8.Text = "Nombre del modelo:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(18, 88);
+            label8.Margin = new Padding(2, 0, 2, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(141, 16);
+            label8.TabIndex = 95;
+            label8.Text = "Nombre del modelo:";
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(330, 138);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 34);
-            this.button2.TabIndex = 93;
-            this.button2.Text = "Guardar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.FromArgb(0, 80, 200);
+            button2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleRight;
+            button2.Location = new Point(385, 159);
+            button2.Margin = new Padding(2);
+            button2.Name = "button2";
+            button2.Size = new Size(119, 39);
+            button2.TabIndex = 93;
+            button2.Text = "Guardar";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 25);
-            this.comboBox1.TabIndex = 99;
+            comboBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(21, 105);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(204, 25);
+            comboBox1.TabIndex = 99;
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 64.69302F;
-            this.Column1.HeaderText = "ID_Modelo";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 70;
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Column1.FillWeight = 64.69302F;
+            Column1.HeaderText = "ID_Modelo";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Resizable = DataGridViewTriState.False;
+            Column1.Width = 70;
             // 
             // Column2
             // 
-            this.Column2.FillWeight = 83.02271F;
-            this.Column2.HeaderText = "Modelo";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            Column2.FillWeight = 83.02271F;
+            Column2.HeaderText = "Modelo";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Marca";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // fechaCreacion
-            // 
-            this.fechaCreacion.HeaderText = "Fecha de creación";
-            this.fechaCreacion.Name = "fechaCreacion";
-            // 
-            // fechaModificacion
-            // 
-            this.fechaModificacion.HeaderText = "Fecha de modificación";
-            this.fechaModificacion.Name = "fechaModificacion";
+            Column4.HeaderText = "Marca";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.FillWeight = 152.2843F;
-            this.Column3.HeaderText = "Eliminar";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 60;
+            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Column3.FillWeight = 152.2843F;
+            Column3.HeaderText = "Eliminar";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Resizable = DataGridViewTriState.False;
+            Column3.Width = 60;
             // 
             // ControlModelos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 632);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "ControlModelos";
-            this.Text = "ControlModelos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(555, 729);
+            Controls.Add(comboBox1);
+            Controls.Add(button1);
+            Controls.Add(button3);
+            Controls.Add(comboBox2);
+            Controls.Add(label2);
+            Controls.Add(label8);
+            Controls.Add(button2);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "ControlModelos";
+            Text = "ControlModelos";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -243,11 +229,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaModificacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column3;
     }
 }

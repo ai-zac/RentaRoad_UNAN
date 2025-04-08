@@ -16,5 +16,20 @@ namespace RentaRoad_Semestre3.Formularios
         {
             InitializeComponent();
         }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -166,5 +166,10 @@ namespace RentaRoad_Semestre3.Formularios
         {
 
         }
+
+        private void corteCaja_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

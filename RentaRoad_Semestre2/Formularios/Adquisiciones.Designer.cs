@@ -66,6 +66,7 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            cantidadAsientos = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Subtotal = new DataGridViewTextBoxColumn();
             eliminarFila = new DataGridViewTextBoxColumn();
@@ -264,9 +265,9 @@
             label11.ForeColor = Color.Black;
             label11.Location = new Point(295, 69);
             label11.Name = "label11";
-            label11.Size = new Size(95, 17);
+            label11.Size = new Size(93, 34);
             label11.TabIndex = 76;
-            label11.Text = "No. Asientos:";
+            label11.Text = "Cantidad de\r\nasientos:";
             // 
             // textBox7
             // 
@@ -332,7 +333,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column5, Column4, Subtotal, eliminarFila });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column5, cantidadAsientos, Column4, Subtotal, eliminarFila });
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 550);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
@@ -494,6 +495,11 @@
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             // 
+            // cantidadAsientos
+            // 
+            cantidadAsientos.HeaderText = "Cantidad de asientos";
+            cantidadAsientos.Name = "cantidadAsientos";
+            // 
             // Column4
             // 
             Column4.HeaderText = "Precio de renta";
@@ -581,6 +587,7 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn cantidadAsientos;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Subtotal;
         private DataGridViewTextBoxColumn eliminarFila;

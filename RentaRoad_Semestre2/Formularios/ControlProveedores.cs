@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentaRoad_Semestre3.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,13 @@ namespace RentaRoad_Semestre3.Formularios
 {
     public partial class ControlProveedores : Form
     {
+        private Proveedor? Proveedor;
+        private Bindinglist<Proveedor>? ListaProveedores;
         public ControlProveedores()
         {
             InitializeComponent();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,12 +63,35 @@ namespace RentaRoad_Semestre3.Formularios
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-        
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private Proveedor? proveedor;
+        private void CargarProveedor()
+        {
+            Proveedor = new Proveedor();
+            DtgProveedor.DataSource
+        }
+
+        private void CargarProveedores()
+        {
+            proveedor = new Proveedor();
+            ListaProveedores = new BindingList<Proveedor>(Proveedor.Pro);
+            DtgProveedor.DataSource = proveedor;
+        }
+        private void ControlProveedores_Load(object sender, EventArgs e)
+        {
+            CargarProveedor();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var ProveedorExistente = Proveedor.listar
         }
     }
 }

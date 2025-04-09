@@ -68,6 +68,7 @@ namespace RentaRoad_Semestre3
 
         private void VentanaInicioSesion_Load(object sender, EventArgs e)
         {
+            Conexion c = new Conexion();    
 
         }
 

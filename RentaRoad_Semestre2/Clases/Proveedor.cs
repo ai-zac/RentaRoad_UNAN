@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentaRoad_Semestre3.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,46 @@ namespace RentaRoad_Semestre3.Clases
             Direccion = direccionInser;
             NombreEmpresa = nombreEmpresaInser;
         }
+
+        public class Proveedores
+            {
+            public List<Proveedores> ListarProveedores()
+            {
+                try
+                {
+                    using (var _contexto=new BillifyDbContext())
+
+                    {
+                        return _contexto.Proveedores.Tolist();
+                    }
+                }
+
+                catch (Exception ex) 
+                { 
+                Console.WriteLine(ex.Message);
+                    return new List<Proveedores>();
+                }
+            }
+            public bool AgregarProveedor()
+            {
+            if (Proveedor == null)
+                    Console.WriteLine("El proveedor no puede ser null");
+            return false;
+
+                try
+                {
+                    using (var _Contexto = new RentaRoadContext())
+                    {
+                        _Contexto.proveedores.Add(Proveedor);
+                        _Contexto.SaveChanges();
+                        return true;
+                    }
+                }
+
+                catch (Exception ex) 
+                {
+
+                }
+            }
     }
 }

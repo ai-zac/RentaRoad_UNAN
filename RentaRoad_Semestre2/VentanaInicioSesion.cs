@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using RentaRoad_Semestre3.Clases;
-using RentaRoad_Semestre3.Formularios;
+using RentaRoad_Semestre3.CapaPresentacion;
 namespace RentaRoad_Semestre3
 {
     public partial class VentanaInicioSesion : Form
@@ -47,21 +46,6 @@ namespace RentaRoad_Semestre3
         {
             string nombreUsuario = txtUser.Text;
 
-            if (!ListaUsuarios.lista.ContainsKey(nombreUsuario)) 
-            {
-                MessageBox.Show("Usuario no existe");
-                txtUser.Clear();
-                return;
-            }
-            Usuario usuario = ListaUsuarios.lista[nombreUsuario];
-            if (txtPass.Text != usuario.Contraseña)
-            {
-                MessageBox.Show("Contraseña incorrecta");
-                txtPass.Clear();
-                return;
-            }
-
-            Credenciales.usuarioActual = usuario;
             new VentanaPrincipal().Show();
             this.Hide();
         }

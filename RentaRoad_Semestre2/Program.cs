@@ -1,3 +1,5 @@
+using RentaRoad_Semestre3.CapaPresentacion;
+
 namespace RentaRoad_Semestre3
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace RentaRoad_Semestre3
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new VentanaInicioSesion());
+            Application.Run(new frm_login());
         }
     }
 }

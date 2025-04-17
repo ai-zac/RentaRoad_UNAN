@@ -106,7 +106,7 @@ namespace RentaRoad_Semestre3
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new VentanaInicioSesion().Show();
+            new frm_login().Show();
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -33,8 +33,8 @@
             pictureBox3 = new PictureBox();
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
-            BtnCerrar = new PictureBox();
-            BtnMinimizar = new PictureBox();
+            btnCerrar = new PictureBox();
+            btnMinimizar = new PictureBox();
             label2 = new Label();
             label3 = new Label();
             label1 = new Label();
@@ -42,8 +42,8 @@
             btnLogin = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BtnCerrar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BtnMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -92,29 +92,29 @@
             txtContraseña.Size = new Size(292, 26);
             txtContraseña.TabIndex = 2;
             // 
-            // BtnCerrar
+            // btnCerrar
             // 
-            BtnCerrar.Image = (Image)resources.GetObject("BtnCerrar.Image");
-            BtnCerrar.Location = new Point(659, 0);
-            BtnCerrar.Margin = new Padding(3, 2, 3, 2);
-            BtnCerrar.Name = "BtnCerrar";
-            BtnCerrar.Size = new Size(13, 14);
-            BtnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
-            BtnCerrar.TabIndex = 8;
-            BtnCerrar.TabStop = false;
-            BtnCerrar.Click += BtnCerrar_Click;
+            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
+            btnCerrar.Location = new Point(659, 0);
+            btnCerrar.Margin = new Padding(3, 2, 3, 2);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(13, 14);
+            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCerrar.TabIndex = 8;
+            btnCerrar.TabStop = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
-            // BtnMinimizar
+            // btnMinimizar
             // 
-            BtnMinimizar.Image = (Image)resources.GetObject("BtnMinimizar.Image");
-            BtnMinimizar.Location = new Point(633, 0);
-            BtnMinimizar.Margin = new Padding(3, 2, 3, 2);
-            BtnMinimizar.Name = "BtnMinimizar";
-            BtnMinimizar.Size = new Size(13, 14);
-            BtnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
-            BtnMinimizar.TabIndex = 9;
-            BtnMinimizar.TabStop = false;
-            BtnMinimizar.Click += BtnMinimizar_Click;
+            btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
+            btnMinimizar.Location = new Point(633, 0);
+            btnMinimizar.Margin = new Padding(3, 2, 3, 2);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new Size(13, 14);
+            btnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMinimizar.TabIndex = 9;
+            btnMinimizar.TabStop = false;
+            btnMinimizar.Click += btnMinimizar_Click;
             // 
             // label2
             // 
@@ -187,7 +187,7 @@
             btnLogin.Text = "Acceder";
             btnLogin.TextAlign = ContentAlignment.MiddleLeft;
             btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += BtnLogin_Click;
+            btnLogin.Click += btnLogin_Click;
             // 
             // frm_login
             // 
@@ -198,8 +198,8 @@
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(BtnMinimizar);
-            Controls.Add(BtnCerrar);
+            Controls.Add(btnMinimizar);
+            Controls.Add(btnCerrar);
             Controls.Add(btnRecuperarContraseña);
             Controls.Add(btnLogin);
             Controls.Add(txtContraseña);
@@ -213,8 +213,8 @@
             Text = "Login";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BtnCerrar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BtnMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -226,8 +226,8 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox BtnCerrar;
-        private System.Windows.Forms.PictureBox BtnMinimizar;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;

@@ -28,17 +28,17 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             _usuarioService = new UsuariosService(repo);
         }
 
-        private void BtnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void BtnMinimizar_Click(object sender, EventArgs e)
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text.IsNullOrEmpty() && txtContraseña.Text.IsNullOrEmpty())
             {

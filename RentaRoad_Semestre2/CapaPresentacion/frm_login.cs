@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
 using RentaRoad_Semestre3.CapaPresentacion.Modelos;
 using RentaRoad_Semestre3.CapaPresentacion.Subformularios;
+using Microsoft.IdentityModel.Tokens;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
@@ -39,6 +40,22 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            if (txtUsuario.Text.IsNullOrEmpty() && txtContraseña.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("Ambos campos están vacíos.");
+                return;
+            }
+            else if (txtUsuario.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("El campo de usuario esta vacío.");
+                return;
+            }
+            else if (txtContraseña.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("El campo de contraseña esta vacío.");
+                return;
+            }
+
             string nombreInsertado = txtUsuario.Text;
             string contraseñaInsertada = txtContraseña.Text;
 
@@ -46,13 +63,13 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 .FirstOrDefault(u => u.NombreUsuario == nombreInsertado);
             if (usuarioEncontrado == null)
             {
-                MessageBox.Show("Usuario no encontrado");
+                MessageBox.Show("Usuario no encontrado.");
                 return;
             }
 
             if (usuarioEncontrado.Contraseña != contraseñaInsertada)
             {
-                MessageBox.Show("Contraseña no es la correcta"); return;
+                MessageBox.Show("Contraseña no es la correcta.");
                 return;
             }
 

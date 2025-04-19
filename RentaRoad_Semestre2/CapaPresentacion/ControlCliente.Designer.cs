@@ -29,391 +29,373 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlCliente));
-            this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaModificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            fechaModificacion = new DataGridViewTextBoxColumn();
+            eliminar = new DataGridViewTextBoxColumn();
+            groupBox2 = new GroupBox();
+            comboBox5 = new ComboBox();
+            button4 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            button3 = new Button();
+            comboBox4 = new ComboBox();
+            comboBox3 = new ComboBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            label2 = new Label();
+            label25 = new Label();
+            button5 = new Button();
+            label7 = new Label();
+            textBox19 = new TextBox();
+            label22 = new Label();
+            label26 = new Label();
+            label27 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 32);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "Clientes";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(466, 218);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 34);
-            this.button5.TabIndex = 62;
-            this.button5.Text = "Guardar";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox19);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(33, 68);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(608, 283);
-            this.groupBox2.TabIndex = 82;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos del Cliente";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(162, 117);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(155, 25);
-            this.comboBox5.TabIndex = 94;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(323, 114);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 30);
-            this.button4.TabIndex = 93;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(233, 83);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 30);
-            this.button2.TabIndex = 92;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(233, 49);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 30);
-            this.button1.TabIndex = 91;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(542, 19);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 30);
-            this.button3.TabIndex = 90;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(73, 86);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(155, 25);
-            this.comboBox4.TabIndex = 82;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(73, 53);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(155, 25);
-            this.comboBox3.TabIndex = 81;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(400, 25);
-            this.comboBox1.TabIndex = 80;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(73, 148);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(116, 25);
-            this.comboBox2.TabIndex = 79;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(10, 151);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Estado:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(8, 89);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(65, 16);
-            this.label25.TabIndex = 76;
-            this.label25.Text = "Teléfono:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(8, 121);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 16);
-            this.label7.TabIndex = 62;
-            this.label7.Text = "Licencia de conducir:";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(84, 178);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(324, 74);
-            this.textBox19.TabIndex = 58;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(10, 178);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(73, 16);
-            this.label22.TabIndex = 57;
-            this.label22.Text = "Dirección:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(8, 24);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(128, 16);
-            this.label26.TabIndex = 54;
-            this.label26.Text = "Nombre completo:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(8, 53);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(59, 16);
-            this.label27.TabIndex = 52;
-            this.label27.Text = "Cédula:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(19, 21);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 32);
+            label1.TabIndex = 65;
+            label1.Text = "Clientes";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column6,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.fechaModificacion,
-            this.eliminar});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 379);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 270);
-            this.dataGridView1.TabIndex = 84;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column6, Column4, Column5, Column7, fechaModificacion, eliminar });
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 401);
+            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new Size(1088, 344);
+            dataGridView1.TabIndex = 84;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Cédula";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            Column1.HeaderText = "Cédula";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Nombre completo";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            Column2.HeaderText = "Nombre completo";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Licencia de conducir";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
+            Column6.HeaderText = "Licencia de conducir";
+            Column6.MinimumWidth = 6;
+            Column6.Name = "Column6";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Teléfono";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            Column4.HeaderText = "Teléfono";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Dirección";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
+            Column5.HeaderText = "Dirección";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Fecha de agregación";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
+            Column7.HeaderText = "Fecha de agregación";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
             // 
             // fechaModificacion
             // 
-            this.fechaModificacion.HeaderText = "Fecha de modificación";
-            this.fechaModificacion.Name = "fechaModificacion";
+            fechaModificacion.HeaderText = "Fecha de modificación";
+            fechaModificacion.Name = "fechaModificacion";
             // 
             // eliminar
             // 
-            this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.Name = "eliminar";
+            eliminar.HeaderText = "Eliminar";
+            eliminar.Name = "eliminar";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(comboBox5);
+            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(comboBox4);
+            groupBox2.Controls.Add(comboBox3);
+            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(comboBox2);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label25);
+            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(textBox19);
+            groupBox2.Controls.Add(label22);
+            groupBox2.Controls.Add(label26);
+            groupBox2.Controls.Add(label27);
+            groupBox2.Dock = DockStyle.Bottom;
+            groupBox2.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox2.Location = new Point(0, 74);
+            groupBox2.Margin = new Padding(2);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(2);
+            groupBox2.Size = new Size(1088, 327);
+            groupBox2.TabIndex = 85;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Datos del Cliente";
+            // 
+            // comboBox5
+            // 
+            comboBox5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(189, 135);
+            comboBox5.Margin = new Padding(4, 3, 4, 3);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(180, 25);
+            comboBox5.TabIndex = 94;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(0, 80, 200);
+            button4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleRight;
+            button4.Location = new Point(377, 132);
+            button4.Margin = new Padding(2);
+            button4.Name = "button4";
+            button4.Size = new Size(38, 35);
+            button4.TabIndex = 93;
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(0, 80, 200);
+            button2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleRight;
+            button2.Location = new Point(272, 96);
+            button2.Margin = new Padding(2);
+            button2.Name = "button2";
+            button2.Size = new Size(38, 35);
+            button2.TabIndex = 92;
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 80, 200);
+            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(272, 57);
+            button1.Margin = new Padding(2);
+            button1.Name = "button1";
+            button1.Size = new Size(38, 35);
+            button1.TabIndex = 91;
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(0, 80, 200);
+            button3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleRight;
+            button3.Location = new Point(632, 22);
+            button3.Margin = new Padding(2);
+            button3.Name = "button3";
+            button3.Size = new Size(38, 35);
+            button3.TabIndex = 90;
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // comboBox4
+            // 
+            comboBox4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(85, 99);
+            comboBox4.Margin = new Padding(4, 3, 4, 3);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(180, 25);
+            comboBox4.TabIndex = 82;
+            // 
+            // comboBox3
+            // 
+            comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(85, 61);
+            comboBox3.Margin = new Padding(4, 3, 4, 3);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(180, 25);
+            comboBox3.TabIndex = 81;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(160, 25);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(466, 25);
+            comboBox1.TabIndex = 80;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(85, 171);
+            comboBox2.Margin = new Padding(4, 3, 4, 3);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(135, 25);
+            comboBox2.TabIndex = 79;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(11, 173);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 16);
+            label2.TabIndex = 78;
+            label2.Text = "Estado:";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label25.ForeColor = Color.Black;
+            label25.Location = new Point(8, 102);
+            label25.Margin = new Padding(2, 0, 2, 0);
+            label25.Name = "label25";
+            label25.Size = new Size(65, 16);
+            label25.TabIndex = 76;
+            label25.Text = "Teléfono:";
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(0, 80, 200);
+            button5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleRight;
+            button5.Location = new Point(544, 252);
+            button5.Margin = new Padding(2);
+            button5.Name = "button5";
+            button5.Size = new Size(127, 39);
+            button5.TabIndex = 62;
+            button5.Text = "Guardar";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(8, 139);
+            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(149, 16);
+            label7.TabIndex = 62;
+            label7.Text = "Licencia de conducir:";
+            // 
+            // textBox19
+            // 
+            textBox19.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox19.Location = new Point(98, 205);
+            textBox19.Margin = new Padding(2);
+            textBox19.Multiline = true;
+            textBox19.Name = "textBox19";
+            textBox19.Size = new Size(377, 85);
+            textBox19.TabIndex = 58;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label22.ForeColor = Color.Black;
+            label22.Location = new Point(11, 204);
+            label22.Margin = new Padding(2, 0, 2, 0);
+            label22.Name = "label22";
+            label22.Size = new Size(73, 16);
+            label22.TabIndex = 57;
+            label22.Text = "Dirección:";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label26.ForeColor = Color.Black;
+            label26.Location = new Point(8, 27);
+            label26.Margin = new Padding(2, 0, 2, 0);
+            label26.Name = "label26";
+            label26.Size = new Size(128, 16);
+            label26.TabIndex = 54;
+            label26.Text = "Nombre completo:";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.ForeColor = Color.Black;
+            label27.Location = new Point(8, 60);
+            label27.Margin = new Padding(2, 0, 2, 0);
+            label27.Name = "label27";
+            label27.Size = new Size(59, 16);
+            label27.TabIndex = 52;
+            label27.Text = "Cédula:";
             // 
             // ControlCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 649);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox2);
-            this.Name = "ControlCliente";
-            this.Text = "ControlCliente";
-            this.Load += new System.EventHandler(this.ControlCliente_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1088, 745);
+            Controls.Add(groupBox2);
+            Controls.Add(dataGridView1);
+            Controls.Add(label1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "ControlCliente";
+            Text = "ControlCliente";
+            Load += ControlCliente_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -422,5 +404,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaModificacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn eliminar;
+        private GroupBox groupBox2;
+        private ComboBox comboBox5;
+        private Button button4;
+        private Button button2;
+        private Button button1;
+        private Button button3;
+        private ComboBox comboBox4;
+        private ComboBox comboBox3;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private Label label2;
+        private Label label25;
+        private Button button5;
+        private Label label7;
+        private TextBox textBox19;
+        private Label label22;
+        private Label label26;
+        private Label label27;
     }
 }

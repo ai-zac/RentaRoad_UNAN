@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using RentaRoad_Semestre3.CapaPresentacion;
+using System.Security.Cryptography.X509Certificates;
 
 namespace RentaRoad_Semestre3
 {
@@ -17,6 +18,161 @@ namespace RentaRoad_Semestre3
         public VentanaPrincipal()
         {
             InitializeComponent();
+            menuNavegacion.Renderer = new customRenderer();
+        }
+
+        private class customRenderer : ToolStripProfessionalRenderer
+        {
+            public customRenderer() : base(new customColorsRender()) { }
+        }
+
+        private class customColorsRender : ProfessionalColorTable
+        {
+            public override Color MenuItemSelectedGradientBegin
+            {
+                get { return Color.DimGray; }
+            }
+            public override Color MenuItemSelectedGradientEnd
+            {
+                get { return Color.DimGray; }
+            }
+            public override Color MenuItemPressedGradientBegin
+            {
+                get { return Color.DimGray; }
+            }
+            public override Color MenuItemPressedGradientMiddle
+            {
+                get { return Color.DimGray; }
+            }
+            public override Color MenuItemPressedGradientEnd
+            {
+                get { return Color.DimGray; }
+            }
+        }
+
+        public ToolStripItem itemSeleccionado = null;
+        private void indicarItemMenuSeleccionado(object objetoEvento)
+        {
+            if (itemSeleccionado != null)
+            {
+                itemSeleccionado.BackColor = Color.FromArgb(26, 32, 40);
+                itemSeleccionado.ForeColor = Color.White;
+            }
+
+            ToolStripItemCollection menuItems = menuNavegacion.Items;
+            foreach (ToolStripItem menuItem in menuItems)
+            {
+                menuItem.BackColor = Color.FromArgb(26, 32, 40);
+                menuItem.ForeColor = Color.White;
+            }
+
+            ToolStripItem? item = (objetoEvento as ToolStripItem);
+            itemSeleccionado = item;
+            if (item != null)
+            {
+                item.BackColor = Color.FromArgb(56, 62, 70);
+            }
+        }
+
+        private Form activarForm = null;
+        private void AbrirFormhija(Form Formhijo)
+        {
+            if (activarForm != null)
+                activarForm.Close();
+            activarForm = Formhijo;
+            Formhijo.TopLevel = false;
+            Formhijo.FormBorderStyle = FormBorderStyle.None;
+            Formhijo.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(Formhijo);
+            panelContenedor.Tag = Formhijo;
+            Formhijo.BringToFront();
+            Formhijo.Show();
+
+        }
+
+        public Form activeForm;
+        private void AbrirFormHija(Form formhija)
+        {
+            activeForm = formhija;
+            activeForm.ShowDialog();
+        }
+
+        private void optionRenta_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormhija(new Renta());
+        }
+
+        private void optionRegistroPlaca_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new RegistroPlacaAuto());
+        }
+
+        private void optionAdquisicion_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormhija(new Adquisiciones());
+        }
+
+        private void optionCaja_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new Caja());
+        }
+
+        private void optionMantenimiento_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new Mantenimiento());
+        }
+
+        private void optionProveedores_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new ControlProveedores());
+        }
+
+        private void optionClientes_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormhija(new ControlCliente());
+        }
+
+        private void optionUsuarios_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormhija(new ControlUsuario());
+        }
+
+        private void optionEntregaAuto_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new EntregaAutoRentado());
+        }
+
+        private void optionSalidaGaraje_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new SalidaAutoGaraje());
+        }
+
+        private void optionAcerca_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new AcercaDe());
+        }
+
+        private void optionListaDeAutos_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            AbrirFormHija(new ControlAutos());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frm_login().Show();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -29,113 +185,9 @@ namespace RentaRoad_Semestre3
             this.WindowState = FormWindowState.Minimized;
         }
 
-        public Form activeForm;
-        private void AbrirFormHija(Form formhija)
-        {
-            activeForm = formhija;
-            activeForm.ShowDialog();
-        }
-
-        private void BtnFormGaraje_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new ControlAutos());
-        }
-
-        private void BtnFormRenta_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new Renta());
-        }
-
-        private void BtnFormPagos_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new RegistroPlacaAuto());
-        }
-
-        private void BtnFormAdquisicion_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new Adquisiciones());
-        }
-
-        private void BtnFormCaja_Click(object sender, EventArgs e)
+        private void panelSuperior_Paint(object sender, PaintEventArgs e)
         {
 
-            AbrirFormHija(new Caja());
-        }
-
-        private void BtnFormMantenimiento_Click(object sender, EventArgs e)
-        {
-
-            AbrirFormHija(new Mantenimiento());
-        }
-
-        private void BtnFormProveedores_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new ControlProveedores());
-        }
-
-        private void BtnFormClientes_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new ControlCliente());
-        }
-
-        private void BtnFormUsuarios_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new ControlUsuario());
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void BtnFormAcerca_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new AcercaDe());
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new frm_login().Show();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnFormEntregaAuto_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new EntregaAutoRentado());
-        }
-
-        private void BtnFormSalidaGaraje_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new SalidaAutoGaraje());
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
         }
     }
 }

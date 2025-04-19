@@ -18,6 +18,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             InitializeComponent();
         }
 
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

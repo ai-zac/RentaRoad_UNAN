@@ -44,6 +44,7 @@
             label18 = new Label();
             txtcantdias = new TextBox();
             groupBox1 = new GroupBox();
+            comboBox2 = new ComboBox();
             label25 = new Label();
             txtlicencia = new TextBox();
             txtcedula = new TextBox();
@@ -57,6 +58,7 @@
             textBox25 = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            comboBox1 = new ComboBox();
             txtmodelo = new TextBox();
             txtasientos = new TextBox();
             txtmarca = new TextBox();
@@ -89,8 +91,7 @@
             txtmontoingresado = new TextBox();
             label6 = new Label();
             txtmontocambio = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -234,16 +235,16 @@
             label18.AutoSize = true;
             label18.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.Black;
-            label18.Location = new Point(431, 46);
+            label18.Location = new Point(414, 33);
             label18.Name = "label18";
-            label18.Size = new Size(125, 16);
+            label18.Size = new Size(69, 32);
             label18.TabIndex = 34;
-            label18.Text = "Cantidad de días:";
+            label18.Text = "Cantidad\r\nde días:";
             // 
             // txtcantdias
             // 
             txtcantdias.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtcantdias.Location = new Point(582, 43);
+            txtcantdias.Location = new Point(489, 42);
             txtcantdias.Margin = new Padding(3, 2, 3, 2);
             txtcantdias.Name = "txtcantdias";
             txtcantdias.Size = new Size(57, 22);
@@ -262,7 +263,7 @@
             groupBox1.Controls.Add(label26);
             groupBox1.Controls.Add(label27);
             groupBox1.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(46, 107);
+            groupBox1.Location = new Point(53, 109);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
@@ -270,6 +271,14 @@
             groupBox1.TabIndex = 48;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del Cliente";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(122, 35);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(179, 26);
+            comboBox2.TabIndex = 124;
             // 
             // label25
             // 
@@ -414,7 +423,7 @@
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label7);
             groupBox2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(419, 107);
+            groupBox2.Location = new Point(427, 118);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
@@ -422,6 +431,14 @@
             groupBox2.TabIndex = 50;
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos del Auto";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(90, 22);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(139, 27);
+            comboBox1.TabIndex = 119;
             // 
             // txtmodelo
             // 
@@ -461,6 +478,7 @@
             // 
             // groupBox3
             // 
+            groupBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             groupBox3.Controls.Add(txtcantdias);
             groupBox3.Controls.Add(label18);
             groupBox3.Controls.Add(dateTimePicker2);
@@ -468,11 +486,11 @@
             groupBox3.Controls.Add(label17);
             groupBox3.Controls.Add(label16);
             groupBox3.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox3.Location = new Point(46, 375);
+            groupBox3.Location = new Point(53, 394);
             groupBox3.Margin = new Padding(3, 2, 3, 2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 2, 3, 2);
-            groupBox3.Size = new Size(700, 104);
+            groupBox3.Size = new Size(592, 104);
             groupBox3.TabIndex = 56;
             groupBox3.TabStop = false;
             groupBox3.Text = "Plazo de Renta";
@@ -545,7 +563,7 @@
             // 
             label32.AutoSize = true;
             label32.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label32.Location = new Point(806, 107);
+            label32.Location = new Point(803, 109);
             label32.Margin = new Padding(4, 0, 4, 0);
             label32.Name = "label32";
             label32.Size = new Size(167, 19);
@@ -555,16 +573,20 @@
             // 
             // autoimage
             // 
+            autoimage.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             autoimage.BackColor = Color.Gray;
-            autoimage.Location = new Point(809, 136);
-            autoimage.Margin = new Padding(4, 4, 4, 4);
+            autoimage.Location = new Point(814, 147);
+            autoimage.Margin = new Padding(4);
+            autoimage.MaximumSize = new Size(500, 500);
+            autoimage.MinimumSize = new Size(250, 250);
             autoimage.Name = "autoimage";
-            autoimage.Size = new Size(251, 244);
+            autoimage.Size = new Size(250, 250);
             autoimage.TabIndex = 86;
             autoimage.TabStop = false;
             // 
             // groupBox4
             // 
+            groupBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             groupBox4.Controls.Add(label3);
             groupBox4.Controls.Add(txtgarantia);
             groupBox4.Controls.Add(label2);
@@ -576,11 +598,11 @@
             groupBox4.Controls.Add(txttotal);
             groupBox4.Controls.Add(label21);
             groupBox4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(46, 494);
+            groupBox4.Location = new Point(53, 512);
             groupBox4.Margin = new Padding(3, 2, 3, 2);
             groupBox4.Name = "groupBox4";
             groupBox4.Padding = new Padding(3, 2, 3, 2);
-            groupBox4.Size = new Size(332, 195);
+            groupBox4.Size = new Size(332, 146);
             groupBox4.TabIndex = 88;
             groupBox4.TabStop = false;
             groupBox4.Text = "Totales";
@@ -715,10 +737,11 @@
             // 
             // groupBox6
             // 
+            groupBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             groupBox6.Controls.Add(radiobtncontado);
             groupBox6.Controls.Add(radiobtntarjeta);
             groupBox6.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox6.Location = new Point(419, 494);
+            groupBox6.Location = new Point(414, 512);
             groupBox6.Margin = new Padding(3, 2, 3, 2);
             groupBox6.Name = "groupBox6";
             groupBox6.Padding = new Padding(3, 2, 3, 2);
@@ -729,6 +752,7 @@
             // 
             // groupBox5
             // 
+            groupBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             groupBox5.Controls.Add(label5);
             groupBox5.Controls.Add(textBox1);
             groupBox5.Controls.Add(txtcordobas);
@@ -736,7 +760,7 @@
             groupBox5.Controls.Add(label6);
             groupBox5.Controls.Add(txtmontocambio);
             groupBox5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox5.Location = new Point(419, 591);
+            groupBox5.Location = new Point(414, 611);
             groupBox5.Margin = new Padding(3, 2, 3, 2);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(3, 2, 3, 2);
@@ -805,21 +829,12 @@
             txtmontocambio.Size = new Size(109, 22);
             txtmontocambio.TabIndex = 42;
             // 
-            // comboBox1
+            // flowLayoutPanel1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(90, 22);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(139, 27);
-            comboBox1.TabIndex = 119;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(122, 35);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(179, 26);
-            comboBox2.TabIndex = 124;
+            flowLayoutPanel1.Location = new Point(803, 527);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(200, 100);
+            flowLayoutPanel1.TabIndex = 90;
             // 
             // Renta
             // 
@@ -827,23 +842,22 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1090, 743);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
-            Controls.Add(label32);
-            Controls.Add(autoimage);
-            Controls.Add(groupBox3);
             Controls.Add(groupBox6);
             Controls.Add(button4);
+            Controls.Add(autoimage);
+            Controls.Add(groupBox3);
             Controls.Add(button3);
+            Controls.Add(groupBox2);
+            Controls.Add(label32);
+            Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(label31);
             Controls.Add(label28);
             Controls.Add(textBox25);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
-            MaximizeBox = false;
             Name = "Renta";
             Text = "Renta";
             Load += Facturacion_Load;
@@ -932,5 +946,6 @@
         private TextBox textBox1;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

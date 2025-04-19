@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlUsuario));
             label1 = new Label();
             dgListaUsuarios = new DataGridView();
@@ -35,6 +38,7 @@
             txtCedulaUsuario = new TextBox();
             label8 = new Label();
             txtTelefonoUsuario = new TextBox();
+            btnCrear = new Button();
             label3 = new Label();
             txtNombreUsuario = new TextBox();
             txtCorreoUsuario = new TextBox();
@@ -48,7 +52,6 @@
             txtContraseña = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            btnCrear = new Button();
             ((System.ComponentModel.ISupportInitialize)dgListaUsuarios).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -57,7 +60,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(16, 21);
+            label1.Location = new Point(37, 44);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(122, 32);
@@ -66,15 +69,33 @@
             // 
             // dgListaUsuarios
             // 
-            dgListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgListaUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgListaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgListaUsuarios.Dock = DockStyle.Bottom;
             dgListaUsuarios.Location = new Point(0, 406);
             dgListaUsuarios.Margin = new Padding(2);
             dgListaUsuarios.Name = "dgListaUsuarios";
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Control;
+            dataGridViewCellStyle8.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgListaUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgListaUsuarios.RowHeadersWidth = 51;
+            dataGridViewCellStyle9.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle9;
             dgListaUsuarios.RowTemplate.Height = 24;
-            dgListaUsuarios.Size = new Size(791, 296);
+            dgListaUsuarios.Size = new Size(1089, 339);
             dgListaUsuarios.TabIndex = 64;
             dgListaUsuarios.CellClick += dgListaUsuarios_seleccionarUsuario;
             dgListaUsuarios.CellDoubleClick += dgListaUsuarios_eliminarUsuario;
@@ -82,9 +103,11 @@
             // 
             // groupBox3
             // 
+            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox3.Controls.Add(txtCedulaUsuario);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(txtTelefonoUsuario);
+            groupBox3.Controls.Add(btnCrear);
             groupBox3.Controls.Add(label3);
             groupBox3.Controls.Add(txtNombreUsuario);
             groupBox3.Controls.Add(txtCorreoUsuario);
@@ -99,11 +122,11 @@
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label4);
             groupBox3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox3.Location = new Point(40, 70);
+            groupBox3.Location = new Point(37, 95);
             groupBox3.Margin = new Padding(2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(2);
-            groupBox3.Size = new Size(707, 260);
+            groupBox3.Size = new Size(589, 264);
             groupBox3.TabIndex = 66;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del usuario";
@@ -137,6 +160,23 @@
             txtTelefonoUsuario.Name = "txtTelefonoUsuario";
             txtTelefonoUsuario.Size = new Size(179, 22);
             txtTelefonoUsuario.TabIndex = 100;
+            // 
+            // btnCrear
+            // 
+            btnCrear.BackColor = Color.FromArgb(0, 80, 200);
+            btnCrear.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCrear.ForeColor = Color.White;
+            btnCrear.Image = (Image)resources.GetObject("btnCrear.Image");
+            btnCrear.ImageAlign = ContentAlignment.MiddleRight;
+            btnCrear.Location = new Point(408, 200);
+            btnCrear.Margin = new Padding(2);
+            btnCrear.Name = "btnCrear";
+            btnCrear.Size = new Size(128, 39);
+            btnCrear.TabIndex = 84;
+            btnCrear.Text = "Guardar";
+            btnCrear.TextAlign = ContentAlignment.MiddleLeft;
+            btnCrear.UseVisualStyleBackColor = false;
+            btnCrear.Click += btnCrear_Click;
             // 
             // label3
             // 
@@ -285,32 +325,14 @@
             label4.TabIndex = 12;
             label4.Text = "Tipo usuario:";
             // 
-            // btnCrear
-            // 
-            btnCrear.BackColor = Color.FromArgb(0, 80, 200);
-            btnCrear.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCrear.ForeColor = Color.White;
-            btnCrear.Image = (Image)resources.GetObject("btnCrear.Image");
-            btnCrear.ImageAlign = ContentAlignment.MiddleRight;
-            btnCrear.Location = new Point(40, 354);
-            btnCrear.Margin = new Padding(2);
-            btnCrear.Name = "btnCrear";
-            btnCrear.Size = new Size(128, 39);
-            btnCrear.TabIndex = 84;
-            btnCrear.Text = "Guardar";
-            btnCrear.TextAlign = ContentAlignment.MiddleLeft;
-            btnCrear.UseVisualStyleBackColor = false;
-            btnCrear.Click += btnCrear_Click;
-            // 
             // ControlUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(791, 702);
+            ClientSize = new Size(1088, 745);
             Controls.Add(groupBox3);
             Controls.Add(label1);
             Controls.Add(dgListaUsuarios);
-            Controls.Add(btnCrear);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;

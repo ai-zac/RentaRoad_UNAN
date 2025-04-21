@@ -73,13 +73,15 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            new VentanaPrincipal().Show();
             this.Hide();
+            Form frmHome = new frm_Home();
+            frmHome.Closed += (s, args) => this.Close();
+            frmHome.Show();
         }
 
         private void btnRecuperarContraseña_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new RecuperarContraseña().ShowDialog();
+            new frm_RecuperarContraseña().ShowDialog();
         }
     }
 }

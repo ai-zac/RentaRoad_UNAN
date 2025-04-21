@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeListaAutos));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeListaAutos));
             ofdImagenAuto = new OpenFileDialog();
             label32 = new Label();
             pictureBox1 = new PictureBox();
             groupBox3 = new GroupBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
             comboBox7 = new ComboBox();
             comboBox3 = new ComboBox();
             label29 = new Label();
@@ -63,7 +62,6 @@
             label8 = new Label();
             label7 = new Label();
             dataGridView1 = new DataGridView();
-            label31 = new Label();
             Column2 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
@@ -74,6 +72,9 @@
             Column9 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             eliminar = new DataGridViewTextBoxColumn();
+            label31 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -107,9 +108,10 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(textBox1);
             groupBox3.Controls.Add(textBox3);
             groupBox3.Controls.Add(textBox2);
-            groupBox3.Controls.Add(comboBox1);
             groupBox3.Controls.Add(comboBox7);
             groupBox3.Controls.Add(comboBox3);
             groupBox3.Controls.Add(label29);
@@ -160,15 +162,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(152, 22);
             textBox2.TabIndex = 82;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.Location = new Point(124, 27);
-            comboBox1.Margin = new Padding(2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(152, 25);
-            comboBox1.TabIndex = 81;
             // 
             // comboBox7
             // 
@@ -474,17 +467,6 @@
             dataGridView1.Size = new Size(1066, 339);
             dataGridView1.TabIndex = 87;
             // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label31.Location = new Point(19, 33);
-            label31.Margin = new Padding(4, 0, 4, 0);
-            label31.Name = "label31";
-            label31.Size = new Size(106, 32);
-            label31.TabIndex = 92;
-            label31.Text = "Garaje";
-            // 
             // Column2
             // 
             Column2.HeaderText = "Placa";
@@ -550,7 +532,41 @@
             eliminar.HeaderText = "Eliminar";
             eliminar.Name = "eliminar";
             // 
-            // ControlAutos
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.Location = new Point(19, 33);
+            label31.Margin = new Padding(4, 0, 4, 0);
+            label31.Name = "label31";
+            label31.Size = new Size(106, 32);
+            label31.TabIndex = 92;
+            label31.Text = "Garaje";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(122, 30);
+            textBox1.Margin = new Padding(2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(152, 22);
+            textBox1.TabIndex = 84;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 80, 200);
+            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(280, 24);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 112;
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // frm_GarajeListaAutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -561,7 +577,7 @@
             Controls.Add(groupBox3);
             Controls.Add(dataGridView1);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "ControlAutos";
+            Name = "frm_GarajeListaAutos";
             Text = "Control del garaje";
             Load += ControlAutos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -580,7 +596,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label29;
@@ -616,5 +631,7 @@
         private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn eliminar;
+        private TextBox textBox1;
+        private Button button1;
     }
 }

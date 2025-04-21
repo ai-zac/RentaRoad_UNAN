@@ -45,8 +45,6 @@
             label27 = new Label();
             label28 = new Label();
             groupBox6 = new GroupBox();
-            button6 = new Button();
-            comboBox1 = new ComboBox();
             textBox5 = new TextBox();
             label5 = new Label();
             textBox3 = new TextBox();
@@ -65,20 +63,17 @@
             groupBox1 = new GroupBox();
             textBox2 = new TextBox();
             label1 = new Label();
-            comboBox3 = new ComboBox();
-            button2 = new Button();
             button5 = new Button();
             textBox1 = new TextBox();
-            label3 = new Label();
             label4 = new Label();
             dataGridView1 = new DataGridView();
-            tipoDaño = new DataGridViewTextBoxColumn();
-            descripcion = new DataGridViewTextBoxColumn();
-            costoDaño = new DataGridViewTextBoxColumn();
             textBox6 = new TextBox();
             label7 = new Label();
             label8 = new Label();
             panel1 = new Panel();
+            textBox7 = new TextBox();
+            descripcion = new DataGridViewTextBoxColumn();
+            costoDaño = new DataGridViewTextBoxColumn();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -235,8 +230,7 @@
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(button6);
-            groupBox6.Controls.Add(comboBox1);
+            groupBox6.Controls.Add(textBox7);
             groupBox6.Controls.Add(textBox5);
             groupBox6.Controls.Add(label5);
             groupBox6.Controls.Add(textBox3);
@@ -261,30 +255,6 @@
             groupBox6.TabIndex = 93;
             groupBox6.TabStop = false;
             groupBox6.Text = "Datos del Auto";
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(0, 80, 200);
-            button6.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleRight;
-            button6.Location = new Point(247, 32);
-            button6.Margin = new Padding(2);
-            button6.Name = "button6";
-            button6.Size = new Size(38, 35);
-            button6.TabIndex = 83;
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.Location = new Point(92, 36);
-            comboBox1.Margin = new Padding(2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(152, 25);
-            comboBox1.TabIndex = 69;
             // 
             // textBox5
             // 
@@ -460,26 +430,23 @@
             // 
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label4);
             groupBox1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(585, 15);
             groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(2);
-            groupBox1.Size = new Size(424, 200);
+            groupBox1.Size = new Size(424, 141);
             groupBox1.TabIndex = 94;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Estado del auto";
+            groupBox1.Text = "Daños del auto";
             // 
             // textBox2
             // 
             textBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(122, 80);
+            textBox2.Location = new Point(122, 34);
             textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(279, 22);
@@ -490,37 +457,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(15, 83);
+            label1.Location = new Point(15, 37);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(88, 16);
             label1.TabIndex = 67;
             label1.Text = "Descripción:";
-            // 
-            // comboBox3
-            // 
-            comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.Location = new Point(84, 46);
-            comboBox3.Margin = new Padding(2);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(118, 25);
-            comboBox3.TabIndex = 66;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(0, 80, 200);
-            button2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleRight;
-            button2.Location = new Point(156, 153);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(124, 35);
-            button2.TabIndex = 64;
-            button2.Text = "Cancelar";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -529,7 +471,7 @@
             button5.ForeColor = Color.White;
             button5.Image = (Image)resources.GetObject("button5.Image");
             button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(22, 153);
+            button5.Location = new Point(15, 93);
             button5.Margin = new Padding(2);
             button5.Name = "button5";
             button5.Size = new Size(115, 35);
@@ -541,30 +483,18 @@
             // textBox1
             // 
             textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(92, 111);
+            textBox1.Location = new Point(92, 65);
             textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(69, 22);
             textBox1.TabIndex = 24;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(15, 38);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 32);
-            label3.TabIndex = 14;
-            label3.Text = "Tipo de\r\ndaño:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(15, 114);
+            label4.Location = new Point(15, 68);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(47, 16);
@@ -583,7 +513,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { tipoDaño, descripcion, costoDaño });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { descripcion, costoDaño });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
@@ -592,7 +522,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(585, 221);
+            dataGridView1.Location = new Point(585, 175);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -604,26 +534,8 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(419, 207);
+            dataGridView1.Size = new Size(419, 253);
             dataGridView1.TabIndex = 69;
-            // 
-            // tipoDaño
-            // 
-            tipoDaño.HeaderText = "Tipo de daño";
-            tipoDaño.MinimumWidth = 6;
-            tipoDaño.Name = "tipoDaño";
-            // 
-            // descripcion
-            // 
-            descripcion.HeaderText = "Descripción";
-            descripcion.MinimumWidth = 6;
-            descripcion.Name = "descripcion";
-            // 
-            // costoDaño
-            // 
-            costoDaño.HeaderText = "Costo";
-            costoDaño.MinimumWidth = 6;
-            costoDaño.Name = "costoDaño";
             // 
             // textBox6
             // 
@@ -674,7 +586,28 @@
             panel1.Size = new Size(1023, 520);
             panel1.TabIndex = 97;
             // 
-            // EntregaAutoRentado
+            // textBox7
+            // 
+            textBox7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox7.Location = new Point(92, 35);
+            textBox7.Margin = new Padding(2);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(152, 22);
+            textBox7.TabIndex = 69;
+            // 
+            // descripcion
+            // 
+            descripcion.HeaderText = "Descripción";
+            descripcion.MinimumWidth = 6;
+            descripcion.Name = "descripcion";
+            // 
+            // costoDaño
+            // 
+            costoDaño.HeaderText = "Costo";
+            costoDaño.MinimumWidth = 6;
+            costoDaño.Name = "costoDaño";
+            // 
+            // frm_GarajeEntregaAutoRentado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -682,7 +615,7 @@
             Controls.Add(label8);
             Controls.Add(panel1);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "EntregaAutoRentado";
+            Name = "frm_GarajeEntregaAutoRentado";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Entrega de auto rentado";
             groupBox7.ResumeLayout(false);
@@ -724,20 +657,14 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDaño;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costoDaño;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox5;
@@ -745,8 +672,9 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button6;
         private Panel panel1;
+        private TextBox textBox7;
+        private DataGridViewTextBoxColumn descripcion;
+        private DataGridViewTextBoxColumn costoDaño;
     }
 }

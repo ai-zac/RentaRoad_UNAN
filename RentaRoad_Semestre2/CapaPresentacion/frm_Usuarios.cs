@@ -184,7 +184,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     return;
 
                 DataGridViewRow fila_actual = dgListaUsuarios.Rows[e.RowIndex];
-                Usuario usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == int.Parse(fila_actual.Cells["dgTipoUsuario"].Value.ToString()));
+                Usuario usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == int.Parse(fila_actual.Cells["dgIdUsuario"].Value.ToString()));
 ;
                 TipoUsuario tipoUsuario = _usuarioService.ObtenerTipo(fila_actual.Cells["dgTipoUsuario"].Value.ToString());
                 CargoEmpleado cargoEmpleado = _usuarioService.ObtenerCargo(fila_actual.Cells["dgCargoEmpleado"].Value.ToString());

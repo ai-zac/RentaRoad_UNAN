@@ -1,7 +1,7 @@
 ﻿// CapaDatos/Repositorios/UsuarioRepository.cs
 
 using Microsoft.EntityFrameworkCore;
-using RentaRoad_Semestre3.CapaPresentacion.Modelos; // Ajustar namespace
+using RentaRoad_Semestre3.CapaDatos.Modelos; // Ajustar namespace
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +16,6 @@ namespace RentaRoad_Semestre3.CapaDatos.Repositorios
         public UsuarioRepositorio(RentaRoadDbContext context)
         {
             _context = context;
-        }
-
-        public List<TipoUsuario> GetAllTipoUsuario()
-        {
-            return _context.TipoUsuarios.ToList();
         }
 
         public List<CargoEmpleado> GetAllCargoEmpleado()

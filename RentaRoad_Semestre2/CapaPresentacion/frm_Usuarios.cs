@@ -98,7 +98,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     FkCargoEmpleado = idCargoEmpleado,
                     CedulaUsuario = txtCedulaUsuario.Text,
                     NombreUsuario = txtNombreUsuario.Text,
-                    TelefonoUsuario = int.Parse(cmbTelefonoUsuario.SelectedItem.ToString()),
+                    TelefonoUsuario = int.Parse(txtTelefonoUsuario.Text),
                     Contraseña = txtContraseña.Text,
                     Correo = txtCorreoUsuario.Text,
                     FechaCreacion = DateTime.Now,
@@ -213,7 +213,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             cmbCargoEmpleado.SelectedItem = filaActual.Cells["dgCargoEmpleado"].Value.ToString();
             txtCedulaUsuario.Text = filaActual.Cells["dgCedulaUsuario"].Value.ToString();
             txtNombreUsuario.Text = filaActual.Cells["dgNombreUsuario"].Value.ToString();
-            cmbTelefonoUsuario.SelectedItem = filaActual.Cells["dgTelefonoUsuario"].Value.ToString();
+            txtTelefonoUsuario.Text = filaActual.Cells["dgTelefonoUsuario"].Value.ToString();
             txtContraseña.Text = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
             txtCorreoUsuario.Text = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
         }

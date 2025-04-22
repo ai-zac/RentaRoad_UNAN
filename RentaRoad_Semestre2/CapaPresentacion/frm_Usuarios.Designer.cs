@@ -35,7 +35,6 @@
             label1 = new Label();
             dgListaUsuarios = new DataGridView();
             groupBox3 = new GroupBox();
-            cmbTelefonoUsuario = new ComboBox();
             txtCedulaUsuario = new TextBox();
             label8 = new Label();
             btnCrear = new Button();
@@ -50,6 +49,7 @@
             txtContraseña = new TextBox();
             label5 = new Label();
             label4 = new Label();
+            txtTelefonoUsuario = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgListaUsuarios).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -101,7 +101,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(cmbTelefonoUsuario);
+            groupBox3.Controls.Add(txtTelefonoUsuario);
             groupBox3.Controls.Add(txtCedulaUsuario);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(btnCrear);
@@ -125,16 +125,6 @@
             groupBox3.TabIndex = 66;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del usuario";
-            // 
-            // cmbTelefonoUsuario
-            // 
-            cmbTelefonoUsuario.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbTelefonoUsuario.FormattingEnabled = true;
-            cmbTelefonoUsuario.Location = new Point(167, 95);
-            cmbTelefonoUsuario.Margin = new Padding(4, 3, 4, 3);
-            cmbTelefonoUsuario.Name = "cmbTelefonoUsuario";
-            cmbTelefonoUsuario.Size = new Size(179, 21);
-            cmbTelefonoUsuario.TabIndex = 103;
             // 
             // txtCedulaUsuario
             // 
@@ -293,6 +283,15 @@
             label4.TabIndex = 12;
             label4.Text = "Tipo usuario:";
             // 
+            // txtTelefonoUsuario
+            // 
+            txtTelefonoUsuario.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefonoUsuario.Location = new Point(167, 91);
+            txtTelefonoUsuario.Margin = new Padding(2);
+            txtTelefonoUsuario.Name = "txtTelefonoUsuario";
+            txtTelefonoUsuario.Size = new Size(179, 22);
+            txtTelefonoUsuario.TabIndex = 103;
+            // 
             // frm_Usuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -334,6 +333,6 @@
         private Label label3;
         private TextBox txtCedulaUsuario;
         private Label label8;
-        private ComboBox cmbTelefonoUsuario;
+        private TextBox txtTelefonoUsuario;
     }
 }

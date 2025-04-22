@@ -15,50 +15,45 @@ namespace RentaRoad_Semestre3.CapaPresentacion
     public partial class frm_Usuarios : Form
     {
         private UsuariosService _usuarioService;
-        private RentaRoadDbContext context = new RentaRoadDbContext();
-        private UsuarioRepositorio repo;
 
         public frm_Usuarios()
         {
             InitializeComponent();
-            // Configurar el cursor de la BD
-            repo = new UsuarioRepositorio(context);
-            _usuarioService = new UsuariosService(repo);
 
-            cmbCargoEmpleado.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cmbCargoEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            // Configurar el cursor de la BD
+            RentaRoadDbContext context = new RentaRoadDbContext();
+            UsuarioRepositorio repo = new UsuarioRepositorio(context);
+            _usuarioService = new UsuariosService(repo);
         }
 
         private void ControlUsuario_Load(object sender, EventArgs e)
         {
-            AutoCompleteStringCollection datosCmbCargo = new AutoCompleteStringCollection();
-            List<CargoEmpleado> cargosEmpleadosDB = _usuarioService.ObtenerCargosEmpleados();
-            foreach (CargoEmpleado cargo in cargosEmpleadosDB)
+            // Configuracion del autocompletado en el buscador de cargos de empleados
+            cmbCargoEmpleado.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cmbCargoEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            AutoCompleteStringCollection customSourceCmbCargo = new AutoCompleteStringCollection();
+            List<CargoEmpleado> cargosDB = _usuarioService.ObtenerCargosEmpleados();
+            foreach (CargoEmpleado cargoDB in cargosDB)
             {
-                datosCmbCargo.Add(cargo.NombreCargo);
-                cmbCargoEmpleado.Items.Add(cargo.NombreCargo);
+                customSourceCmbCargo.Add(cargoDB.NombreCargo);
+                cmbCargoEmpleado.Items.Add(cargoDB.NombreCargo);
             }
-            cmbCargoEmpleado.AutoCompleteCustomSource = datosCmbCargo;
+            cmbCargoEmpleado.AutoCompleteCustomSource = customSourceCmbCargo;
 
             actualizarDatagrid();
         }
 
         private void actualizarDatagrid()
         {
-            context = new RentaRoadDbContext();
-            repo = new UsuarioRepositorio(context);
-            _usuarioService = new UsuariosService(repo);
-
+            /* Actualizar la lista de usuarios en el datagrid */ 
             dgListaUsuarios.Rows.Clear();
-            var lista = _usuarioService.ObtenerTodos();
-            foreach (var usuario in lista)
+            List<Usuario> lista = _usuarioService.ObtenerTodos();
+            foreach (Usuario usuario in lista)
             {
-                string nombreCargo = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == usuario.IdUsuario).IdCargoEmpleadoNavigation.NombreCargo;
-                var fila = new DataGridViewRow();
                 dgListaUsuarios.Rows.Add(
                     usuario.IdUsuario,
                     usuario.EsAdministrador,
-                    nombreCargo,
+                    usuario.IdCargoEmpleadoNavigation.NombreCargo,
                     usuario.CedulaUsuario,
                     usuario.NombreUsuario,
                     usuario.TelefonoUsuario,
@@ -70,11 +65,12 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            var idCargoEmpleado = _usuarioService.ObtenerCargo(cmbCargoEmpleado.SelectedItem.ToString()).IdCargoEmpleado;
+            /* Evento cuando se crea un usuario desde los controles */
 
+            int idCargoEmpleado = _usuarioService.ObtenerCargo(cmbCargoEmpleado.SelectedItem.ToString()).IdCargoEmpleado;
             try
             {
-                var usua = new Usuario
+                Usuario usua = new Usuario
                 {
                     IdCargoEmpleado = idCargoEmpleado,
                     CedulaUsuario = txtCedulaUsuario.Text,
@@ -84,14 +80,15 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     CorreoUsuario = txtCorreoUsuario.Text,
                     FechaCreacion = DateTime.Now,
                     FechaModificacion = DateTime.Now,
-                    EstaHabilitado = true,
+                    EstaHabilitado = chbEstaHabilitado.Checked,
                     EsAdministrador = chbEsAdministrador.Checked,
                 };
                 MessageBox.Show("Cargar usuario.");
 
                 _usuarioService.CrearUsuario(usua);
                 MessageBox.Show("Usuario agregado.");
-                actualizarDatagrid(); // refresca la tabla
+
+                actualizarDatagrid(); 
             }
             catch (Exception ex)
             {
@@ -99,9 +96,10 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             }
         }
 
-        // Editando los datos de usuarios directamente desde el datagrid en modo edicion
         private void dgListaUsuarios_actualizarUsuario(object sender, DataGridViewCellEventArgs e)
         {
+            /* Editando los datos de un usuario directamente desde el datagrid en modo edicion */
+
             DataGridViewRow filaActual = dgListaUsuarios.Rows[e.RowIndex];
 
             int idUsuarioActual = (int)filaActual.Cells["dgIdUsuario"].Value;
@@ -113,7 +111,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            // Buscar si existe el cargo de empleado editado en el datagrid
+            // Validar la existencia del cargo escrito por el usuario en el datagrid
             string? cargoEmpleadoDG = filaActual.Cells["dgCargoEmpleado"].Value.ToString();
             CargoEmpleado? cargoNuevo = _usuarioService.ObtenerCargosEmpleados().FirstOrDefault(c => c.NombreCargo == cargoEmpleadoDG);
             if (cargoNuevo == null)
@@ -122,8 +120,9 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-
             usuaExistente.NombreUsuario = filaActual.Cells["dgNombreUsuario"].Value.ToString();
+            usuaExistente.IdCargoEmpleado = cargoNuevo.IdCargoEmpleado;
+            usuaExistente.IdCargoEmpleadoNavigation = cargoNuevo;
             usuaExistente.TelefonoUsuario = (int)filaActual.Cells["dgTelefonoUsuario"].Value;
             usuaExistente.ContraseñaUsuario = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
             usuaExistente.CorreoUsuario = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
@@ -133,8 +132,8 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             try
             {
                 _usuarioService.ActualizarUsuario(usuaExistente);
-                _usuarioService.ActualizarCargoEmpleado(usuaExistente, cargoNuevo);
                 MessageBox.Show("Usuario actualizado.");
+
                 actualizarDatagrid();
             }
             catch (Exception ex)
@@ -144,10 +143,11 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             }
         }
 
-        // Eliminar un usuario dando click a la ultima celda de la fila
         private void dgListaUsuarios_eliminarUsuario(object sender, DataGridViewCellEventArgs e)
         {
-            // La ultima fila es para la funcionalidad de eliminar
+            /* Eliminar un usuario dando click a la ultima celda de la fila */
+
+            // La ultima columna es para la funcionalidad de eliminar el usuario de x fila
             if (e.ColumnIndex == dgListaUsuarios.ColumnCount - 1)
             {
                 DialogResult respuesta = MessageBox.Show("¿Seguro de eliminar?", "Confirmar",
@@ -174,6 +174,8 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void dgListaUsuarios_seleccionarUsuario(object sender, DataGridViewCellEventArgs e)
         {
+            /* Poblar los controles con los datos de la fila que se le dio click en el datagrid */
+
             DataGridViewRow filaActual = dgListaUsuarios.Rows[e.RowIndex];
 
             int idUsuarioActual = (int)filaActual.Cells["dgIdUsuario"].Value;

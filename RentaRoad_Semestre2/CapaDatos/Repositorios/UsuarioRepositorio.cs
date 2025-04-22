@@ -20,19 +20,16 @@ namespace RentaRoad_Semestre3.CapaDatos.Repositorios
 
         public List<CargoEmpleado> GetAllCargoEmpleado()
         {
-            _context.ChangeTracker.DetectChanges();
             return _context.CargoEmpleados.ToList();
         }
 
         public List<Usuario> GetAllUsuarios()
         {
-            _context.ChangeTracker.DetectChanges();
             return _context.Usuarios.ToList();
         }
 
         public Usuario? GetById(int Id)
         {
-            _context.ChangeTracker.DetectChanges();
             return _context.Usuarios.Find(Id);
         }
 

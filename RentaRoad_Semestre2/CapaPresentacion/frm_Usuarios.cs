@@ -44,11 +44,14 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void actualizarDatagrid()
         {
+            var context = new RentaRoadDbContext();
+            var repo = new UsuarioRepositorio(context);
+            _usuarioService = new UsuariosService(repo);
+
             dgListaUsuarios.Rows.Clear();
             var lista = _usuarioService.ObtenerTodos();
-            foreach (var usuarioEnLista in lista)
+            foreach (var usuario in lista)
             {
-                Usuario usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == usuario.IdUsuario);
                 var fila = new DataGridViewRow();
                 dgListaUsuarios.Rows.Add(
                     usuario.IdUsuario,

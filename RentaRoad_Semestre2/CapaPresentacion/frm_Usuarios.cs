@@ -184,13 +184,14 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     return;
 
                 DataGridViewRow fila_actual = dgListaUsuarios.Rows[e.RowIndex];
-                int IdUsuario = (int)fila_actual.Cells["dgIdUsuario"].Value;
-                int FkIdTipoUsuario = (int)fila_actual.Cells["dgFkIdTipoUsuario"].Value;
-                int FkIdCargoEmpleado = (int)fila_actual.Cells["dgFkIdCargoEmpleado"].Value;
+                Usuario usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == int.Parse(fila_actual.Cells["dgTipoUsuario"].Value.ToString()));
+;
+                TipoUsuario tipoUsuario = _usuarioService.ObtenerTipo(fila_actual.Cells["dgTipoUsuario"].Value.ToString());
+                CargoEmpleado cargoEmpleado = _usuarioService.ObtenerCargo(fila_actual.Cells["dgCargoEmpleado"].Value.ToString());
 
                 try
                 {
-                    _usuarioService.EliminarUsuario(FkIdTipoUsuario, IdUsuario, FkIdCargoEmpleado);
+                    _usuarioService.EliminarUsuario(tipoUsuario.IdTipoUsuario, usuario.IdUsuario, cargoEmpleado.IdCargoEmpleado);
                     MessageBox.Show("Usuario eliminado.");
                     actualizarDatagrid();
                 }

@@ -41,14 +41,12 @@ namespace RentaRoad_Semestre3.CapaDatos.Repositorios
 
         public void Update(Usuario usua)
         {
-            _context.ChangeTracker.DetectChanges();
             _context.Usuarios.Update(usua);
             _context.SaveChanges();
         }
 
         public void ChangeCargoEmpleado(Usuario usua,CargoEmpleado oldCargo, CargoEmpleado newCargo)
         {
-            _context.ChangeTracker.DetectChanges();
             _context.Database.ExecuteSql($"UPDATE [Usuario] SET [Id_Cargo_empleado] = {newCargo.IdCargoEmpleado} WHERE [Id_Usuario] = {usua.IdUsuario}");
             _context.SaveChanges();
         }

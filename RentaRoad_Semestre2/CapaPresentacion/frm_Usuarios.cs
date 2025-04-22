@@ -15,13 +15,14 @@ namespace RentaRoad_Semestre3.CapaPresentacion
     public partial class frm_Usuarios : Form
     {
         private UsuariosService _usuarioService;
+        private RentaRoadDbContext context = new RentaRoadDbContext();
+        private UsuarioRepositorio repo;
 
         public frm_Usuarios()
         {
             InitializeComponent();
             // Configurar el cursor de la BD
-            var context = new RentaRoadDbContext();
-            var repo = new UsuarioRepositorio(context);
+            repo = new UsuarioRepositorio(context);
             _usuarioService = new UsuariosService(repo);
 
             cmbCargoEmpleado.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -44,19 +45,20 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void actualizarDatagrid()
         {
-            var context = new RentaRoadDbContext();
-            var repo = new UsuarioRepositorio(context);
+            context = new RentaRoadDbContext();
+            repo = new UsuarioRepositorio(context);
             _usuarioService = new UsuariosService(repo);
 
             dgListaUsuarios.Rows.Clear();
             var lista = _usuarioService.ObtenerTodos();
             foreach (var usuario in lista)
             {
+                string nombreCargo = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == usuario.IdUsuario).IdCargoEmpleadoNavigation.NombreCargo;
                 var fila = new DataGridViewRow();
                 dgListaUsuarios.Rows.Add(
                     usuario.IdUsuario,
                     usuario.EsAdministrador,
-                    usuario.IdCargoEmpleadoNavigation.NombreCargo,
+                    nombreCargo,
                     usuario.CedulaUsuario,
                     usuario.NombreUsuario,
                     usuario.TelefonoUsuario,

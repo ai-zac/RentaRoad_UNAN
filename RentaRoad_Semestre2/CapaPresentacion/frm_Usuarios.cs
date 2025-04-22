@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
-using RentaRoad_Semestre3.CapaPresentacion.Modelos;
+using RentaRoad_Semestre3.CapaDatos.Modelos;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
@@ -19,97 +19,76 @@ namespace RentaRoad_Semestre3.CapaPresentacion
         public frm_Usuarios()
         {
             InitializeComponent();
-            // Configurar el cursor de la BD
-            var context = new RentaRoadDbContext();
-            var repo = new UsuarioRepositorio(context);
-            _usuarioService = new UsuariosService(repo);
 
-            cmbCargoEmpleado.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cmbCargoEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbTipoUsuario.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            cmbTipoUsuario.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            // Configurar el cursor de la BD
+            RentaRoadDbContext context = new RentaRoadDbContext();
+            UsuarioRepositorio repo = new UsuarioRepositorio(context);
+            _usuarioService = new UsuariosService(repo);
         }
 
         private void ControlUsuario_Load(object sender, EventArgs e)
         {
-            dgListaUsuarios.Columns.Add("dgIdUsuario", "ID");
-            dgListaUsuarios.Columns.Add("dgTipoUsuario", "Tipo Usuario");
-            dgListaUsuarios.Columns.Add("dgCargoEmpleado", "Cargo Empleado");
-            dgListaUsuarios.Columns.Add("dgCedulaUsuario", "Cédula");
-            dgListaUsuarios.Columns.Add("dgNombreUsuario", "Nombre usuario");
-            dgListaUsuarios.Columns.Add("dgTelefonoUsuario", "Teléfono");
-            dgListaUsuarios.Columns.Add("dgCorreoUsuario", "Correo Electrónico");
-            dgListaUsuarios.Columns.Add("dgContraseñaUsuario", "Contraseña");
-            dgListaUsuarios.Columns.Add("dgEstadoUsuario", "Estado");
-            dgListaUsuarios.Columns.Add("dgEliminar", "Eliminar");
-
-            AutoCompleteStringCollection datosCmbCargo = new AutoCompleteStringCollection();
-            List<CargoEmpleado> cargosEmpleadosDB = _usuarioService.ObtenerCargosEmpleados();
-            foreach (CargoEmpleado cargo in cargosEmpleadosDB)
+            // Configuracion del autocompletado en el buscador de cargos de empleados
+            cmbCargoEmpleado.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cmbCargoEmpleado.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            AutoCompleteStringCollection customSourceCmbCargo = new AutoCompleteStringCollection();
+            List<CargoEmpleado> cargosDB = _usuarioService.ObtenerCargosEmpleados();
+            foreach (CargoEmpleado cargoDB in cargosDB)
             {
-                datosCmbCargo.Add(cargo.Cargo);
-                cmbCargoEmpleado.Items.Add(cargo.Cargo);
+                customSourceCmbCargo.Add(cargoDB.NombreCargo);
+                cmbCargoEmpleado.Items.Add(cargoDB.NombreCargo);
             }
-            cmbCargoEmpleado.AutoCompleteCustomSource = datosCmbCargo;
-
-            AutoCompleteStringCollection datosCmbTipos = new AutoCompleteStringCollection();
-            List<TipoUsuario> tiposEmpleadosDB = _usuarioService.ObtenerTiposUsuarios();
-            foreach (TipoUsuario tipo in tiposEmpleadosDB)
-            {
-                datosCmbTipos.Add(tipo.Tipo);
-                cmbTipoUsuario.Items.Add(tipo.Tipo);
-            }
-            cmbTipoUsuario.AutoCompleteCustomSource = datosCmbTipos;
-
+            cmbCargoEmpleado.AutoCompleteCustomSource = customSourceCmbCargo;
 
             actualizarDatagrid();
         }
- 
+
         private void actualizarDatagrid()
         {
+            /* Actualizar la lista de usuarios en el datagrid */ 
             dgListaUsuarios.Rows.Clear();
-            var lista = _usuarioService.ObtenerTodos();
-            foreach (var usuario in lista)
+            List<Usuario> lista = _usuarioService.ObtenerTodos();
+            foreach (Usuario usuario in lista)
             {
-                var fila = new DataGridViewRow();
                 dgListaUsuarios.Rows.Add(
                     usuario.IdUsuario,
-                    usuario.FkTipoUsuarioNavigation.Tipo,
-                    usuario.FkCargoEmpleadoNavigation.Cargo,
+                    usuario.EsAdministrador,
+                    usuario.IdCargoEmpleadoNavigation.NombreCargo,
                     usuario.CedulaUsuario,
                     usuario.NombreUsuario,
                     usuario.TelefonoUsuario,
-                    usuario.Correo,
-                    usuario.Contraseña,
-                    usuario.Estado);
+                    usuario.CorreoUsuario,
+                    usuario.ContraseñaUsuario,
+                    usuario.EstaHabilitado);
             }
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            var idTipoUsuario = _usuarioService.ObtenerTipo(cmbTipoUsuario.SelectedItem.ToString()).IdTipoUsuario;
-            var idCargoEmpleado = _usuarioService.ObtenerCargo(cmbCargoEmpleado.SelectedItem.ToString()).IdCargoEmpleado;
+            /* Evento cuando se crea un usuario desde los controles */
 
+            int idCargoEmpleado = _usuarioService.ObtenerCargo(cmbCargoEmpleado.SelectedItem.ToString()).IdCargoEmpleado;
             try
             {
-                var usua = new Usuario
+                Usuario usua = new Usuario
                 {
-                    FkTipoUsuario = idTipoUsuario,
-                    FkCargoEmpleado = idCargoEmpleado,
+                    IdCargoEmpleado = idCargoEmpleado,
                     CedulaUsuario = txtCedulaUsuario.Text,
                     NombreUsuario = txtNombreUsuario.Text,
                     TelefonoUsuario = int.Parse(txtTelefonoUsuario.Text),
-                    Contraseña = txtContraseña.Text,
-                    Correo = txtCorreoUsuario.Text,
+                    ContraseñaUsuario = txtContraseña.Text,
+                    CorreoUsuario = txtCorreoUsuario.Text,
                     FechaCreacion = DateTime.Now,
                     FechaModificacion = DateTime.Now,
-                    Estado = "Habilitado",
+                    EstaHabilitado = chbEstaHabilitado.Checked,
+                    EsAdministrador = chbEsAdministrador.Checked,
                 };
                 MessageBox.Show("Cargar usuario.");
 
                 _usuarioService.CrearUsuario(usua);
                 MessageBox.Show("Usuario agregado.");
-                actualizarDatagrid(); // refresca la tabla
+
+                actualizarDatagrid(); 
             }
             catch (Exception ex)
             {
@@ -117,9 +96,10 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             }
         }
 
-        // Editando los datos de usuarios directamente desde el datagrid en modo edicion
         private void dgListaUsuarios_actualizarUsuario(object sender, DataGridViewCellEventArgs e)
         {
+            /* Editando los datos de un usuario directamente desde el datagrid en modo edicion */
+
             DataGridViewRow filaActual = dgListaUsuarios.Rows[e.RowIndex];
 
             int idUsuarioActual = (int)filaActual.Cells["dgIdUsuario"].Value;
@@ -131,37 +111,29 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            // Buscar si existe el cargo de empleado editado en el datagrid
+            // Validar la existencia del cargo escrito por el usuario en el datagrid
             string? cargoEmpleadoDG = filaActual.Cells["dgCargoEmpleado"].Value.ToString();
-            CargoEmpleado? cargoNuevo = _usuarioService.ObtenerCargosEmpleados().FirstOrDefault(c => c.Cargo == cargoEmpleadoDG);
+            CargoEmpleado? cargoNuevo = _usuarioService.ObtenerCargosEmpleados().FirstOrDefault(c => c.NombreCargo == cargoEmpleadoDG);
             if (cargoNuevo == null)
             {
                 MessageBox.Show("El cargo de empleado especificado no existe");
                 return;
             }
 
-            // Buscar si existe el tipo de usuario editado en el datagrid
-            string? tipoUsuarioDG = filaActual.Cells["dgTipoUsuario"].Value.ToString();
-            TipoUsuario? tipoNuevo = _usuarioService.ObtenerTiposUsuarios().FirstOrDefault(t => t.Tipo == tipoUsuarioDG);
-            if (tipoNuevo == null)
-            {
-                MessageBox.Show("El tipo de usuario especificado no existe");
-                return;
-            }
-
             usuaExistente.NombreUsuario = filaActual.Cells["dgNombreUsuario"].Value.ToString();
+            usuaExistente.IdCargoEmpleado = cargoNuevo.IdCargoEmpleado;
+            usuaExistente.IdCargoEmpleadoNavigation = cargoNuevo;
             usuaExistente.TelefonoUsuario = (int)filaActual.Cells["dgTelefonoUsuario"].Value;
-            usuaExistente.Contraseña = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
-            usuaExistente.Correo = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
+            usuaExistente.ContraseñaUsuario = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
+            usuaExistente.CorreoUsuario = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
             usuaExistente.FechaModificacion = DateTime.Now;
-            usuaExistente.Estado = filaActual.Cells["dgEstadoUsuario"].Value.ToString();
+            usuaExistente.EstaHabilitado = bool.Parse(filaActual.Cells["dgEstadoUsuario"].Value.ToString());
 
             try
             {
                 _usuarioService.ActualizarUsuario(usuaExistente);
-                _usuarioService.ActualizarCargoEmpleado(usuaExistente, cargoNuevo);
-                _usuarioService.ActualizarTipoUsuario(usuaExistente, tipoNuevo);
                 MessageBox.Show("Usuario actualizado.");
+
                 actualizarDatagrid();
             }
             catch (Exception ex)
@@ -171,10 +143,11 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             }
         }
 
-        // Eliminar un usuario dando click a la ultima celda de la fila
         private void dgListaUsuarios_eliminarUsuario(object sender, DataGridViewCellEventArgs e)
         {
-            // La ultima fila es para la funcionalidad de eliminar
+            /* Eliminar un usuario dando click a la ultima celda de la fila */
+
+            // La ultima columna es para la funcionalidad de eliminar el usuario de x fila
             if (e.ColumnIndex == dgListaUsuarios.ColumnCount - 1)
             {
                 DialogResult respuesta = MessageBox.Show("¿Seguro de eliminar?", "Confirmar",
@@ -184,14 +157,11 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     return;
 
                 DataGridViewRow fila_actual = dgListaUsuarios.Rows[e.RowIndex];
-                Usuario usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == int.Parse(fila_actual.Cells["dgIdUsuario"].Value.ToString()));
-;
-                TipoUsuario tipoUsuario = _usuarioService.ObtenerTipo(fila_actual.Cells["dgTipoUsuario"].Value.ToString());
-                CargoEmpleado cargoEmpleado = _usuarioService.ObtenerCargo(fila_actual.Cells["dgCargoEmpleado"].Value.ToString());
+                int IdUsuario = (int)fila_actual.Cells["dgIdUsuario"].Value;
 
                 try
                 {
-                    _usuarioService.EliminarUsuario(tipoUsuario.IdTipoUsuario, usuario.IdUsuario, cargoEmpleado.IdCargoEmpleado);
+                    _usuarioService.EliminarUsuario(IdUsuario);
                     MessageBox.Show("Usuario eliminado.");
                     actualizarDatagrid();
                 }
@@ -204,19 +174,22 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void dgListaUsuarios_seleccionarUsuario(object sender, DataGridViewCellEventArgs e)
         {
+            /* Poblar los controles con los datos de la fila que se le dio click en el datagrid */
+
             DataGridViewRow filaActual = dgListaUsuarios.Rows[e.RowIndex];
 
             int idUsuarioActual = (int)filaActual.Cells["dgIdUsuario"].Value;
             Usuario? usuaExistente = _usuarioService.ObtenerTodos()
                                     .FirstOrDefault(p => p.IdUsuario == idUsuarioActual);
 
-            cmbTipoUsuario.SelectedItem = filaActual.Cells["dgTipoUsuario"].Value.ToString();
             cmbCargoEmpleado.SelectedItem = filaActual.Cells["dgCargoEmpleado"].Value.ToString();
             txtCedulaUsuario.Text = filaActual.Cells["dgCedulaUsuario"].Value.ToString();
             txtNombreUsuario.Text = filaActual.Cells["dgNombreUsuario"].Value.ToString();
             txtTelefonoUsuario.Text = filaActual.Cells["dgTelefonoUsuario"].Value.ToString();
             txtContraseña.Text = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
             txtCorreoUsuario.Text = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
+            chbEsAdministrador.Checked = bool.Parse(filaActual.Cells["dgTipoUsuario"].Value.ToString());
+            chbEstaHabilitado.Checked = bool.Parse(filaActual.Cells["dgEstadoUsuario"].Value.ToString());
         }
     }
 }

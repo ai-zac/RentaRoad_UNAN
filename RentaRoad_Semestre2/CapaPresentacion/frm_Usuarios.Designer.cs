@@ -34,7 +34,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Usuarios));
             label1 = new Label();
             dgListaUsuarios = new DataGridView();
+            dgIdUsuario = new DataGridViewTextBoxColumn();
+            dgTipoUsuario = new DataGridViewTextBoxColumn();
+            dgCargoEmpleado = new DataGridViewTextBoxColumn();
+            dgCedulaUsuario = new DataGridViewTextBoxColumn();
+            dgNombreUsuario = new DataGridViewTextBoxColumn();
+            dgTelefonoUsuario = new DataGridViewTextBoxColumn();
+            dgCorreoUsuario = new DataGridViewTextBoxColumn();
+            dgContraseñaUsuario = new DataGridViewTextBoxColumn();
+            dgEstadoUsuario = new DataGridViewTextBoxColumn();
+            dgEliminar = new DataGridViewTextBoxColumn();
             groupBox3 = new GroupBox();
+            txtTelefonoUsuario = new TextBox();
+            groupBox2 = new GroupBox();
+            label4 = new Label();
+            groupBox1 = new GroupBox();
+            label9 = new Label();
             txtCedulaUsuario = new TextBox();
             label8 = new Label();
             btnCrear = new Button();
@@ -45,13 +60,14 @@
             cmbCargoEmpleado = new ComboBox();
             label7 = new Label();
             label2 = new Label();
-            cmbTipoUsuario = new ComboBox();
             txtContraseña = new TextBox();
             label5 = new Label();
-            label4 = new Label();
-            txtTelefonoUsuario = new TextBox();
+            chbEsAdministrador = new CheckBox();
+            chbEstaHabilitado = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dgListaUsuarios).BeginInit();
             groupBox3.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -78,6 +94,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgListaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgListaUsuarios.Columns.AddRange(new DataGridViewColumn[] { dgIdUsuario, dgTipoUsuario, dgCargoEmpleado, dgCedulaUsuario, dgNombreUsuario, dgTelefonoUsuario, dgCorreoUsuario, dgContraseñaUsuario, dgEstadoUsuario, dgEliminar });
             dgListaUsuarios.Location = new Point(11, 406);
             dgListaUsuarios.Margin = new Padding(2);
             dgListaUsuarios.Name = "dgListaUsuarios";
@@ -99,9 +116,61 @@
             dgListaUsuarios.CellDoubleClick += dgListaUsuarios_eliminarUsuario;
             dgListaUsuarios.CellEndEdit += dgListaUsuarios_actualizarUsuario;
             // 
+            // dgIdUsuario
+            // 
+            dgIdUsuario.HeaderText = "ID";
+            dgIdUsuario.Name = "dgIdUsuario";
+            // 
+            // dgTipoUsuario
+            // 
+            dgTipoUsuario.HeaderText = "Es Administrador";
+            dgTipoUsuario.Name = "dgTipoUsuario";
+            // 
+            // dgCargoEmpleado
+            // 
+            dgCargoEmpleado.HeaderText = "Cargo Empleado";
+            dgCargoEmpleado.Name = "dgCargoEmpleado";
+            // 
+            // dgCedulaUsuario
+            // 
+            dgCedulaUsuario.HeaderText = "Cedula Usuario";
+            dgCedulaUsuario.Name = "dgCedulaUsuario";
+            // 
+            // dgNombreUsuario
+            // 
+            dgNombreUsuario.HeaderText = "Nombre Usuario";
+            dgNombreUsuario.Name = "dgNombreUsuario";
+            // 
+            // dgTelefonoUsuario
+            // 
+            dgTelefonoUsuario.HeaderText = "Telefono Usuario";
+            dgTelefonoUsuario.Name = "dgTelefonoUsuario";
+            // 
+            // dgCorreoUsuario
+            // 
+            dgCorreoUsuario.HeaderText = "Correo electrónico";
+            dgCorreoUsuario.Name = "dgCorreoUsuario";
+            // 
+            // dgContraseñaUsuario
+            // 
+            dgContraseñaUsuario.HeaderText = "Contraseña";
+            dgContraseñaUsuario.Name = "dgContraseñaUsuario";
+            // 
+            // dgEstadoUsuario
+            // 
+            dgEstadoUsuario.HeaderText = "Estado";
+            dgEstadoUsuario.Name = "dgEstadoUsuario";
+            // 
+            // dgEliminar
+            // 
+            dgEliminar.HeaderText = "Eliminar";
+            dgEliminar.Name = "dgEliminar";
+            // 
             // groupBox3
             // 
             groupBox3.Controls.Add(txtTelefonoUsuario);
+            groupBox3.Controls.Add(groupBox2);
+            groupBox3.Controls.Add(groupBox1);
             groupBox3.Controls.Add(txtCedulaUsuario);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(btnCrear);
@@ -112,19 +181,70 @@
             groupBox3.Controls.Add(cmbCargoEmpleado);
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(label2);
-            groupBox3.Controls.Add(cmbTipoUsuario);
             groupBox3.Controls.Add(txtContraseña);
             groupBox3.Controls.Add(label5);
-            groupBox3.Controls.Add(label4);
             groupBox3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox3.Location = new Point(37, 95);
             groupBox3.Margin = new Padding(2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(2);
-            groupBox3.Size = new Size(589, 264);
+            groupBox3.Size = new Size(589, 295);
             groupBox3.TabIndex = 66;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del usuario";
+            // 
+            // txtTelefonoUsuario
+            // 
+            txtTelefonoUsuario.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefonoUsuario.Location = new Point(167, 97);
+            txtTelefonoUsuario.Margin = new Padding(2);
+            txtTelefonoUsuario.Name = "txtTelefonoUsuario";
+            txtTelefonoUsuario.Size = new Size(179, 22);
+            txtTelefonoUsuario.TabIndex = 110;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(chbEstaHabilitado);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Location = new Point(16, 245);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 42);
+            groupBox2.TabIndex = 109;
+            groupBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(5, 23);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(109, 16);
+            label4.TabIndex = 105;
+            label4.Text = "Esta habilitado:";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(chbEsAdministrador);
+            groupBox1.Controls.Add(label9);
+            groupBox1.Location = new Point(16, 197);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(200, 42);
+            groupBox1.TabIndex = 108;
+            groupBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(2, 19);
+            label9.Margin = new Padding(2, 0, 2, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(120, 16);
+            label9.TabIndex = 107;
+            label9.Text = "Es administrador:";
             // 
             // txtCedulaUsuario
             // 
@@ -210,7 +330,7 @@
             // 
             cmbCargoEmpleado.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbCargoEmpleado.FormattingEnabled = true;
-            cmbCargoEmpleado.Location = new Point(167, 188);
+            cmbCargoEmpleado.Location = new Point(167, 177);
             cmbCargoEmpleado.Margin = new Padding(4, 3, 4, 3);
             cmbCargoEmpleado.Name = "cmbCargoEmpleado";
             cmbCargoEmpleado.Size = new Size(152, 21);
@@ -221,7 +341,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(15, 194);
+            label7.Location = new Point(15, 183);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(123, 16);
@@ -240,20 +360,10 @@
             label2.TabIndex = 82;
             label2.Text = "Nombre usuario:";
             // 
-            // cmbTipoUsuario
-            // 
-            cmbTipoUsuario.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbTipoUsuario.FormattingEnabled = true;
-            cmbTipoUsuario.Location = new Point(167, 155);
-            cmbTipoUsuario.Margin = new Padding(4, 3, 4, 3);
-            cmbTipoUsuario.Name = "cmbTipoUsuario";
-            cmbTipoUsuario.Size = new Size(152, 21);
-            cmbTipoUsuario.TabIndex = 70;
-            // 
             // txtContraseña
             // 
             txtContraseña.Font = new Font("Microsoft Sans Serif", 8.25F);
-            txtContraseña.Location = new Point(167, 219);
+            txtContraseña.Location = new Point(168, 152);
             txtContraseña.Margin = new Padding(2);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new Size(151, 20);
@@ -264,24 +374,30 @@
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(16, 223);
+            label5.Location = new Point(17, 156);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(86, 16);
             label5.TabIndex = 64;
             label5.Text = "Contraseña:";
             // 
-            // label4
+            // chbEsAdministrador
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(15, 161);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(90, 16);
-            label4.TabIndex = 12;
-            label4.Text = "Tipo usuario:";
+            chbEsAdministrador.AutoSize = true;
+            chbEsAdministrador.Location = new Point(151, 19);
+            chbEsAdministrador.Name = "chbEsAdministrador";
+            chbEsAdministrador.Size = new Size(15, 14);
+            chbEsAdministrador.TabIndex = 108;
+            chbEsAdministrador.UseVisualStyleBackColor = true;
+            // 
+            // chbEstaHabilitado
+            // 
+            chbEstaHabilitado.AutoSize = true;
+            chbEstaHabilitado.Location = new Point(151, 22);
+            chbEstaHabilitado.Name = "chbEstaHabilitado";
+            chbEstaHabilitado.Size = new Size(15, 14);
+            chbEstaHabilitado.TabIndex = 109;
+            chbEstaHabilitado.UseVisualStyleBackColor = true;
             // 
             // txtTelefonoUsuario
             // 
@@ -309,6 +425,10 @@
             ((System.ComponentModel.ISupportInitialize)dgListaUsuarios).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
 
@@ -321,8 +441,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.ComboBox cmbCargoEmpleado;
@@ -333,6 +451,22 @@
         private Label label3;
         private TextBox txtCedulaUsuario;
         private Label label8;
+        private Label label9;
+        private Label label4;
+        private DataGridViewTextBoxColumn dgIdUsuario;
+        private DataGridViewTextBoxColumn dgTipoUsuario;
+        private DataGridViewTextBoxColumn dgCargoEmpleado;
+        private DataGridViewTextBoxColumn dgCedulaUsuario;
+        private DataGridViewTextBoxColumn dgNombreUsuario;
+        private DataGridViewTextBoxColumn dgTelefonoUsuario;
+        private DataGridViewTextBoxColumn dgCorreoUsuario;
+        private DataGridViewTextBoxColumn dgContraseñaUsuario;
+        private DataGridViewTextBoxColumn dgEstadoUsuario;
+        private DataGridViewTextBoxColumn dgEliminar;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
         private TextBox txtTelefonoUsuario;
+        private CheckBox chbEsAdministrador;
+        private CheckBox chbEstaHabilitado;
     }
 }

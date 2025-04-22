@@ -67,12 +67,6 @@ namespace RentaRoad_Semestre3
             AbrirFormHija(new frm_Renta());
         }
 
-        private void optionRegistroPlaca_Click(object sender, EventArgs e)
-        {
-            indicarItemMenuSeleccionado(sender);
-            AbrirFormHija(new RegistroPlacaAuto());
-        }
-
         private void optionAdquisicion_Click(object sender, EventArgs e)
         {
             indicarItemMenuSeleccionado(sender);

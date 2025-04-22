@@ -13,112 +13,11 @@ using RentaRoad_Semestre3.CapaPresentacion.Subformularios;
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
     public partial class frm_GarajeListaAutos : Form
-   {
+    {
         public frm_GarajeListaAutos()
         {
             InitializeComponent();
         }
-
-        private void BtnEditar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PbLupa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            new ControlMarcas().ShowDialog();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            new ControlModelos().ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            new ControlColores().ShowDialog();
-        }
-
-        private void tbEntradaGaraje_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox18_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ofdImagenAuto.ShowDialog();
@@ -129,15 +28,19 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnNuevoModelo_Click(object sender, EventArgs e)
         {
-
+            new frm_NuevoModelo().ShowDialog();
         }
 
-        private void label32_Click(object sender, EventArgs e)
+        private void btnNuevaMarca_Click(object sender, EventArgs e)
         {
+            new frm_NuevaMarca().ShowDialog();
+        }
 
-
+        private void btnNuevoColor_Click(object sender, EventArgs e)
+        {
+            new frm_NuevoColor().ShowDialog();
         }
     }
 }

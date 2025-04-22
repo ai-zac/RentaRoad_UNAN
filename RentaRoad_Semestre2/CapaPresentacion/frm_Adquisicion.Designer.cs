@@ -55,14 +55,6 @@
             comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            cantidadAsientos = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
-            eliminarFila = new DataGridViewTextBoxColumn();
             groupBox4 = new GroupBox();
             textBox5 = new TextBox();
             textBox1 = new TextBox();
@@ -73,6 +65,14 @@
             button3 = new Button();
             button2 = new Button();
             button4 = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            cantidadAsientos = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
+            eliminarFila = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -148,7 +148,6 @@
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold);
             label8.ForeColor = Color.Black;
@@ -205,7 +204,6 @@
             // 
             // textBox4
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBox4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox4.Location = new Point(590, 290);
             textBox4.Margin = new Padding(3, 2, 3, 2);
@@ -318,7 +316,6 @@
             // 
             // comboBox3
             // 
-            comboBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox3.FormattingEnabled = true;
             comboBox3.Location = new Point(334, 28);
@@ -329,7 +326,6 @@
             // 
             // comboBox2
             // 
-            comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
             comboBox2.Location = new Point(91, 28);
@@ -370,55 +366,6 @@
             dataGridView1.Size = new Size(1064, 372);
             dataGridView1.TabIndex = 84;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Marca";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Modelo";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Color";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Cantidad de autos";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            // 
-            // cantidadAsientos
-            // 
-            cantidadAsientos.HeaderText = "Cantidad de asientos";
-            cantidadAsientos.Name = "cantidadAsientos";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Precio de renta";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            // 
-            // Subtotal
-            // 
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.Name = "Subtotal";
-            // 
-            // eliminarFila
-            // 
-            eliminarFila.HeaderText = "Eliminar";
-            eliminarFila.MinimumWidth = 6;
-            eliminarFila.Name = "eliminarFila";
             // 
             // groupBox4
             // 
@@ -545,7 +492,56 @@
             button4.TextAlign = ContentAlignment.MiddleLeft;
             button4.UseVisualStyleBackColor = false;
             // 
-            // Adquisiciones
+            // Column1
+            // 
+            Column1.HeaderText = "Marca";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Modelo";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Color";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Cantidad de autos";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            // 
+            // cantidadAsientos
+            // 
+            cantidadAsientos.HeaderText = "Cantidad de asientos";
+            cantidadAsientos.Name = "cantidadAsientos";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Precio de renta";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            // 
+            // Subtotal
+            // 
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.Name = "Subtotal";
+            // 
+            // eliminarFila
+            // 
+            eliminarFila.HeaderText = "Eliminar";
+            eliminarFila.MinimumWidth = 6;
+            eliminarFila.Name = "eliminarFila";
+            // 
+            // frm_Adquisicion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -561,7 +557,7 @@
             Controls.Add(label10);
             Controls.Add(groupBox1);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Adquisiciones";
+            Name = "frm_Adquisicion";
             Text = "Adquisiciones";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

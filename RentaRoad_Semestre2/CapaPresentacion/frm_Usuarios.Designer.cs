@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Usuarios));
             label1 = new Label();
             dgListaUsuarios = new DataGridView();
             groupBox3 = new GroupBox();
+            cmbTelefonoUsuario = new ComboBox();
             txtCedulaUsuario = new TextBox();
             label8 = new Label();
             btnCrear = new Button();
@@ -49,7 +50,6 @@
             txtContraseña = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            cmbTelefonoUsuario = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgListaUsuarios).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
@@ -69,29 +69,29 @@
             // 
             dgListaUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgListaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgListaUsuarios.Location = new Point(11, 406);
             dgListaUsuarios.Margin = new Padding(2);
             dgListaUsuarios.Name = "dgListaUsuarios";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgListaUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgListaUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgListaUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dgListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgListaUsuarios.RowTemplate.Height = 24;
             dgListaUsuarios.Size = new Size(1066, 328);
             dgListaUsuarios.TabIndex = 64;
@@ -101,7 +101,6 @@
             // 
             // groupBox3
             // 
-            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox3.Controls.Add(cmbTelefonoUsuario);
             groupBox3.Controls.Add(txtCedulaUsuario);
             groupBox3.Controls.Add(label8);
@@ -126,6 +125,16 @@
             groupBox3.TabIndex = 66;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del usuario";
+            // 
+            // cmbTelefonoUsuario
+            // 
+            cmbTelefonoUsuario.Font = new Font("Microsoft Sans Serif", 8.25F);
+            cmbTelefonoUsuario.FormattingEnabled = true;
+            cmbTelefonoUsuario.Location = new Point(167, 95);
+            cmbTelefonoUsuario.Margin = new Padding(4, 3, 4, 3);
+            cmbTelefonoUsuario.Name = "cmbTelefonoUsuario";
+            cmbTelefonoUsuario.Size = new Size(179, 21);
+            cmbTelefonoUsuario.TabIndex = 103;
             // 
             // txtCedulaUsuario
             // 
@@ -284,17 +293,7 @@
             label4.TabIndex = 12;
             label4.Text = "Tipo usuario:";
             // 
-            // cmbTelefonoUsuario
-            // 
-            cmbTelefonoUsuario.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbTelefonoUsuario.FormattingEnabled = true;
-            cmbTelefonoUsuario.Location = new Point(167, 95);
-            cmbTelefonoUsuario.Margin = new Padding(4, 3, 4, 3);
-            cmbTelefonoUsuario.Name = "cmbTelefonoUsuario";
-            cmbTelefonoUsuario.Size = new Size(179, 21);
-            cmbTelefonoUsuario.TabIndex = 103;
-            // 
-            // ControlUsuario
+            // frm_Usuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -305,7 +304,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
-            Name = "ControlUsuario";
+            Name = "frm_Usuarios";
             Text = "ControlUsuario";
             Shown += ControlUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)dgListaUsuarios).EndInit();

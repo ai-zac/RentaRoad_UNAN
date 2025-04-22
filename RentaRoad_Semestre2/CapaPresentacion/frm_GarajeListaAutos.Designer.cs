@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeListaAutos));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeListaAutos));
             ofdImagenAuto = new OpenFileDialog();
             label32 = new Label();
             pictureBox1 = new PictureBox();
             groupBox3 = new GroupBox();
+            button1 = new Button();
+            textBox1 = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             comboBox7 = new ComboBox();
@@ -44,9 +46,9 @@
             textBox13 = new TextBox();
             comboBox9 = new ComboBox();
             label5 = new Label();
-            button7 = new Button();
-            button6 = new Button();
-            button5 = new Button();
+            btnNuevoModelo = new Button();
+            btnNuevaMarca = new Button();
+            btnNuevoColor = new Button();
             button2 = new Button();
             comboBox5 = new ComboBox();
             label3 = new Label();
@@ -73,8 +75,6 @@
             Column8 = new DataGridViewTextBoxColumn();
             eliminar = new DataGridViewTextBoxColumn();
             label31 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -118,9 +118,9 @@
             groupBox3.Controls.Add(textBox13);
             groupBox3.Controls.Add(comboBox9);
             groupBox3.Controls.Add(label5);
-            groupBox3.Controls.Add(button7);
-            groupBox3.Controls.Add(button6);
-            groupBox3.Controls.Add(button5);
+            groupBox3.Controls.Add(btnNuevoModelo);
+            groupBox3.Controls.Add(btnNuevaMarca);
+            groupBox3.Controls.Add(btnNuevoColor);
             groupBox3.Controls.Add(button2);
             groupBox3.Controls.Add(comboBox5);
             groupBox3.Controls.Add(label3);
@@ -144,6 +144,29 @@
             groupBox3.TabIndex = 89;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del Auto";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 80, 200);
+            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(280, 24);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 112;
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(122, 30);
+            textBox1.Margin = new Padding(2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(152, 22);
+            textBox1.TabIndex = 84;
             // 
             // textBox3
             // 
@@ -227,53 +250,56 @@
             label5.TabIndex = 70;
             label5.Text = "Estado:";
             // 
-            // button7
+            // btnNuevoModelo
             // 
-            button7.BackColor = Color.FromArgb(0, 80, 200);
-            button7.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleRight;
-            button7.Location = new Point(280, 85);
-            button7.Margin = new Padding(2);
-            button7.Name = "button7";
-            button7.Size = new Size(100, 30);
-            button7.TabIndex = 68;
-            button7.Text = "Nuevo";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = false;
+            btnNuevoModelo.BackColor = Color.FromArgb(0, 80, 200);
+            btnNuevoModelo.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoModelo.ForeColor = Color.White;
+            btnNuevoModelo.Image = (Image)resources.GetObject("btnNuevoModelo.Image");
+            btnNuevoModelo.ImageAlign = ContentAlignment.MiddleRight;
+            btnNuevoModelo.Location = new Point(280, 85);
+            btnNuevoModelo.Margin = new Padding(2);
+            btnNuevoModelo.Name = "btnNuevoModelo";
+            btnNuevoModelo.Size = new Size(100, 30);
+            btnNuevoModelo.TabIndex = 68;
+            btnNuevoModelo.Text = "Nuevo";
+            btnNuevoModelo.TextAlign = ContentAlignment.MiddleLeft;
+            btnNuevoModelo.UseVisualStyleBackColor = false;
+            btnNuevoModelo.Click += btnNuevoModelo_Click;
             // 
-            // button6
+            // btnNuevaMarca
             // 
-            button6.BackColor = Color.FromArgb(0, 80, 200);
-            button6.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleRight;
-            button6.Location = new Point(280, 55);
-            button6.Margin = new Padding(2);
-            button6.Name = "button6";
-            button6.Size = new Size(100, 30);
-            button6.TabIndex = 67;
-            button6.Text = "Nuevo";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = false;
+            btnNuevaMarca.BackColor = Color.FromArgb(0, 80, 200);
+            btnNuevaMarca.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevaMarca.ForeColor = Color.White;
+            btnNuevaMarca.Image = (Image)resources.GetObject("btnNuevaMarca.Image");
+            btnNuevaMarca.ImageAlign = ContentAlignment.MiddleRight;
+            btnNuevaMarca.Location = new Point(280, 55);
+            btnNuevaMarca.Margin = new Padding(2);
+            btnNuevaMarca.Name = "btnNuevaMarca";
+            btnNuevaMarca.Size = new Size(100, 30);
+            btnNuevaMarca.TabIndex = 67;
+            btnNuevaMarca.Text = "Nuevo";
+            btnNuevaMarca.TextAlign = ContentAlignment.MiddleLeft;
+            btnNuevaMarca.UseVisualStyleBackColor = false;
+            btnNuevaMarca.Click += btnNuevaMarca_Click;
             // 
-            // button5
+            // btnNuevoColor
             // 
-            button5.BackColor = Color.FromArgb(0, 80, 200);
-            button5.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(280, 117);
-            button5.Margin = new Padding(2);
-            button5.Name = "button5";
-            button5.Size = new Size(100, 30);
-            button5.TabIndex = 66;
-            button5.Text = "Nuevo";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
+            btnNuevoColor.BackColor = Color.FromArgb(0, 80, 200);
+            btnNuevoColor.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoColor.ForeColor = Color.White;
+            btnNuevoColor.Image = (Image)resources.GetObject("btnNuevoColor.Image");
+            btnNuevoColor.ImageAlign = ContentAlignment.MiddleRight;
+            btnNuevoColor.Location = new Point(280, 117);
+            btnNuevoColor.Margin = new Padding(2);
+            btnNuevoColor.Name = "btnNuevoColor";
+            btnNuevoColor.Size = new Size(100, 30);
+            btnNuevoColor.TabIndex = 66;
+            btnNuevoColor.Text = "Nuevo";
+            btnNuevoColor.TextAlign = ContentAlignment.MiddleLeft;
+            btnNuevoColor.UseVisualStyleBackColor = false;
+            btnNuevoColor.Click += btnNuevoColor_Click;
             // 
             // button2
             // 
@@ -543,29 +569,6 @@
             label31.TabIndex = 92;
             label31.Text = "Garaje";
             // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(122, 30);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 22);
-            textBox1.TabIndex = 84;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(0, 80, 200);
-            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(280, 24);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(35, 35);
-            button1.TabIndex = 112;
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            // 
             // frm_GarajeListaAutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -602,9 +605,9 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.ComboBox comboBox9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnNuevoModelo;
+        private System.Windows.Forms.Button btnNuevaMarca;
+        private System.Windows.Forms.Button btnNuevoColor;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label3;

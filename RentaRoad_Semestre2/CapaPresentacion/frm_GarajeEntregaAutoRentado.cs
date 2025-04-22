@@ -18,14 +18,9 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnBuscarContrato_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            new SeleccionContrato().ShowDialog();
+            new frm_SeleccionContrato_PorPlaca().ShowDialog();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RentaRoad_Semestre3.CapaPresentacion.Subformularios
 {
-    public partial class SeleccionContrato : Form
+    public partial class frm_SeleccionContrato_PorPlaca : Form
     {
-        public SeleccionContrato()
+        public frm_SeleccionContrato_PorPlaca()
         {
             InitializeComponent();
         }

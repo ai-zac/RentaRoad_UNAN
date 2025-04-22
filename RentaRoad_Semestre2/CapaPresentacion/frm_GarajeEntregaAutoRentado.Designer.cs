@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeEntregaAutoRentado));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            button9 = new Button();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            btnBuscarContrato = new Button();
             groupBox7 = new GroupBox();
             textBox4 = new TextBox();
             label2 = new Label();
@@ -45,6 +45,7 @@
             label27 = new Label();
             label28 = new Label();
             groupBox6 = new GroupBox();
+            textBox7 = new TextBox();
             textBox5 = new TextBox();
             label5 = new Label();
             textBox3 = new TextBox();
@@ -67,13 +68,12 @@
             textBox1 = new TextBox();
             label4 = new Label();
             dataGridView1 = new DataGridView();
+            descripcion = new DataGridViewTextBoxColumn();
+            costoDaño = new DataGridViewTextBoxColumn();
             textBox6 = new TextBox();
             label7 = new Label();
             label8 = new Label();
             panel1 = new Panel();
-            textBox7 = new TextBox();
-            descripcion = new DataGridViewTextBoxColumn();
-            costoDaño = new DataGridViewTextBoxColumn();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -81,22 +81,22 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // button9
+            // btnBuscarContrato
             // 
-            button9.BackColor = Color.FromArgb(0, 80, 200);
-            button9.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.White;
-            button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.ImageAlign = ContentAlignment.MiddleRight;
-            button9.Location = new Point(17, 15);
-            button9.Margin = new Padding(2);
-            button9.Name = "button9";
-            button9.Size = new Size(143, 35);
-            button9.TabIndex = 94;
-            button9.Text = "Buscar contrato";
-            button9.TextAlign = ContentAlignment.MiddleLeft;
-            button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
+            btnBuscarContrato.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarContrato.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarContrato.ForeColor = Color.White;
+            btnBuscarContrato.Image = (Image)resources.GetObject("btnBuscarContrato.Image");
+            btnBuscarContrato.ImageAlign = ContentAlignment.MiddleRight;
+            btnBuscarContrato.Location = new Point(17, 15);
+            btnBuscarContrato.Margin = new Padding(2);
+            btnBuscarContrato.Name = "btnBuscarContrato";
+            btnBuscarContrato.Size = new Size(143, 35);
+            btnBuscarContrato.TabIndex = 94;
+            btnBuscarContrato.Text = "Buscar contrato";
+            btnBuscarContrato.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarContrato.UseVisualStyleBackColor = false;
+            btnBuscarContrato.Click += btnBuscarContrato_Click;
             // 
             // groupBox7
             // 
@@ -140,7 +140,6 @@
             label2.Size = new Size(71, 32);
             label2.TabIndex = 39;
             label2.Text = "Multa\r\npor mora:";
-            label2.Click += label2_Click;
             // 
             // textBox19
             // 
@@ -255,6 +254,15 @@
             groupBox6.TabIndex = 93;
             groupBox6.TabStop = false;
             groupBox6.Text = "Datos del Auto";
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox7.Location = new Point(92, 35);
+            textBox7.Margin = new Padding(2);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(152, 22);
+            textBox7.TabIndex = 69;
             // 
             // textBox5
             // 
@@ -504,38 +512,50 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { descripcion, costoDaño });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.Location = new Point(585, 175);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 10F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Tai Le", 10F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(419, 253);
             dataGridView1.TabIndex = 69;
+            // 
+            // descripcion
+            // 
+            descripcion.HeaderText = "Descripción";
+            descripcion.MinimumWidth = 6;
+            descripcion.Name = "descripcion";
+            // 
+            // costoDaño
+            // 
+            costoDaño.HeaderText = "Costo";
+            costoDaño.MinimumWidth = 6;
+            costoDaño.Name = "costoDaño";
             // 
             // textBox6
             // 
@@ -560,6 +580,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(37, 65);
@@ -572,7 +593,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
-            panel1.Controls.Add(button9);
+            panel1.Controls.Add(btnBuscarContrato);
             panel1.Controls.Add(textBox6);
             panel1.Controls.Add(groupBox6);
             panel1.Controls.Add(label7);
@@ -585,27 +606,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1023, 520);
             panel1.TabIndex = 97;
-            // 
-            // textBox7
-            // 
-            textBox7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(92, 35);
-            textBox7.Margin = new Padding(2);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(152, 22);
-            textBox7.TabIndex = 69;
-            // 
-            // descripcion
-            // 
-            descripcion.HeaderText = "Descripción";
-            descripcion.MinimumWidth = 6;
-            descripcion.Name = "descripcion";
-            // 
-            // costoDaño
-            // 
-            costoDaño.HeaderText = "Costo";
-            costoDaño.MinimumWidth = 6;
-            costoDaño.Name = "costoDaño";
             // 
             // frm_GarajeEntregaAutoRentado
             // 
@@ -634,7 +634,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnBuscarContrato;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label13;

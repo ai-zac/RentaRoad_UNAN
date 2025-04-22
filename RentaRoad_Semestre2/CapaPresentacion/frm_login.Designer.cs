@@ -94,7 +94,6 @@
             // 
             // btnCerrar
             // 
-            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
             btnCerrar.Location = new Point(659, 0);
             btnCerrar.Margin = new Padding(3, 2, 3, 2);
             btnCerrar.Name = "btnCerrar";
@@ -106,7 +105,6 @@
             // 
             // btnMinimizar
             // 
-            btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
             btnMinimizar.Location = new Point(633, 0);
             btnMinimizar.Margin = new Padding(3, 2, 3, 2);
             btnMinimizar.Name = "btnMinimizar";
@@ -205,9 +203,9 @@
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "fmr_login";
+            Name = "frm_login";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

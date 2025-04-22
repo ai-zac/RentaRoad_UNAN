@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
 using RentaRoad_Semestre3.CapaPresentacion.Modelos;
-using RentaRoad_Semestre3.CapaPresentacion.Subformularios;
+using RentaRoad_Semestre3.CapaPresentacion ;
 using Microsoft.IdentityModel.Tokens;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
@@ -73,13 +73,15 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            new VentanaPrincipal().Show();
             this.Hide();
+            Form frmHome = new frm_Home();
+            frmHome.Closed += (s, args) => this.Close();
+            frmHome.Show();
         }
 
         private void btnRecuperarContraseña_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new RecuperarContraseña().ShowDialog();
+            new frm_RecuperarContraseña().ShowDialog();
         }
     }
 }

@@ -28,9 +28,9 @@ namespace RentaRoad_Semestre3.CapaDatos.Repositorios
             return _context.Usuarios.ToList();
         }
 
-        public Usuario? GetById(int FkIdTipoUsuario, int Id, int FkIdCargoEmpleado)
+        public Usuario? GetById(int Id)
         {
-            return _context.Usuarios.Find(FkIdTipoUsuario, Id, FkIdCargoEmpleado);
+            return _context.Usuarios.Find(Id);
         }
 
         public void Add(Usuario usua)
@@ -47,19 +47,13 @@ namespace RentaRoad_Semestre3.CapaDatos.Repositorios
 
         public void ChangeCargoEmpleado(Usuario usua,CargoEmpleado oldCargo, CargoEmpleado newCargo)
         {
-            _context.Database.ExecuteSql($"UPDATE [Usuario] SET [Fk_Cargo_empleado] = {newCargo.IdCargoEmpleado} WHERE [Id_Usuario] = {usua.IdUsuario}");
+            _context.Database.ExecuteSql($"UPDATE [Usuario] SET [Id_Cargo_empleado] = {newCargo.IdCargoEmpleado} WHERE [Id_Usuario] = {usua.IdUsuario}");
             _context.SaveChanges();
         }
 
-        public void ChangeTipoUsuarios(Usuario usua, TipoUsuario oldTipo, TipoUsuario newTipo)
+        public void Delete(int Id)
         {
-            _context.Database.ExecuteSql($"UPDATE [Usuario] SET [Fk_Tipo_Usuario] = {newTipo.IdTipoUsuario} WHERE [Id_Usuario] = {usua.IdUsuario}");
-            _context.SaveChanges();
-        }
-
-        public void Delete(int FkIdTipoUsuario, int Id, int FkIdCargoEmpleado)
-        {
-            var u = GetById(FkIdTipoUsuario, Id, FkIdCargoEmpleado);
+            var u = GetById(Id);
             if (u != null)
             {
                 _context.Usuarios.Remove(u);

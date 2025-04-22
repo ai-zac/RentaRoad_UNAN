@@ -1,4 +1,4 @@
-﻿using RentaRoad_Semestre3.CapaPresentacion.Modelos;
+﻿using RentaRoad_Semestre3.CapaDatos.Modelos;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
 using System.Security.Cryptography.X509Certificates;
 public class UsuariosService
@@ -10,19 +10,9 @@ public class UsuariosService
         _repo = repo;
     }
 
-    public List<TipoUsuario> ObtenerTiposUsuarios()
-    {
-        return _repo.GetAllTipoUsuario();
-    }
-
-    public TipoUsuario ObtenerTipo(string Tipo)
-    {
-        return _repo.GetAllTipoUsuario().FirstOrDefault(t => t.Tipo == Tipo);
-    }
-
     public CargoEmpleado ObtenerCargo(string Cargo)
     {
-        return _repo.GetAllCargoEmpleado().FirstOrDefault(c => c.Cargo == Cargo);
+        return _repo.GetAllCargoEmpleado().FirstOrDefault(c => c.NombreCargo == Cargo);
     }
 
     public List<CargoEmpleado> ObtenerCargosEmpleados()
@@ -50,19 +40,14 @@ public class UsuariosService
         _repo.Update(usua);
     }
 
-    public void ActualizarTipoUsuario(Usuario usua, TipoUsuario nuevoTipo)
-    {
-        _repo.ChangeTipoUsuarios(usua, usua.FkTipoUsuarioNavigation, nuevoTipo);
-    }
-
     public void ActualizarCargoEmpleado(Usuario usua, CargoEmpleado nuevoCargo)
     {
-        _repo.ChangeCargoEmpleado(usua, usua.FkCargoEmpleadoNavigation, nuevoCargo);
+        _repo.ChangeCargoEmpleado(usua, usua.IdCargoEmpleadoNavigation, nuevoCargo);
     }
 
-    public void EliminarUsuario(int FkIdTipoUsuario, int Id, int FkIdCargoEmpleado)
+    public void EliminarUsuario(int Id)
     {
-        _repo.Delete(FkIdTipoUsuario, Id, FkIdCargoEmpleado);
+        _repo.Delete(Id);
     }
 }
 

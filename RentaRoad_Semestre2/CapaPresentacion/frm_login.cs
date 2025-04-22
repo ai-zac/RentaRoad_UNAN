@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
-using RentaRoad_Semestre3.CapaPresentacion.Modelos;
+using RentaRoad_Semestre3.CapaDatos.Modelos;
 using RentaRoad_Semestre3.CapaPresentacion ;
 using Microsoft.IdentityModel.Tokens;
 
@@ -67,7 +67,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            if (usuarioEncontrado.Contraseña != contraseñaInsertada)
+            if (usuarioEncontrado.ContraseñaUsuario != contraseñaInsertada)
             {
                 MessageBox.Show("Contraseña no es la correcta.");
                 return;

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using RentaRoad_Semestre3.CapaPresentacion.Subformularios;
+using RentaRoad_Semestre3.CapaPresentacion ;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {

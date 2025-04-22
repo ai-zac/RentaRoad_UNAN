@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
-    public partial class SeleccionProveedor : Form
+    public partial class frm_GarajeMarcas : Form
     {
-        public SeleccionProveedor()
+        public frm_GarajeMarcas()
         {
             InitializeComponent();
         }
@@ -22,14 +22,19 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
-            this.Hide();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

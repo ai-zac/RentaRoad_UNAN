@@ -20,6 +20,7 @@ namespace RentaRoad_Semestre3
         {
             InitializeComponent();
             menuNavegacion.Renderer = new customRenderUIColors();
+            AbrirFormHija(new frm_AperturaCaja());
         }
 
         public ToolStripItem itemSeleccionado = null;
@@ -107,21 +108,21 @@ namespace RentaRoad_Semestre3
         private void optionEntregaAuto_Click(object sender, EventArgs e)
         {
             indicarItemMenuSeleccionado(sender);
-            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);     
+            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);
             AbrirFormHija(new frm_GarajeEntregaAutoRentado());
         }
 
         private void optionSalidaGaraje_Click(object sender, EventArgs e)
         {
             indicarItemMenuSeleccionado(sender);
-            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);     
+            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);
             AbrirFormHija(new frm_GarajeSalida());
         }
 
         private void optionListaDeAutos_Click(object sender, EventArgs e)
         {
             indicarItemMenuSeleccionado(sender);
-            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);     
+            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);
             AbrirFormHija(new frm_GarajeListaAutos());
         }
         // FINAL - GARAJE - opciones
@@ -135,7 +136,43 @@ namespace RentaRoad_Semestre3
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new frm_login().Show();
+            Form frmLogin = new frm_login();
+            frmLogin.Closed += (s, args) => this.Close();
+            frmLogin.Show();
+        }
+
+        private void optionMarcas_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);
+            optionCaracteristica.BackColor = Color.FromArgb(56, 62, 70);
+            AbrirFormHija(new frm_GarajeMarcas());
+        }
+
+        private void optionModelos_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);
+            optionCaracteristica.BackColor = Color.FromArgb(56, 62, 70);
+            AbrirFormHija(new frm_GarajeModelos());
+        }
+
+        private void optionColores_Click(object sender, EventArgs e)
+        {
+            indicarItemMenuSeleccionado(sender);
+            optionGaraje.BackColor = Color.FromArgb(56, 62, 70);
+            optionCaracteristica.BackColor = Color.FromArgb(56, 62, 70);
+            AbrirFormHija(new frm_GarajeColores());
+        }
+
+        private void tituloRentaRoad_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new frm_AperturaCaja());
+        }
+
+        private void btnVolverHome_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new frm_AperturaCaja());
         }
     }
 }

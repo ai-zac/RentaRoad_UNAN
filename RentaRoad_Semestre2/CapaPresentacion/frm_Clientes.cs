@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RentaRoad_Semestre3.CapaPresentacion.Subformularios;
+using RentaRoad_Semestre3.CapaPresentacion ;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
@@ -21,11 +21,6 @@ namespace RentaRoad_Semestre3.CapaPresentacion
         private void ControlCliente_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new SeleccionClientes().ShowDialog();
         }
     }
 }

@@ -91,6 +91,7 @@
             txtmontoingresado = new TextBox();
             label6 = new Label();
             txtmontocambio = new TextBox();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -252,6 +253,7 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.None;
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(comboBox2);
             groupBox1.Controls.Add(label25);
             groupBox1.Controls.Add(txtlicencia);
@@ -275,7 +277,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(122, 35);
+            comboBox2.Location = new Point(122, 22);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(179, 26);
             comboBox2.TabIndex = 124;
@@ -285,7 +287,7 @@
             label25.AutoSize = true;
             label25.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.Black;
-            label25.Location = new Point(10, 40);
+            label25.Location = new Point(10, 27);
             label25.Name = "label25";
             label25.Size = new Size(65, 16);
             label25.TabIndex = 123;
@@ -294,7 +296,7 @@
             // txtlicencia
             // 
             txtlicencia.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtlicencia.Location = new Point(122, 151);
+            txtlicencia.Location = new Point(122, 138);
             txtlicencia.Margin = new Padding(3, 2, 3, 2);
             txtlicencia.Name = "txtlicencia";
             txtlicencia.Size = new Size(179, 22);
@@ -303,7 +305,7 @@
             // txtcedula
             // 
             txtcedula.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtcedula.Location = new Point(122, 113);
+            txtcedula.Location = new Point(122, 100);
             txtcedula.Margin = new Padding(3, 2, 3, 2);
             txtcedula.Name = "txtcedula";
             txtcedula.Size = new Size(179, 22);
@@ -312,7 +314,7 @@
             // txtnombrecliente
             // 
             txtnombrecliente.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtnombrecliente.Location = new Point(122, 77);
+            txtnombrecliente.Location = new Point(122, 64);
             txtnombrecliente.Margin = new Padding(3, 2, 3, 2);
             txtnombrecliente.Name = "txtnombrecliente";
             txtnombrecliente.Size = new Size(179, 22);
@@ -323,7 +325,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(10, 142);
+            label4.Location = new Point(10, 129);
             label4.Name = "label4";
             label4.Size = new Size(90, 32);
             label4.TabIndex = 62;
@@ -332,11 +334,11 @@
             // txtdireccion
             // 
             txtdireccion.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdireccion.Location = new Point(119, 191);
+            txtdireccion.Location = new Point(119, 178);
             txtdireccion.Margin = new Padding(3, 2, 3, 2);
             txtdireccion.Multiline = true;
             txtdireccion.Name = "txtdireccion";
-            txtdireccion.Size = new Size(182, 51);
+            txtdireccion.Size = new Size(182, 42);
             txtdireccion.TabIndex = 58;
             txtdireccion.TextChanged += textBox19_TextChanged;
             // 
@@ -345,7 +347,7 @@
             label22.AutoSize = true;
             label22.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.Black;
-            label22.Location = new Point(10, 191);
+            label22.Location = new Point(10, 178);
             label22.Name = "label22";
             label22.Size = new Size(73, 16);
             label22.TabIndex = 57;
@@ -356,7 +358,7 @@
             label26.AutoSize = true;
             label26.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.Black;
-            label26.Location = new Point(10, 68);
+            label26.Location = new Point(10, 55);
             label26.Name = "label26";
             label26.Size = new Size(72, 32);
             label26.TabIndex = 54;
@@ -367,7 +369,7 @@
             label27.AutoSize = true;
             label27.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label27.ForeColor = Color.Black;
-            label27.Location = new Point(10, 113);
+            label27.Location = new Point(10, 100);
             label27.Name = "label27";
             label27.Size = new Size(59, 16);
             label27.TabIndex = 52;
@@ -489,7 +491,7 @@
             groupBox3.Controls.Add(label17);
             groupBox3.Controls.Add(label16);
             groupBox3.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox3.Location = new Point(53, 376);
+            groupBox3.Location = new Point(53, 384);
             groupBox3.Margin = new Padding(3, 2, 3, 2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 2, 3, 2);
@@ -606,7 +608,7 @@
             groupBox4.Controls.Add(txttotal);
             groupBox4.Controls.Add(label21);
             groupBox4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(53, 494);
+            groupBox4.Location = new Point(53, 502);
             groupBox4.Margin = new Padding(3, 2, 3, 2);
             groupBox4.Name = "groupBox4";
             groupBox4.Padding = new Padding(3, 2, 3, 2);
@@ -749,7 +751,7 @@
             groupBox6.Controls.Add(radiobtncontado);
             groupBox6.Controls.Add(radiobtntarjeta);
             groupBox6.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox6.Location = new Point(414, 494);
+            groupBox6.Location = new Point(414, 502);
             groupBox6.Margin = new Padding(3, 2, 3, 2);
             groupBox6.Name = "groupBox6";
             groupBox6.Padding = new Padding(3, 2, 3, 2);
@@ -768,7 +770,7 @@
             groupBox5.Controls.Add(label6);
             groupBox5.Controls.Add(txtmontocambio);
             groupBox5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox5.Location = new Point(414, 593);
+            groupBox5.Location = new Point(414, 601);
             groupBox5.Margin = new Padding(3, 2, 3, 2);
             groupBox5.Name = "groupBox5";
             groupBox5.Padding = new Padding(3, 2, 3, 2);
@@ -837,7 +839,23 @@
             txtmontocambio.Size = new Size(109, 22);
             txtmontocambio.TabIndex = 42;
             // 
-            // Renta
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.None;
+            button1.AutoSize = true;
+            button1.BackColor = Color.FromArgb(0, 80, 200);
+            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(6, 224);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 35);
+            button1.TabIndex = 90;
+            button1.Text = "Nuevo cliente";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // frm_Renta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -858,7 +876,7 @@
             Controls.Add(label28);
             Controls.Add(textBox25);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Renta";
+            Name = "frm_Renta";
             Text = "Renta";
             Load += Facturacion_Load;
             groupBox1.ResumeLayout(false);
@@ -946,5 +964,6 @@
         private TextBox textBox1;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
+        private Button button1;
     }
 }

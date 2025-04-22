@@ -1,4 +1,4 @@
-﻿namespace RentaRoad_Semestre3.CapaPresentacion.Subformularios
+﻿namespace RentaRoad_Semestre3.CapaPresentacion 
 {
     partial class frm_SeleccionContrato_PorPlaca
     {

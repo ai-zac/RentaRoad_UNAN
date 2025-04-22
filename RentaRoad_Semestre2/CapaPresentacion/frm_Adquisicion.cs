@@ -17,11 +17,6 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             InitializeComponent();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            new SeleccionProveedor().ShowDialog();
-        }
-
         private void label14_Click(object sender, EventArgs e)
         {
 

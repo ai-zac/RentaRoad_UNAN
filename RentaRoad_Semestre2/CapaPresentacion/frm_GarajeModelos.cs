@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentaRoad_Semestre3.CapaPresentacion.Subformularios
+namespace RentaRoad_Semestre3.CapaPresentacion
 {
-    public partial class ControlColores : Form
+    public partial class frm_GarajeModelos : Form
     {
-        public ControlColores()
+        public frm_GarajeModelos()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

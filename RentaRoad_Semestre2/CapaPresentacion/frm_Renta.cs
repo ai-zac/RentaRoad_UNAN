@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RentaRoad_Semestre3.CapaPresentacion.Subformularios;
+using RentaRoad_Semestre3.CapaPresentacion ;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
@@ -185,26 +185,6 @@ namespace RentaRoad_Semestre3.CapaPresentacion
         }
 
         private void textBox19_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            new SeleccionClientes().ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new SeleccionAutos().ShowDialog();
-        }
-
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
 
         }

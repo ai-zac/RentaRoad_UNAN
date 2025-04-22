@@ -33,20 +33,25 @@
             optionGaraje = new ToolStripMenuItem();
             optionListaDeAutos = new ToolStripMenuItem();
             optionSalidaDeGaraje = new ToolStripMenuItem();
-            optionEntregaDeAuto = new ToolStripMenuItem();
+            optionEntregaAuto = new ToolStripMenuItem();
+            optionCaracteristica = new ToolStripMenuItem();
+            optionMarcas = new ToolStripMenuItem();
+            optionModelos = new ToolStripMenuItem();
+            optionColores = new ToolStripMenuItem();
             optionRenta = new ToolStripMenuItem();
             optionClientes = new ToolStripMenuItem();
             optionUsuarios = new ToolStripMenuItem();
             optionProveedores = new ToolStripMenuItem();
             optionCaja = new ToolStripMenuItem();
             optionAdquisiciones = new ToolStripMenuItem();
+            optionMatenimiento = new ToolStripMenuItem();
             optionAcercaDe = new ToolStripMenuItem();
             panelVertical = new Panel();
-            label1 = new Label();
+            tituloRentaRoad = new Label();
             btnCerrarSesion = new Button();
             panelSuperior = new Panel();
+            btnVolverHome = new Button();
             panelContenedor = new Panel();
-            optionMatenimiento = new ToolStripMenuItem();
             menuNavegacion.SuspendLayout();
             panelVertical.SuspendLayout();
             panelSuperior.SuspendLayout();
@@ -69,7 +74,7 @@
             // optionGaraje
             // 
             optionGaraje.BackColor = Color.FromArgb(26, 32, 40);
-            optionGaraje.DropDownItems.AddRange(new ToolStripItem[] { optionListaDeAutos, optionSalidaDeGaraje, optionEntregaDeAuto });
+            optionGaraje.DropDownItems.AddRange(new ToolStripItem[] { optionListaDeAutos, optionSalidaDeGaraje, optionEntregaAuto, optionCaracteristica });
             optionGaraje.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
             optionGaraje.ForeColor = Color.White;
             optionGaraje.Margin = new Padding(0, 2, 0, 2);
@@ -100,16 +105,60 @@
             optionSalidaDeGaraje.Text = "Salida de garaje";
             optionSalidaDeGaraje.Click += optionSalidaGaraje_Click;
             // 
-            // optionEntregaDeAuto
+            // optionEntregaAuto
             // 
-            optionEntregaDeAuto.BackColor = Color.FromArgb(26, 32, 40);
-            optionEntregaDeAuto.ForeColor = Color.White;
-            optionEntregaDeAuto.Margin = new Padding(0, 1, 0, 1);
-            optionEntregaDeAuto.Name = "optionEntregaDeAuto";
-            optionEntregaDeAuto.Padding = new Padding(0, 2, 0, 2);
-            optionEntregaDeAuto.Size = new Size(220, 32);
-            optionEntregaDeAuto.Text = "Entrega de auto";
-            optionEntregaDeAuto.Click += optionEntregaAuto_Click;
+            optionEntregaAuto.BackColor = Color.FromArgb(26, 32, 40);
+            optionEntregaAuto.ForeColor = Color.White;
+            optionEntregaAuto.Margin = new Padding(0, 1, 0, 1);
+            optionEntregaAuto.Name = "optionEntregaAuto";
+            optionEntregaAuto.Padding = new Padding(0, 2, 0, 2);
+            optionEntregaAuto.Size = new Size(220, 32);
+            optionEntregaAuto.Text = "Entrega de auto";
+            optionEntregaAuto.Click += optionEntregaAuto_Click;
+            // 
+            // optionCaracteristica
+            // 
+            optionCaracteristica.BackColor = Color.FromArgb(26, 32, 40);
+            optionCaracteristica.DropDownItems.AddRange(new ToolStripItem[] { optionMarcas, optionModelos, optionColores });
+            optionCaracteristica.ForeColor = Color.White;
+            optionCaracteristica.Margin = new Padding(0, 1, 0, 1);
+            optionCaracteristica.Name = "optionCaracteristica";
+            optionCaracteristica.Padding = new Padding(0, 2, 0, 2);
+            optionCaracteristica.Size = new Size(220, 32);
+            optionCaracteristica.Text = "Caracteristicas";
+            // 
+            // optionMarcas
+            // 
+            optionMarcas.BackColor = Color.FromArgb(26, 32, 40);
+            optionMarcas.ForeColor = Color.White;
+            optionMarcas.Margin = new Padding(0, 1, 0, 1);
+            optionMarcas.Name = "optionMarcas";
+            optionMarcas.Padding = new Padding(0, 2, 0, 2);
+            optionMarcas.Size = new Size(158, 32);
+            optionMarcas.Text = "Marcas";
+            optionMarcas.Click += optionMarcas_Click;
+            // 
+            // optionModelos
+            // 
+            optionModelos.BackColor = Color.FromArgb(26, 32, 40);
+            optionModelos.ForeColor = Color.White;
+            optionModelos.Margin = new Padding(0, 1, 0, 1);
+            optionModelos.Name = "optionModelos";
+            optionModelos.Padding = new Padding(0, 2, 0, 2);
+            optionModelos.Size = new Size(158, 32);
+            optionModelos.Text = "Modelos";
+            optionModelos.Click += optionModelos_Click;
+            // 
+            // optionColores
+            // 
+            optionColores.BackColor = Color.FromArgb(26, 32, 40);
+            optionColores.ForeColor = Color.White;
+            optionColores.Margin = new Padding(0, 1, 0, 1);
+            optionColores.Name = "optionColores";
+            optionColores.Padding = new Padding(0, 2, 0, 2);
+            optionColores.Size = new Size(158, 32);
+            optionColores.Text = "Colores";
+            optionColores.Click += optionColores_Click;
             // 
             // optionRenta
             // 
@@ -183,6 +232,18 @@
             optionAdquisiciones.Text = "Adquisiciones";
             optionAdquisiciones.Click += optionAdquisicion_Click;
             // 
+            // optionMatenimiento
+            // 
+            optionMatenimiento.BackColor = Color.FromArgb(26, 32, 40);
+            optionMatenimiento.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            optionMatenimiento.ForeColor = Color.White;
+            optionMatenimiento.Margin = new Padding(0, 2, 0, 2);
+            optionMatenimiento.Name = "optionMatenimiento";
+            optionMatenimiento.Padding = new Padding(4, 5, 4, 5);
+            optionMatenimiento.Size = new Size(223, 39);
+            optionMatenimiento.Text = "Matenimiento";
+            optionMatenimiento.Click += optionMantenimiento_Click;
+            // 
             // optionAcercaDe
             // 
             optionAcercaDe.BackColor = Color.FromArgb(26, 32, 40);
@@ -198,7 +259,7 @@
             // panelVertical
             // 
             panelVertical.BackColor = Color.FromArgb(26, 32, 40);
-            panelVertical.Controls.Add(label1);
+            panelVertical.Controls.Add(tituloRentaRoad);
             panelVertical.Controls.Add(menuNavegacion);
             panelVertical.Dock = DockStyle.Left;
             panelVertical.Location = new Point(0, 0);
@@ -207,16 +268,17 @@
             panelVertical.Size = new Size(230, 828);
             panelVertical.TabIndex = 6;
             // 
-            // label1
+            // tituloRentaRoad
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Location = new Point(45, 44);
-            label1.Name = "label1";
-            label1.Size = new Size(141, 32);
-            label1.TabIndex = 66;
-            label1.Text = "RentARoad";
+            tituloRentaRoad.AutoSize = true;
+            tituloRentaRoad.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tituloRentaRoad.ForeColor = SystemColors.MenuHighlight;
+            tituloRentaRoad.Location = new Point(45, 44);
+            tituloRentaRoad.Name = "tituloRentaRoad";
+            tituloRentaRoad.Size = new Size(141, 32);
+            tituloRentaRoad.TabIndex = 66;
+            tituloRentaRoad.Text = "RentARoad";
+            tituloRentaRoad.Click += tituloRentaRoad_Click;
             // 
             // btnCerrarSesion
             // 
@@ -242,12 +304,28 @@
             // panelSuperior
             // 
             panelSuperior.BackColor = Color.FromArgb(26, 32, 40);
+            panelSuperior.Controls.Add(btnVolverHome);
             panelSuperior.Controls.Add(btnCerrarSesion);
             panelSuperior.Dock = DockStyle.Top;
             panelSuperior.Location = new Point(230, 0);
             panelSuperior.Name = "panelSuperior";
             panelSuperior.Size = new Size(1104, 44);
             panelSuperior.TabIndex = 65;
+            // 
+            // btnVolverHome
+            // 
+            btnVolverHome.BackColor = Color.FromArgb(0, 80, 200);
+            btnVolverHome.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVolverHome.ForeColor = Color.White;
+            btnVolverHome.ImageAlign = ContentAlignment.MiddleRight;
+            btnVolverHome.Location = new Point(5, 6);
+            btnVolverHome.Margin = new Padding(3, 2, 3, 2);
+            btnVolverHome.Name = "btnVolverHome";
+            btnVolverHome.Size = new Size(204, 34);
+            btnVolverHome.TabIndex = 89;
+            btnVolverHome.Text = "Volver a pantalla principal";
+            btnVolverHome.UseVisualStyleBackColor = false;
+            btnVolverHome.Click += btnVolverHome_Click;
             // 
             // panelContenedor
             // 
@@ -261,19 +339,7 @@
             panelContenedor.Size = new Size(1104, 784);
             panelContenedor.TabIndex = 66;
             // 
-            // optionMatenimiento
-            // 
-            optionMatenimiento.BackColor = Color.FromArgb(26, 32, 40);
-            optionMatenimiento.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
-            optionMatenimiento.ForeColor = Color.White;
-            optionMatenimiento.Margin = new Padding(0, 2, 0, 2);
-            optionMatenimiento.Name = "optionMatenimiento";
-            optionMatenimiento.Padding = new Padding(4, 5, 4, 5);
-            optionMatenimiento.Size = new Size(223, 39);
-            optionMatenimiento.Text = "Matenimiento";
-            optionMatenimiento.Click += optionMantenimiento_Click;
-            // 
-            // VentanaPrincipal
+            // frm_Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -284,7 +350,7 @@
             MainMenuStrip = menuNavegacion;
             Margin = new Padding(2);
             MinimumSize = new Size(1315, 867);
-            Name = "VentanaPrincipal";
+            Name = "frm_Home";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RentaRoad - Ventana principal";
             menuNavegacion.ResumeLayout(false);
@@ -307,13 +373,18 @@
         private ToolStripMenuItem optionProveedores;
         private ToolStripMenuItem optionCaja;
         private ToolStripMenuItem optionAdquisiciones;
-        private ToolStripMenuItem optionEntregaDeAuto;
+        private ToolStripMenuItem optionCaracteristica;
         private ToolStripMenuItem optionAcercaDe;
         private Button btnCerrarSesion;
         private Panel panelSuperior;
-        private Label label1;
+        private Label tituloRentaRoad;
         private Panel panelContenedor;
         private ToolStripMenuItem optionMatenimiento;
+        private ToolStripMenuItem optionEntregaAuto;
+        private ToolStripMenuItem optionMarcas;
+        private ToolStripMenuItem optionModelos;
+        private ToolStripMenuItem optionColores;
+        private Button btnVolverHome;
     }
 }
 

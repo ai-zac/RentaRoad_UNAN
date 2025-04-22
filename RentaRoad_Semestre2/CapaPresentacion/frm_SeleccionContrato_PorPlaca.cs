@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RentaRoad_Semestre3.CapaPresentacion.Subformularios
+namespace RentaRoad_Semestre3.CapaPresentacion 
 {
     public partial class frm_SeleccionContrato_PorPlaca : Form
     {

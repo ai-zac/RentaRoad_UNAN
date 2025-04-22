@@ -46,8 +46,9 @@ namespace RentaRoad_Semestre3.CapaPresentacion
         {
             dgListaUsuarios.Rows.Clear();
             var lista = _usuarioService.ObtenerTodos();
-            foreach (var usuario in lista)
+            foreach (var usuarioEnLista in lista)
             {
+                Usuario usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == usuario.IdUsuario);
                 var fila = new DataGridViewRow();
                 dgListaUsuarios.Rows.Add(
                     usuario.IdUsuario,
@@ -79,7 +80,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     FechaCreacion = DateTime.Now,
                     FechaModificacion = DateTime.Now,
                     EstaHabilitado = true,
-                    EsAdministrador = rbtnEsAdministrador.Checked,
+                    EsAdministrador = chbEsAdministrador.Checked,
                 };
                 MessageBox.Show("Cargar usuario.");
 
@@ -122,7 +123,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             usuaExistente.ContraseñaUsuario = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
             usuaExistente.CorreoUsuario = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
             usuaExistente.FechaModificacion = DateTime.Now;
-            // usuaExistente.EstaHabilitado = filaActual.Cells["dgEstadoUsuario"].Value;
+            usuaExistente.EstaHabilitado = bool.Parse(filaActual.Cells["dgEstadoUsuario"].Value.ToString());
 
             try
             {
@@ -180,23 +181,8 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             txtTelefonoUsuario.Text = filaActual.Cells["dgTelefonoUsuario"].Value.ToString();
             txtContraseña.Text = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
             txtCorreoUsuario.Text = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbtnEsAdministrador.Checked)
-            { 
-                    rbtnEsAdministrador.Checked = false;
-                    return;
-             }
-
-            rbtnEsAdministrador.Checked = true;
-        }
-
-        private void rbtnEstaHabilitado_CheckedChanged(object sender, EventArgs e)
-        {
-            rbtnEstaHabilitado.Checked = !rbtnEstaHabilitado.Checked;
-
+            chbEsAdministrador.Checked = bool.Parse(filaActual.Cells["dgTipoUsuario"].Value.ToString());
+            chbEstaHabilitado.Checked = bool.Parse(filaActual.Cells["dgEstadoUsuario"].Value.ToString());
         }
     }
 }

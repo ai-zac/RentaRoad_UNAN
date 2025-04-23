@@ -25,7 +25,7 @@ namespace RentaRoad_Semestre3.CapaDatos.Repositorios
 
         public List<Usuario> GetAllUsuarios()
         {
-            return _context.Usuarios.ToList();
+            return _context.Usuarios.Include(u => u.IdCargoEmpleadoNavigation).ToList();
         }
 
         public Usuario? GetById(int Id)

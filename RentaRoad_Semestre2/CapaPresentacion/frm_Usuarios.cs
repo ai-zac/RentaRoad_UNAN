@@ -123,11 +123,12 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             usuaExistente.NombreUsuario = filaActual.Cells["dgNombreUsuario"].Value.ToString();
             usuaExistente.IdCargoEmpleado = cargoNuevo.IdCargoEmpleado;
             usuaExistente.IdCargoEmpleadoNavigation = cargoNuevo;
-            usuaExistente.TelefonoUsuario = (int)filaActual.Cells["dgTelefonoUsuario"].Value;
+            usuaExistente.TelefonoUsuario = int.Parse(filaActual.Cells["dgTelefonoUsuario"].Value.ToString());
             usuaExistente.ContraseñaUsuario = filaActual.Cells["dgContraseñaUsuario"].Value.ToString();
             usuaExistente.CorreoUsuario = filaActual.Cells["dgCorreoUsuario"].Value.ToString();
             usuaExistente.FechaModificacion = DateTime.Now;
             usuaExistente.EstaHabilitado = bool.Parse(filaActual.Cells["dgEstadoUsuario"].Value.ToString());
+            usuaExistente.EsAdministrador = bool.Parse(filaActual.Cells["dgTipoUsuario"].Value.ToString());
 
             try
             {

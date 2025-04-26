@@ -6,22 +6,15 @@
  USE RentaRoad_DB
  GO
 
-/* TIPOS DE USUARIOS */
-INSERT INTO Tipo_Usuario (tipo, Fecha_Creacion, Fecha_Modificacion, estado) VALUES ('Admin', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 'habilitado')
-GO
-INSERT INTO Tipo_Usuario (tipo, Fecha_Creacion, Fecha_Modificacion, estado) VALUES ('Usuario', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 'habilitado')
-GO
-
-
 /* CARGOS DE EMPLEADOS */
-INSERT INTO Cargo_Empleado (cargo, Fecha_Creacion, Fecha_Modificacion, estado) VALUES ('Gerente', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 'habilitado')
+INSERT INTO Cargo_Empleado (Nombre_Cargo, Fecha_Creacion, Fecha_Modificacion, estaHabilitado) VALUES ('Gerente', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 1)
 GO
-INSERT INTO Cargo_Empleado (cargo, Fecha_Creacion, Fecha_Modificacion, estado) VALUES ('Cajero', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 'habilitado')
+INSERT INTO Cargo_Empleado (Nombre_Cargo, Fecha_Creacion, Fecha_Modificacion, estaHabilitado) VALUES ('Cajero', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 1)
 GO
 
 
 /* USUARIOS */
-INSERT INTO Usuario (Fk_Cargo_empleado, Fk_Tipo_usuario, nombre_usuario, Telefono_Usuario, Cedula_Usuario, contraseña, correo, Fecha_Creacion, Fecha_Modificacion, estado) VALUES
+INSERT INTO Usuario (Fk_Cargo_empleado, es, _Tipo_usuario, nombre_usuario, Telefono_Usuario, Cedula_Usuario, contrase a, correo, Fecha_Creacion, Fecha_Modificacion, estado) VALUES
 (1,1,'Isaac', 66666666,'10000D', 123, 'isa@gma.co', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 'Habilitado')
 Go	
 
@@ -102,6 +95,6 @@ GO
 
 
 /* AUTOS */
-INSERT INTO Auto (Fk_Detalle_Adquisicion, Fk_Color, Fk_Marca, Fk_Modelo, placa, año_salida, numero_asientos, estado_auto, costo_renta, disponibilidad, fecha_creacion, Fecha_Modficacion, verificacion_pendiente, Estado)
+INSERT INTO Auto (Fk_Detalle_Adquisicion, Fk_Color, Fk_Marca, Fk_Modelo, placa, a o_salida, numero_asientos, estado_auto, costo_renta, disponibilidad, fecha_creacion, Fecha_Modficacion, verificacion_pendiente, Estado)
 VALUES (1, 9, 1, 1, 'ABC', 2017, 2, 'Bueno', 500.00, 'Disponible', convert(datetime,'18-06-12 10:34:09 PM',5), convert(datetime,'18-06-12 10:34:09 PM',5), 'Ya verificado', 'Habilitado')
 GO

@@ -27,6 +27,10 @@ public partial class Usuario
 
     public bool EsAdministrador { get; set; }
 
+    public string? TokenRecuperacion { get; set; }
+
+    public DateTime? FechaLimiteRecuperacion { get; set; }
+
     public virtual ICollection<Contrato> Contratos { get; set; } = new List<Contrato>();
 
     public virtual CargoEmpleado IdCargoEmpleadoNavigation { get; set; } = null!;

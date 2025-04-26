@@ -74,7 +74,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             }
 
             this.Hide();
-            Form frmHome = new frm_Home();
+            Form frmHome = new frm_Home(usuarioEncontrado);
             frmHome.Closed += (s, args) => this.Close();
             frmHome.Show();
         }

@@ -1,4 +1,5 @@
-﻿using RentaRoad_Semestre3.CapaDatos.Modelos;
+﻿using Microsoft.IdentityModel.Tokens;
+using RentaRoad_Semestre3.CapaDatos.Modelos;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,11 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
-            if (txtCorreo.Text == null) return;
+            if (txtCorreo.Text.IsNullOrEmpty())
+            {
+                MessageBox.Show("El campo de correo esta vacio");
+                return;
+            }
 
             usuarioActual = _usuarioService.ObtenerTodos()
                                     .FirstOrDefault(u => u.CorreoUsuario == txtCorreo.Text.Trim());
@@ -64,6 +69,12 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             }
 
             string token = txtToken.Text.Trim();
+
+            if (token.IsNullOrEmpty())
+            {
+                MessageBox.Show("El campo de token esta vacio");
+                return;
+            }
 
             if (usuarioActual.TokenRecuperacion != token)
             {

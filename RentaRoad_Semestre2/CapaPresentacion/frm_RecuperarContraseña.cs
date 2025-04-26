@@ -17,6 +17,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
     public partial class frm_RecuperarContraseña : Form
     {
         private UsuariosService _usuarioService;
+        private Usuario? usuarioActual;
 
         public frm_RecuperarContraseña()
         {
@@ -32,9 +33,9 @@ namespace RentaRoad_Semestre3.CapaPresentacion
         {
             if (txtCorreo.Text == null) return;
 
-            Usuario? usuaExistente = _usuarioService.ObtenerTodos()
-                                    .FirstOrDefault(u => u.CorreoUsuario == txtCorreo.Text);
-            if (usuaExistente == null)
+            usuarioActual = _usuarioService.ObtenerTodos()
+                                    .FirstOrDefault(u => u.CorreoUsuario == txtCorreo.Text.Trim());
+            if (usuarioActual == null)
             {
                 MessageBox.Show("El correo no existe en la base de datos");
                 return;
@@ -42,11 +43,11 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
             string tokenRecuperacion = Guid.NewGuid().ToString();
 
-            usuaExistente.TokenRecuperacion = tokenRecuperacion;
-            usuaExistente.FechaLimiteRecuperacion = DateTime.Now.AddMinutes(5);
-            _usuarioService.ActualizarUsuario(usuaExistente);
+            usuarioActual.TokenRecuperacion = tokenRecuperacion;
+            usuarioActual.FechaLimiteRecuperacion = DateTime.Now.AddMinutes(1);
+            _usuarioService.ActualizarUsuario(usuarioActual);
 
-            if (enviarCorreo(txtCorreo.Text, tokenRecuperacion))
+            if (enviarCorreo(txtCorreo.Text.Trim(), tokenRecuperacion))
             {
                 panelCorreo.Visible = false;
                 return;
@@ -56,48 +57,84 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void btnToken_Click(object sender, EventArgs e)
         {
+            if (usuarioActual.FechaLimiteRecuperacion < DateTime.Now)
+            {
+                MessageBox.Show("Se ha pasado del tiempo limite para ingresar el token");
+                return;
+            }
 
+            string token = txtToken.Text.Trim();
+
+            if (usuarioActual.TokenRecuperacion != token)
+            {
+                MessageBox.Show("El token no es el correcto");
+                return;
+            }
+
+            panelToken.Visible = false;
         }
+
+        private void btnContraseña_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("El campo de la contraseña esta vacio");
+                return;
+            }    
+
+            usuarioActual.ContraseñaUsuario = txtContraseña.Text.Trim();
+            usuarioActual.TokenRecuperacion = null;
+            usuarioActual.FechaLimiteRecuperacion = null;
+            _usuarioService.ActualizarUsuario(usuarioActual);
+
+            MessageBox.Show("La contraseña ha sido actualizada correctamente");
+            this.Close();
+        }
+
+        private void btnReenviar_Click(object sender, EventArgs e)
+        {
+            usuarioActual.TokenRecuperacion = null;
+            usuarioActual.FechaLimiteRecuperacion = null;
+            _usuarioService.ActualizarUsuario(usuarioActual);
+
+            panelCorreo.Visible = true;
+            txtToken.Text = string.Empty;
+        }
+
 
         private bool enviarCorreo(string correoDestino, string token)
         {
-            SmtpClient stmp = null;
-            try
-            {
-                stmp = new SmtpClient("smtp.zoho.com")
-                {
-                    Port = 587,
-                    Credentials = new NetworkCredential("rentaroad_unan@zohomail.com", "6q2ei6eMCUfa"),
-                    EnableSsl = true,
-                    UseDefaultCredentials = false
-                };
-            }
+            string correoSalida = "rentaroad_unan@zohomail.com";
+            string correoSalidaPass = "6q2ei6eMCUfa";
 
-            catch (Exception ex)
+            SmtpClient stmp = new SmtpClient("smtp.zoho.com")
             {
-                MessageBox.Show("Hubo un error al configurar el cliente");
-                return false;
-            }
+                Port = 587,
+                Credentials = new NetworkCredential(correoSalida, correoSalidaPass),
+                EnableSsl = true,
+                UseDefaultCredentials = false
+            };
 
             string asuntoCorreo = "Recuperación de contraseña";
             string cuerpoCorreo = $"Tu código de recuperación: {token}";
 
             try
-            { 
+            {
                 var mensajeCorreo = new MailMessage
                 {
-                    From = new MailAddress("rentaroad_unan@zohomail.com"),
+                    From = new MailAddress(correoSalida),
                     Subject = asuntoCorreo,
                     Body = cuerpoCorreo,
-                    IsBodyHtml = false  
+                    IsBodyHtml = false
                 };
 
                 mensajeCorreo.To.Add(correoDestino);
                 stmp.Send(mensajeCorreo);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Hubo un error al procesar el correo");
+                MessageBox.Show(ex.Message);
                 return false;
             }
             return true;

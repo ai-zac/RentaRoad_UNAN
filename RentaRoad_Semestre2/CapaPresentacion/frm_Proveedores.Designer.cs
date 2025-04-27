@@ -32,27 +32,31 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
-            button5 = new Button();
+            btnGuardar = new Button();
             groupBox3 = new GroupBox();
-            comboBox5 = new ComboBox();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox1 = new ComboBox();
+            txtTelefono = new TextBox();
+            label4 = new Label();
+            groupBox2 = new GroupBox();
+            chbEstaHabilitado = new CheckBox();
+            label3 = new Label();
+            txtNombre = new TextBox();
+            txtCorreo = new TextBox();
+            txtRUC = new TextBox();
             label26 = new Label();
-            comboBox2 = new ComboBox();
-            label8 = new Label();
             label5 = new Label();
             label2 = new Label();
-            label4 = new Label();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            eliminar = new DataGridViewTextBoxColumn();
+            dgListaProveedores = new DataGridView();
+            dgCodigoRuc = new DataGridViewTextBoxColumn();
+            dgNombre = new DataGridViewTextBoxColumn();
+            dgTelefono = new DataGridViewTextBoxColumn();
+            dgCorreo = new DataGridViewTextBoxColumn();
+            dgEstado = new DataGridViewTextBoxColumn();
+            dgEliminar = new DataGridViewTextBoxColumn();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgListaProveedores).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -66,35 +70,35 @@
             label1.TabIndex = 71;
             label1.Text = "Proveedores";
             // 
-            // button5
+            // btnGuardar
             // 
-            button5.BackColor = Color.FromArgb(0, 80, 200);
-            button5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(559, 152);
-            button5.Margin = new Padding(2);
-            button5.Name = "button5";
-            button5.Size = new Size(120, 39);
-            button5.TabIndex = 62;
-            button5.Text = "Guardar";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
+            btnGuardar.BackColor = Color.FromArgb(0, 80, 200);
+            btnGuardar.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
+            btnGuardar.ImageAlign = ContentAlignment.MiddleRight;
+            btnGuardar.Location = new Point(559, 152);
+            btnGuardar.Margin = new Padding(2);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(120, 39);
+            btnGuardar.TabIndex = 62;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(comboBox5);
-            groupBox3.Controls.Add(comboBox4);
-            groupBox3.Controls.Add(comboBox3);
-            groupBox3.Controls.Add(comboBox1);
+            groupBox3.Controls.Add(txtTelefono);
+            groupBox3.Controls.Add(label4);
+            groupBox3.Controls.Add(groupBox2);
+            groupBox3.Controls.Add(txtNombre);
+            groupBox3.Controls.Add(txtCorreo);
+            groupBox3.Controls.Add(txtRUC);
             groupBox3.Controls.Add(label26);
-            groupBox3.Controls.Add(comboBox2);
-            groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(button5);
+            groupBox3.Controls.Add(btnGuardar);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label2);
-            groupBox3.Controls.Add(label4);
             groupBox3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox3.Location = new Point(35, 81);
             groupBox3.Margin = new Padding(2);
@@ -105,45 +109,76 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del proveedor";
             // 
-            // comboBox5
+            // txtTelefono
             // 
-            comboBox5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(169, 133);
-            comboBox5.Margin = new Padding(4, 3, 4, 3);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(135, 25);
-            comboBox5.TabIndex = 85;
+            txtTelefono.Location = new Point(169, 130);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(213, 27);
+            txtTelefono.TabIndex = 89;
             // 
-            // comboBox4
+            // label4
             // 
-            comboBox4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(169, 62);
-            comboBox4.Margin = new Padding(4, 3, 4, 3);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(270, 25);
-            comboBox4.TabIndex = 84;
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(16, 136);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(65, 16);
+            label4.TabIndex = 12;
+            label4.Text = "Teléfono:";
             // 
-            // comboBox3
+            // groupBox2
             // 
-            comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(169, 29);
-            comboBox3.Margin = new Padding(4, 3, 4, 3);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(270, 25);
-            comboBox3.TabIndex = 83;
+            groupBox2.Controls.Add(chbEstaHabilitado);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Location = new Point(18, 155);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 42);
+            groupBox2.TabIndex = 110;
+            groupBox2.TabStop = false;
             // 
-            // comboBox1
+            // chbEstaHabilitado
             // 
-            comboBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(169, 98);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(466, 25);
-            comboBox1.TabIndex = 82;
+            chbEstaHabilitado.AutoSize = true;
+            chbEstaHabilitado.Location = new Point(151, 22);
+            chbEstaHabilitado.Name = "chbEstaHabilitado";
+            chbEstaHabilitado.Size = new Size(15, 14);
+            chbEstaHabilitado.TabIndex = 109;
+            chbEstaHabilitado.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(-2, 23);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 16);
+            label3.TabIndex = 105;
+            label3.Text = "Esta habilitado:";
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(170, 96);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(466, 27);
+            txtNombre.TabIndex = 88;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(170, 62);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(270, 27);
+            txtCorreo.TabIndex = 87;
+            // 
+            // txtRUC
+            // 
+            txtRUC.Location = new Point(170, 28);
+            txtRUC.Name = "txtRUC";
+            txtRUC.Size = new Size(270, 27);
+            txtRUC.TabIndex = 86;
             // 
             // label26
             // 
@@ -156,29 +191,6 @@
             label26.Size = new Size(128, 16);
             label26.TabIndex = 81;
             label26.Text = "Nombre completo:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(169, 168);
-            comboBox2.Margin = new Padding(4, 3, 4, 3);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(135, 25);
-            comboBox2.TabIndex = 69;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Black;
-            label8.Location = new Point(15, 173);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(54, 16);
-            label8.TabIndex = 68;
-            label8.Text = "Estado:";
             // 
             // label5
             // 
@@ -204,22 +216,10 @@
             label2.TabIndex = 14;
             label2.Text = "Código RUC:";
             // 
-            // label4
+            // dgListaProveedores
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(16, 136);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 16);
-            label4.TabIndex = 12;
-            label4.Text = "Teléfono:";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgListaProveedores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgListaProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
@@ -227,81 +227,91 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, eliminar });
+            dgListaProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgListaProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgListaProveedores.Columns.AddRange(new DataGridViewColumn[] { dgCodigoRuc, dgNombre, dgTelefono, dgCorreo, dgEstado, dgEliminar });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 11F);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(11, 323);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
+            dgListaProveedores.DefaultCellStyle = dataGridViewCellStyle2;
+            dgListaProveedores.Location = new Point(11, 316);
+            dgListaProveedores.Margin = new Padding(2);
+            dgListaProveedores.Name = "dgListaProveedores";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 11F);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(1066, 411);
-            dataGridView1.TabIndex = 82;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgListaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgListaProveedores.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 11F);
+            dgListaProveedores.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgListaProveedores.RowTemplate.Height = 24;
+            dgListaProveedores.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgListaProveedores.Size = new Size(1066, 418);
+            dgListaProveedores.TabIndex = 82;
+            dgListaProveedores.CellClick += dgListaProveedores_seleccionarProveedor;
+            dgListaProveedores.CellDoubleClick += dgListaProveedores_eliminarUsuario;
+            dgListaProveedores.CellEndEdit += dgListaProveedores_actualizarProveedor;
             // 
-            // Column1
+            // dgCodigoRuc
             // 
-            Column1.HeaderText = "Código RUC";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            dgCodigoRuc.HeaderText = "Código RUC";
+            dgCodigoRuc.MinimumWidth = 6;
+            dgCodigoRuc.Name = "dgCodigoRuc";
             // 
-            // Column2
+            // dgNombre
             // 
-            Column2.HeaderText = "Nombre completo";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            dgNombre.HeaderText = "Nombre completo";
+            dgNombre.MinimumWidth = 6;
+            dgNombre.Name = "dgNombre";
             // 
-            // Column3
+            // dgTelefono
             // 
-            Column3.HeaderText = "Teléfono";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            dgTelefono.HeaderText = "Teléfono";
+            dgTelefono.MinimumWidth = 6;
+            dgTelefono.Name = "dgTelefono";
             // 
-            // Column4
+            // dgCorreo
             // 
-            Column4.HeaderText = "Correo electrónico";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
+            dgCorreo.HeaderText = "Correo electrónico";
+            dgCorreo.MinimumWidth = 6;
+            dgCorreo.Name = "dgCorreo";
             // 
-            // eliminar
+            // dgEstado
             // 
-            eliminar.HeaderText = "Eliminar";
-            eliminar.Name = "eliminar";
+            dgEstado.HeaderText = "Habilitado";
+            dgEstado.Name = "dgEstado";
             // 
-            // ControlProveedores
+            // dgEliminar
+            // 
+            dgEliminar.HeaderText = "Eliminar";
+            dgEliminar.Name = "dgEliminar";
+            dgEliminar.ReadOnly = true;
+            // 
+            // frm_Proveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 745);
             Controls.Add(groupBox3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgListaProveedores);
             Controls.Add(label1);
             Margin = new Padding(2);
             MinimumSize = new Size(700, 345);
-            Name = "ControlProveedores";
+            Name = "frm_Proveedores";
             Text = "ControlProveedores";
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgListaProveedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -309,23 +319,29 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgListaProveedores;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn eliminar;
+        private TextBox txtRUC;
+        private TextBox txtNombre;
+        private TextBox txtCorreo;
+        private TextBox txtTelefono;
+        private GroupBox groupBox2;
+        private CheckBox chbEstaHabilitado;
+        private Label label3;
+        private DataGridViewTextBoxColumn dgNombreCompleto;
+        private DataGridViewTextBoxColumn dgTelefonoProveedor;
+        private DataGridViewTextBoxColumn dgCorreoElectronico;
+        private DataGridViewTextBoxColumn dgHabilitado;
+        private DataGridViewTextBoxColumn dgCodigoRuc;
+        private DataGridViewTextBoxColumn dgNombre;
+        private DataGridViewTextBoxColumn dgTelefono;
+        private DataGridViewTextBoxColumn dgCorreo;
+        private DataGridViewTextBoxColumn dgEstado;
+        private DataGridViewTextBoxColumn dgEliminar;
     }
 }

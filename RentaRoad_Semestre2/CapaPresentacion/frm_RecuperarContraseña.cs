@@ -1,6 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using RentaRoad_Semestre3.CapaDatos.Modelos;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
+using RentaRoad_Semestre3.CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -35,16 +35,18 @@
             label10 = new Label();
             label11 = new Label();
             label14 = new Label();
-            txtyear = new TextBox();
+            txtAño = new TextBox();
             txtprecio = new TextBox();
             label16 = new Label();
             label17 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            dtpDesdePlazo = new DateTimePicker();
+            dtpHastaPlazo = new DateTimePicker();
             label18 = new Label();
-            txtcantdias = new TextBox();
+            txtCantidadDias = new TextBox();
             groupBox1 = new GroupBox();
-            comboBox2 = new ComboBox();
+            btnGuardarCliente = new Button();
+            btnNuevoCliente = new Button();
+            cmbTelefonoCliente = new ComboBox();
             label25 = new Label();
             txtlicencia = new TextBox();
             txtcedula = new TextBox();
@@ -55,43 +57,42 @@
             label26 = new Label();
             label27 = new Label();
             label28 = new Label();
-            textBox25 = new TextBox();
+            txtNumeroContrato = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            comboBox1 = new ComboBox();
+            cmbPlaca = new ComboBox();
             txtmodelo = new TextBox();
             txtasientos = new TextBox();
-            txtmarca = new TextBox();
+            txtMarca = new TextBox();
             txtcolor = new TextBox();
             groupBox3 = new GroupBox();
             label31 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnNuevoContrato = new Button();
+            btnGuardarContrato = new Button();
+            btnImprimirContrato = new Button();
             label32 = new Label();
             autoimage = new PictureBox();
             groupBox4 = new GroupBox();
             label3 = new Label();
-            txtgarantia = new TextBox();
+            txtGarantia = new TextBox();
             label2 = new Label();
-            txtseguros = new TextBox();
+            txtSeguros = new TextBox();
             label23 = new Label();
-            txtsubtotal = new TextBox();
+            txtSubTotal = new TextBox();
             label24 = new Label();
-            txtdescuentos = new TextBox();
-            txttotal = new TextBox();
+            txtDescuentos = new TextBox();
+            txtTotal = new TextBox();
             label21 = new Label();
             radiobtncontado = new RadioButton();
             radiobtntarjeta = new RadioButton();
             groupBox6 = new GroupBox();
             groupBox5 = new GroupBox();
             label5 = new Label();
-            textBox1 = new TextBox();
+            txtPagoDolares = new TextBox();
             txtcordobas = new Label();
-            txtmontoingresado = new TextBox();
+            txtPagoCordobas = new TextBox();
             label6 = new Label();
-            txtmontocambio = new TextBox();
-            button1 = new Button();
+            txtCambio = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -111,7 +112,6 @@
             label7.Size = new Size(46, 16);
             label7.TabIndex = 11;
             label7.Text = "Color:";
-            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -168,15 +168,15 @@
             label14.TabIndex = 18;
             label14.Text = "Precio de renta:";
             // 
-            // txtyear
+            // txtAño
             // 
-            txtyear.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtyear.Location = new Point(90, 118);
-            txtyear.Margin = new Padding(3, 2, 3, 2);
-            txtyear.Name = "txtyear";
-            txtyear.Size = new Size(88, 22);
-            txtyear.TabIndex = 21;
-            txtyear.TextChanged += textBox6_TextChanged;
+            txtAño.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAño.Location = new Point(90, 118);
+            txtAño.Margin = new Padding(3, 2, 3, 2);
+            txtAño.Name = "txtAño";
+            txtAño.ReadOnly = true;
+            txtAño.Size = new Size(88, 22);
+            txtAño.TabIndex = 21;
             // 
             // txtprecio
             // 
@@ -184,9 +184,10 @@
             txtprecio.Location = new Point(148, 176);
             txtprecio.Margin = new Padding(3, 2, 3, 2);
             txtprecio.Name = "txtprecio";
+            txtprecio.ReadOnly = true;
             txtprecio.Size = new Size(101, 22);
             txtprecio.TabIndex = 25;
-            txtprecio.TextChanged += textBox10_TextChanged;
+            txtprecio.Text = "0.0";
             // 
             // label16
             // 
@@ -210,25 +211,27 @@
             label17.TabIndex = 31;
             label17.Text = "Hasta:";
             // 
-            // dateTimePicker1
+            // dtpDesdePlazo
             // 
-            dateTimePicker1.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(80, 28);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(315, 22);
-            dateTimePicker1.TabIndex = 32;
+            dtpDesdePlazo.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDesdePlazo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDesdePlazo.Location = new Point(80, 28);
+            dtpDesdePlazo.Margin = new Padding(3, 2, 3, 2);
+            dtpDesdePlazo.Name = "dtpDesdePlazo";
+            dtpDesdePlazo.Size = new Size(315, 22);
+            dtpDesdePlazo.TabIndex = 32;
+            dtpDesdePlazo.ValueChanged += dtpDesdePlazo_ValueChanged;
             // 
-            // dateTimePicker2
+            // dtpHastaPlazo
             // 
-            dateTimePicker2.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker2.Location = new Point(80, 58);
-            dateTimePicker2.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(315, 22);
-            dateTimePicker2.TabIndex = 33;
+            dtpHastaPlazo.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpHastaPlazo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpHastaPlazo.Location = new Point(80, 58);
+            dtpHastaPlazo.Margin = new Padding(3, 2, 3, 2);
+            dtpHastaPlazo.Name = "dtpHastaPlazo";
+            dtpHastaPlazo.Size = new Size(315, 22);
+            dtpHastaPlazo.TabIndex = 33;
+            dtpHastaPlazo.ValueChanged += dtpHastaPlazo_ValueChanged;
             // 
             // label18
             // 
@@ -241,20 +244,23 @@
             label18.TabIndex = 34;
             label18.Text = "Cantidad\r\nde días:";
             // 
-            // txtcantdias
+            // txtCantidadDias
             // 
-            txtcantdias.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtcantdias.Location = new Point(489, 42);
-            txtcantdias.Margin = new Padding(3, 2, 3, 2);
-            txtcantdias.Name = "txtcantdias";
-            txtcantdias.Size = new Size(57, 22);
-            txtcantdias.TabIndex = 36;
+            txtCantidadDias.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCantidadDias.Location = new Point(489, 42);
+            txtCantidadDias.Margin = new Padding(3, 2, 3, 2);
+            txtCantidadDias.Name = "txtCantidadDias";
+            txtCantidadDias.ReadOnly = true;
+            txtCantidadDias.Size = new Size(57, 22);
+            txtCantidadDias.TabIndex = 36;
+            txtCantidadDias.Text = "0";
             // 
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.None;
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(btnGuardarCliente);
+            groupBox1.Controls.Add(btnNuevoCliente);
+            groupBox1.Controls.Add(cmbTelefonoCliente);
             groupBox1.Controls.Add(label25);
             groupBox1.Controls.Add(txtlicencia);
             groupBox1.Controls.Add(txtcedula);
@@ -274,13 +280,49 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del Cliente";
             // 
-            // comboBox2
+            // btnGuardarCliente
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(122, 22);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(179, 26);
-            comboBox2.TabIndex = 124;
+            btnGuardarCliente.Anchor = AnchorStyles.None;
+            btnGuardarCliente.AutoSize = true;
+            btnGuardarCliente.BackColor = Color.FromArgb(0, 80, 200);
+            btnGuardarCliente.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardarCliente.ForeColor = Color.White;
+            btnGuardarCliente.ImageAlign = ContentAlignment.MiddleRight;
+            btnGuardarCliente.Location = new Point(248, 224);
+            btnGuardarCliente.Margin = new Padding(3, 2, 3, 2);
+            btnGuardarCliente.Name = "btnGuardarCliente";
+            btnGuardarCliente.Size = new Size(97, 35);
+            btnGuardarCliente.TabIndex = 125;
+            btnGuardarCliente.Text = "Guardar";
+            btnGuardarCliente.UseVisualStyleBackColor = false;
+            btnGuardarCliente.Visible = false;
+            btnGuardarCliente.Click += btnGuardarCliente_Click;
+            // 
+            // btnNuevoCliente
+            // 
+            btnNuevoCliente.Anchor = AnchorStyles.None;
+            btnNuevoCliente.AutoSize = true;
+            btnNuevoCliente.BackColor = Color.FromArgb(0, 80, 200);
+            btnNuevoCliente.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoCliente.ForeColor = Color.White;
+            btnNuevoCliente.ImageAlign = ContentAlignment.MiddleRight;
+            btnNuevoCliente.Location = new Point(6, 224);
+            btnNuevoCliente.Margin = new Padding(3, 2, 3, 2);
+            btnNuevoCliente.Name = "btnNuevoCliente";
+            btnNuevoCliente.Size = new Size(123, 35);
+            btnNuevoCliente.TabIndex = 90;
+            btnNuevoCliente.Text = "Nuevo cliente";
+            btnNuevoCliente.UseVisualStyleBackColor = false;
+            btnNuevoCliente.Click += btnNuevoCliente_Click;
+            // 
+            // cmbTelefonoCliente
+            // 
+            cmbTelefonoCliente.FormattingEnabled = true;
+            cmbTelefonoCliente.Location = new Point(122, 22);
+            cmbTelefonoCliente.Name = "cmbTelefonoCliente";
+            cmbTelefonoCliente.Size = new Size(179, 26);
+            cmbTelefonoCliente.TabIndex = 124;
+            cmbTelefonoCliente.SelectedIndexChanged += cmbTelefonoCliente_SelectedIndexChanged;
             // 
             // label25
             // 
@@ -299,6 +341,7 @@
             txtlicencia.Location = new Point(122, 138);
             txtlicencia.Margin = new Padding(3, 2, 3, 2);
             txtlicencia.Name = "txtlicencia";
+            txtlicencia.ReadOnly = true;
             txtlicencia.Size = new Size(179, 22);
             txtlicencia.TabIndex = 121;
             // 
@@ -308,6 +351,7 @@
             txtcedula.Location = new Point(122, 100);
             txtcedula.Margin = new Padding(3, 2, 3, 2);
             txtcedula.Name = "txtcedula";
+            txtcedula.ReadOnly = true;
             txtcedula.Size = new Size(179, 22);
             txtcedula.TabIndex = 120;
             // 
@@ -317,6 +361,7 @@
             txtnombrecliente.Location = new Point(122, 64);
             txtnombrecliente.Margin = new Padding(3, 2, 3, 2);
             txtnombrecliente.Name = "txtnombrecliente";
+            txtnombrecliente.ReadOnly = true;
             txtnombrecliente.Size = new Size(179, 22);
             txtnombrecliente.TabIndex = 119;
             // 
@@ -338,9 +383,9 @@
             txtdireccion.Margin = new Padding(3, 2, 3, 2);
             txtdireccion.Multiline = true;
             txtdireccion.Name = "txtdireccion";
+            txtdireccion.ReadOnly = true;
             txtdireccion.Size = new Size(182, 42);
             txtdireccion.TabIndex = 58;
-            txtdireccion.TextChanged += textBox19_TextChanged;
             // 
             // label22
             // 
@@ -386,18 +431,16 @@
             label28.Size = new Size(169, 19);
             label28.TabIndex = 49;
             label28.Text = "Número de contrato:";
-            label28.Click += label28_Click;
             // 
-            // textBox25
+            // txtNumeroContrato
             // 
-            textBox25.Anchor = AnchorStyles.None;
-            textBox25.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox25.Location = new Point(256, 69);
-            textBox25.Margin = new Padding(3, 2, 3, 2);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(84, 22);
-            textBox25.TabIndex = 50;
-            textBox25.TextChanged += textBox25_TextChanged;
+            txtNumeroContrato.Anchor = AnchorStyles.None;
+            txtNumeroContrato.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumeroContrato.Location = new Point(256, 69);
+            txtNumeroContrato.Margin = new Padding(3, 2, 3, 2);
+            txtNumeroContrato.Name = "txtNumeroContrato";
+            txtNumeroContrato.Size = new Size(84, 22);
+            txtNumeroContrato.TabIndex = 50;
             // 
             // label1
             // 
@@ -413,14 +456,14 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.None;
-            groupBox2.Controls.Add(comboBox1);
+            groupBox2.Controls.Add(cmbPlaca);
             groupBox2.Controls.Add(txtmodelo);
             groupBox2.Controls.Add(txtasientos);
-            groupBox2.Controls.Add(txtmarca);
+            groupBox2.Controls.Add(txtMarca);
             groupBox2.Controls.Add(txtcolor);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(txtprecio);
-            groupBox2.Controls.Add(txtyear);
+            groupBox2.Controls.Add(txtAño);
             groupBox2.Controls.Add(label14);
             groupBox2.Controls.Add(label11);
             groupBox2.Controls.Add(label10);
@@ -437,13 +480,14 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos del Auto";
             // 
-            // comboBox1
+            // cmbPlaca
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(90, 22);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(139, 27);
-            comboBox1.TabIndex = 119;
+            cmbPlaca.FormattingEnabled = true;
+            cmbPlaca.Location = new Point(90, 22);
+            cmbPlaca.Name = "cmbPlaca";
+            cmbPlaca.Size = new Size(139, 27);
+            cmbPlaca.TabIndex = 119;
+            cmbPlaca.SelectedIndexChanged += cmbPlaca_SelectedIndexChanged;
             // 
             // txtmodelo
             // 
@@ -451,6 +495,7 @@
             txtmodelo.Location = new Point(90, 88);
             txtmodelo.Margin = new Padding(3, 2, 3, 2);
             txtmodelo.Name = "txtmodelo";
+            txtmodelo.ReadOnly = true;
             txtmodelo.Size = new Size(185, 22);
             txtmodelo.TabIndex = 69;
             // 
@@ -460,17 +505,19 @@
             txtasientos.Location = new Point(148, 204);
             txtasientos.Margin = new Padding(3, 2, 3, 2);
             txtasientos.Name = "txtasientos";
+            txtasientos.ReadOnly = true;
             txtasientos.Size = new Size(101, 22);
             txtasientos.TabIndex = 67;
             // 
-            // txtmarca
+            // txtMarca
             // 
-            txtmarca.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtmarca.Location = new Point(90, 58);
-            txtmarca.Margin = new Padding(3, 2, 3, 2);
-            txtmarca.Name = "txtmarca";
-            txtmarca.Size = new Size(185, 22);
-            txtmarca.TabIndex = 66;
+            txtMarca.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMarca.Location = new Point(90, 58);
+            txtMarca.Margin = new Padding(3, 2, 3, 2);
+            txtMarca.Name = "txtMarca";
+            txtMarca.ReadOnly = true;
+            txtMarca.Size = new Size(185, 22);
+            txtMarca.TabIndex = 66;
             // 
             // txtcolor
             // 
@@ -478,16 +525,17 @@
             txtcolor.Location = new Point(90, 146);
             txtcolor.Margin = new Padding(3, 2, 3, 2);
             txtcolor.Name = "txtcolor";
+            txtcolor.ReadOnly = true;
             txtcolor.Size = new Size(88, 22);
             txtcolor.TabIndex = 65;
             // 
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.None;
-            groupBox3.Controls.Add(txtcantdias);
+            groupBox3.Controls.Add(txtCantidadDias);
             groupBox3.Controls.Add(label18);
-            groupBox3.Controls.Add(dateTimePicker2);
-            groupBox3.Controls.Add(dateTimePicker1);
+            groupBox3.Controls.Add(dtpHastaPlazo);
+            groupBox3.Controls.Add(dtpDesdePlazo);
             groupBox3.Controls.Add(label17);
             groupBox3.Controls.Add(label16);
             groupBox3.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -512,61 +560,61 @@
             label31.TabIndex = 68;
             label31.Text = "Renta";
             // 
-            // button2
+            // btnNuevoContrato
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.AutoSize = true;
-            button2.BackColor = Color.FromArgb(0, 80, 200);
-            button2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleRight;
-            button2.Location = new Point(368, 52);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(126, 52);
-            button2.TabIndex = 63;
-            button2.Text = "Nuevo\r\ncontrato";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
+            btnNuevoContrato.Anchor = AnchorStyles.None;
+            btnNuevoContrato.AutoSize = true;
+            btnNuevoContrato.BackColor = Color.FromArgb(0, 80, 200);
+            btnNuevoContrato.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNuevoContrato.ForeColor = Color.White;
+            btnNuevoContrato.Image = (Image)resources.GetObject("btnNuevoContrato.Image");
+            btnNuevoContrato.ImageAlign = ContentAlignment.MiddleRight;
+            btnNuevoContrato.Location = new Point(368, 52);
+            btnNuevoContrato.Margin = new Padding(3, 2, 3, 2);
+            btnNuevoContrato.Name = "btnNuevoContrato";
+            btnNuevoContrato.Size = new Size(126, 52);
+            btnNuevoContrato.TabIndex = 63;
+            btnNuevoContrato.Text = "Nuevo\r\ncontrato";
+            btnNuevoContrato.TextAlign = ContentAlignment.MiddleLeft;
+            btnNuevoContrato.UseVisualStyleBackColor = false;
+            btnNuevoContrato.Click += btnNuevoContrato_Click;
             // 
-            // button3
+            // btnGuardarContrato
             // 
-            button3.Anchor = AnchorStyles.None;
-            button3.AutoSize = true;
-            button3.BackColor = Color.FromArgb(0, 80, 200);
-            button3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleRight;
-            button3.Location = new Point(501, 52);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(129, 52);
-            button3.TabIndex = 69;
-            button3.Text = "Guardar\r\ncontrato";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnGuardarContrato.Anchor = AnchorStyles.None;
+            btnGuardarContrato.AutoSize = true;
+            btnGuardarContrato.BackColor = Color.FromArgb(0, 80, 200);
+            btnGuardarContrato.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardarContrato.ForeColor = Color.White;
+            btnGuardarContrato.Image = (Image)resources.GetObject("btnGuardarContrato.Image");
+            btnGuardarContrato.ImageAlign = ContentAlignment.MiddleRight;
+            btnGuardarContrato.Location = new Point(501, 52);
+            btnGuardarContrato.Margin = new Padding(3, 2, 3, 2);
+            btnGuardarContrato.Name = "btnGuardarContrato";
+            btnGuardarContrato.Size = new Size(129, 52);
+            btnGuardarContrato.TabIndex = 69;
+            btnGuardarContrato.Text = "Guardar\r\ncontrato";
+            btnGuardarContrato.TextAlign = ContentAlignment.MiddleLeft;
+            btnGuardarContrato.UseVisualStyleBackColor = false;
+            btnGuardarContrato.Click += btnGuardarContrato_Click;
             // 
-            // button4
+            // btnImprimirContrato
             // 
-            button4.Anchor = AnchorStyles.None;
-            button4.AutoSize = true;
-            button4.BackColor = Color.FromArgb(0, 80, 200);
-            button4.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleRight;
-            button4.Location = new Point(641, 52);
-            button4.Margin = new Padding(3, 2, 3, 2);
-            button4.Name = "button4";
-            button4.Size = new Size(144, 52);
-            button4.TabIndex = 70;
-            button4.Text = "Imprimir\r\ncontrato";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            btnImprimirContrato.Anchor = AnchorStyles.None;
+            btnImprimirContrato.AutoSize = true;
+            btnImprimirContrato.BackColor = Color.FromArgb(0, 80, 200);
+            btnImprimirContrato.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnImprimirContrato.ForeColor = Color.White;
+            btnImprimirContrato.Image = (Image)resources.GetObject("btnImprimirContrato.Image");
+            btnImprimirContrato.ImageAlign = ContentAlignment.MiddleRight;
+            btnImprimirContrato.Location = new Point(641, 52);
+            btnImprimirContrato.Margin = new Padding(3, 2, 3, 2);
+            btnImprimirContrato.Name = "btnImprimirContrato";
+            btnImprimirContrato.Size = new Size(144, 52);
+            btnImprimirContrato.TabIndex = 70;
+            btnImprimirContrato.Text = "Imprimir\r\ncontrato";
+            btnImprimirContrato.TextAlign = ContentAlignment.MiddleLeft;
+            btnImprimirContrato.UseVisualStyleBackColor = false;
             // 
             // label32
             // 
@@ -579,7 +627,6 @@
             label32.Size = new Size(167, 19);
             label32.TabIndex = 87;
             label32.Text = "Vista previa del auto";
-            label32.Click += label32_Click;
             // 
             // autoimage
             // 
@@ -598,14 +645,14 @@
             // 
             groupBox4.Anchor = AnchorStyles.None;
             groupBox4.Controls.Add(label3);
-            groupBox4.Controls.Add(txtgarantia);
+            groupBox4.Controls.Add(txtGarantia);
             groupBox4.Controls.Add(label2);
-            groupBox4.Controls.Add(txtseguros);
+            groupBox4.Controls.Add(txtSeguros);
             groupBox4.Controls.Add(label23);
-            groupBox4.Controls.Add(txtsubtotal);
+            groupBox4.Controls.Add(txtSubTotal);
             groupBox4.Controls.Add(label24);
-            groupBox4.Controls.Add(txtdescuentos);
-            groupBox4.Controls.Add(txttotal);
+            groupBox4.Controls.Add(txtDescuentos);
+            groupBox4.Controls.Add(txtTotal);
             groupBox4.Controls.Add(label21);
             groupBox4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox4.Location = new Point(53, 502);
@@ -628,14 +675,16 @@
             label3.TabIndex = 46;
             label3.Text = "Garantía:";
             // 
-            // txtgarantia
+            // txtGarantia
             // 
-            txtgarantia.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtgarantia.Location = new Point(132, 125);
-            txtgarantia.Margin = new Padding(3, 2, 3, 2);
-            txtgarantia.Name = "txtgarantia";
-            txtgarantia.Size = new Size(109, 22);
-            txtgarantia.TabIndex = 47;
+            txtGarantia.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtGarantia.Location = new Point(132, 125);
+            txtGarantia.Margin = new Padding(3, 2, 3, 2);
+            txtGarantia.Name = "txtGarantia";
+            txtGarantia.ReadOnly = true;
+            txtGarantia.Size = new Size(109, 22);
+            txtGarantia.TabIndex = 47;
+            txtGarantia.Text = "0.0";
             // 
             // label2
             // 
@@ -648,14 +697,16 @@
             label2.TabIndex = 44;
             label2.Text = "Seguro:";
             // 
-            // txtseguros
+            // txtSeguros
             // 
-            txtseguros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtseguros.Location = new Point(133, 62);
-            txtseguros.Margin = new Padding(3, 2, 3, 2);
-            txtseguros.Name = "txtseguros";
-            txtseguros.Size = new Size(108, 22);
-            txtseguros.TabIndex = 45;
+            txtSeguros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSeguros.Location = new Point(133, 62);
+            txtSeguros.Margin = new Padding(3, 2, 3, 2);
+            txtSeguros.Name = "txtSeguros";
+            txtSeguros.ReadOnly = true;
+            txtSeguros.Size = new Size(108, 22);
+            txtSeguros.TabIndex = 45;
+            txtSeguros.Text = "50000.00";
             // 
             // label23
             // 
@@ -668,14 +719,15 @@
             label23.TabIndex = 38;
             label23.Text = "SubTotal:";
             // 
-            // txtsubtotal
+            // txtSubTotal
             // 
-            txtsubtotal.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtsubtotal.Location = new Point(132, 28);
-            txtsubtotal.Margin = new Padding(3, 2, 3, 2);
-            txtsubtotal.Name = "txtsubtotal";
-            txtsubtotal.Size = new Size(109, 22);
-            txtsubtotal.TabIndex = 43;
+            txtSubTotal.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSubTotal.Location = new Point(132, 28);
+            txtSubTotal.Margin = new Padding(3, 2, 3, 2);
+            txtSubTotal.Name = "txtSubTotal";
+            txtSubTotal.ReadOnly = true;
+            txtSubTotal.Size = new Size(109, 22);
+            txtSubTotal.TabIndex = 43;
             // 
             // label24
             // 
@@ -688,23 +740,27 @@
             label24.TabIndex = 40;
             label24.Text = "Descuentos:";
             // 
-            // txtdescuentos
+            // txtDescuentos
             // 
-            txtdescuentos.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdescuentos.Location = new Point(132, 97);
-            txtdescuentos.Margin = new Padding(3, 2, 3, 2);
-            txtdescuentos.Name = "txtdescuentos";
-            txtdescuentos.Size = new Size(109, 22);
-            txtdescuentos.TabIndex = 42;
+            txtDescuentos.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescuentos.Location = new Point(132, 97);
+            txtDescuentos.Margin = new Padding(3, 2, 3, 2);
+            txtDescuentos.Name = "txtDescuentos";
+            txtDescuentos.Size = new Size(109, 22);
+            txtDescuentos.TabIndex = 42;
+            txtDescuentos.Text = "0.0";
+            txtDescuentos.TextChanged += txtDescuentos_TextChanged;
             // 
-            // txttotal
+            // txtTotal
             // 
-            txttotal.Font = new Font("Century Gothic", 11F);
-            txttotal.Location = new Point(133, 161);
-            txttotal.Margin = new Padding(3, 2, 3, 2);
-            txttotal.Name = "txttotal";
-            txttotal.Size = new Size(109, 25);
-            txttotal.TabIndex = 41;
+            txtTotal.Font = new Font("Century Gothic", 11F);
+            txtTotal.Location = new Point(133, 161);
+            txtTotal.Margin = new Padding(3, 2, 3, 2);
+            txtTotal.Name = "txtTotal";
+            txtTotal.ReadOnly = true;
+            txtTotal.Size = new Size(109, 25);
+            txtTotal.TabIndex = 41;
+            txtTotal.Text = "0.0";
             // 
             // label21
             // 
@@ -729,7 +785,6 @@
             radiobtncontado.TabStop = true;
             radiobtncontado.Text = "Contado";
             radiobtncontado.UseVisualStyleBackColor = true;
-            radiobtncontado.CheckedChanged += radiobtncontado_CheckedChanged;
             // 
             // radiobtntarjeta
             // 
@@ -764,11 +819,11 @@
             // 
             groupBox5.Anchor = AnchorStyles.None;
             groupBox5.Controls.Add(label5);
-            groupBox5.Controls.Add(textBox1);
+            groupBox5.Controls.Add(txtPagoDolares);
             groupBox5.Controls.Add(txtcordobas);
-            groupBox5.Controls.Add(txtmontoingresado);
+            groupBox5.Controls.Add(txtPagoCordobas);
             groupBox5.Controls.Add(label6);
-            groupBox5.Controls.Add(txtmontocambio);
+            groupBox5.Controls.Add(txtCambio);
             groupBox5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox5.Location = new Point(414, 601);
             groupBox5.Margin = new Padding(3, 2, 3, 2);
@@ -790,14 +845,15 @@
             label5.TabIndex = 45;
             label5.Text = "Pago en $:";
             // 
-            // textBox1
+            // txtPagoDolares
             // 
-            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(151, 62);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(109, 22);
-            textBox1.TabIndex = 46;
+            txtPagoDolares.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPagoDolares.Location = new Point(151, 62);
+            txtPagoDolares.Margin = new Padding(3, 2, 3, 2);
+            txtPagoDolares.Name = "txtPagoDolares";
+            txtPagoDolares.Size = new Size(109, 22);
+            txtPagoDolares.TabIndex = 46;
+            txtPagoDolares.TextChanged += txtPagoDolares_TextChanged;
             // 
             // txtcordobas
             // 
@@ -810,14 +866,15 @@
             txtcordobas.TabIndex = 38;
             txtcordobas.Text = "Pago en C$:";
             // 
-            // txtmontoingresado
+            // txtPagoCordobas
             // 
-            txtmontoingresado.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtmontoingresado.Location = new Point(151, 28);
-            txtmontoingresado.Margin = new Padding(3, 2, 3, 2);
-            txtmontoingresado.Name = "txtmontoingresado";
-            txtmontoingresado.Size = new Size(109, 22);
-            txtmontoingresado.TabIndex = 43;
+            txtPagoCordobas.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPagoCordobas.Location = new Point(151, 28);
+            txtPagoCordobas.Margin = new Padding(3, 2, 3, 2);
+            txtPagoCordobas.Name = "txtPagoCordobas";
+            txtPagoCordobas.Size = new Size(109, 22);
+            txtPagoCordobas.TabIndex = 43;
+            txtPagoCordobas.TextChanged += txtPagoCordobas_TextChanged;
             // 
             // label6
             // 
@@ -830,30 +887,16 @@
             label6.TabIndex = 40;
             label6.Text = "Cambio:";
             // 
-            // txtmontocambio
+            // txtCambio
             // 
-            txtmontocambio.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtmontocambio.Location = new Point(151, 95);
-            txtmontocambio.Margin = new Padding(3, 2, 3, 2);
-            txtmontocambio.Name = "txtmontocambio";
-            txtmontocambio.Size = new Size(109, 22);
-            txtmontocambio.TabIndex = 42;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.None;
-            button1.AutoSize = true;
-            button1.BackColor = Color.FromArgb(0, 80, 200);
-            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(6, 224);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 35);
-            button1.TabIndex = 90;
-            button1.Text = "Nuevo cliente";
-            button1.UseVisualStyleBackColor = false;
+            txtCambio.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCambio.Location = new Point(151, 95);
+            txtCambio.Margin = new Padding(3, 2, 3, 2);
+            txtCambio.Name = "txtCambio";
+            txtCambio.ReadOnly = true;
+            txtCambio.Size = new Size(109, 22);
+            txtCambio.TabIndex = 42;
+            txtCambio.Text = "0.0";
             // 
             // frm_Renta
             // 
@@ -864,21 +907,21 @@
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox6);
-            Controls.Add(button4);
+            Controls.Add(btnImprimirContrato);
             Controls.Add(autoimage);
             Controls.Add(groupBox3);
-            Controls.Add(button3);
+            Controls.Add(btnGuardarContrato);
             Controls.Add(groupBox2);
             Controls.Add(label32);
             Controls.Add(groupBox1);
-            Controls.Add(button2);
+            Controls.Add(btnNuevoContrato);
             Controls.Add(label31);
             Controls.Add(label28);
-            Controls.Add(textBox25);
+            Controls.Add(txtNumeroContrato);
             Margin = new Padding(3, 2, 3, 2);
             Name = "frm_Renta";
             Text = "Renta";
-            Load += Facturacion_Load;
+            Load += frm_Renta_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -904,47 +947,47 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtyear;
+        private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpDesdePlazo;
+        private System.Windows.Forms.DateTimePicker dtpHastaPlazo;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtcantdias;
+        private System.Windows.Forms.TextBox txtCantidadDias;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.TextBox txtNumeroContrato;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnNuevoContrato;
+        private System.Windows.Forms.Button btnGuardarContrato;
+        private System.Windows.Forms.Button btnImprimirContrato;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtmodelo;
         private System.Windows.Forms.TextBox txtasientos;
-        private System.Windows.Forms.TextBox txtmarca;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtcolor;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox autoimage;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtsubtotal;
+        private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtdescuentos;
-        private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.TextBox txtDescuentos;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtseguros;
+        private System.Windows.Forms.TextBox txtSeguros;
         private System.Windows.Forms.RadioButton radiobtncontado;
         private System.Windows.Forms.RadioButton radiobtntarjeta;
         private System.Windows.Forms.GroupBox groupBox6;
         private Label label3;
-        private TextBox txtgarantia;
+        private TextBox txtGarantia;
         private TextBox txtlicencia;
         private TextBox txtcedula;
         private TextBox txtnombrecliente;
@@ -957,13 +1000,14 @@
         private RadioButton radiobtncordoba;
         private GroupBox groupBox5;
         private Label txtcordobas;
-        private TextBox txtmontoingresado;
+        private TextBox txtPagoCordobas;
         private Label label6;
-        private TextBox txtmontocambio;
+        private TextBox txtCambio;
         private Label label5;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private Button button1;
+        private TextBox txtPagoDolares;
+        private ComboBox cmbTelefonoCliente;
+        private ComboBox cmbPlaca;
+        private Button btnNuevoCliente;
+        private Button btnGuardarCliente;
     }
 }

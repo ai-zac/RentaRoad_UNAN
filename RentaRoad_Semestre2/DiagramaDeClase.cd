@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Usuario">
+    <Position X="20.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAIABAQIAAAAAgJMAEAAAAAIAAIIAAEACCAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.CargoEmpleado">
+    <Position X="20.75" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAEAAAAAIAAAAAAACCAAgA=</HashCode>
+      <FileName>CapaDatos\Modelos\CargoEmpleado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="32.75" Y="0.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Adquisicion">
+    <Position X="23.5" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAgAIAAgAgAAAAAAAAAAQACAACA=</HashCode>
+      <FileName>CapaDatos\Modelos\Adquisicion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Auto">
+    <Position X="26.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAEgIAAAIAQQAAAAAAAAAJAEAhiAACAIAAECAAQAAAI=</HashCode>
+      <FileName>CapaDatos\Modelos\Auto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Cliente">
+    <Position X="29" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAIEAAAAIAAAAAAAAAAAAAAEACAUAA=</HashCode>
+      <FileName>CapaDatos\Modelos\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Color">
+    <Position X="31.25" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAIAAAQAAABAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\Color.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Contrato">
+    <Position X="23" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAgAAAAAAAQAAIBCAAAAAACgABQAIRAAEAA=</HashCode>
+      <FileName>CapaDatos\Modelos\Contrato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.DetalleAdquisicion">
+    <Position X="25.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ggEAAgAAAAAYAAAEAQAAAAAACgAAAAAAABIAAAEAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\DetalleAdquisicion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.EntregaAuto">
+    <Position X="27.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAIAAAAEAQAAAAAAQAAAAAABAAAQAAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\EntregaAuto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Marca">
+    <Position X="29.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAgAAAAAgAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\Marca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Modelo">
+    <Position X="32.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAACAAAAAAAAAAAgAAAAAAAAAAAAAACAAAE=</HashCode>
+      <FileName>CapaDatos\Modelos\Modelo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.MultaContrato">
+    <Position X="34.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQAIAAAEAAAQAAAIAAAAAAAAAAAAABAAACAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\MultaContrato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.Proveedor">
+    <Position X="36.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAAAAAAAAAIAAEAAAAAAAAAACgAACAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.RegistrosAperturasCaja">
+    <Position X="39" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAkAAAAAAAACAACAQAAAAAAAA=</HashCode>
+      <FileName>CapaDatos\Modelos\RegistrosAperturasCaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Modelos.RegistrosArqueosCaja">
+    <Position X="41.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAggAAQAAAEAAAAAACQAEAAAAAAAAAAAAAQIAAAAEAA=</HashCode>
+      <FileName>CapaDatos\Modelos\RegistrosArqueosCaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Repositorios.AutoRepositorio">
+    <Position X="44.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAABAAAAAAACAAAAIEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CapaDatos\Repositorios\AutoRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Repositorios.ClienteRepositorio">
+    <Position X="46.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAYAAACAAAAABAAAAAAAAAAIAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CapaDatos\Repositorios\ClienteRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Repositorios.ProveedorRepositorio">
+    <Position X="37.25" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAgAI=</HashCode>
+      <FileName>CapaDatos\Repositorios\ProveedorRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaDatos.Repositorios.UsuarioRepositorio">
+    <Position X="39.75" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAFAAAAAAAAAAAAAEAAAAAAEAAAAAAAIA=</HashCode>
+      <FileName>CapaDatos\Repositorios\UsuarioRepositorio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaNegocio.AutoServicio">
+    <Position X="42.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIgAAAAAQIAAAAAAAAAAAQAAAAAAACA=</HashCode>
+      <FileName>CapaNegocio\AutoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaNegocio.ClienteServicio">
+    <Position X="44.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAQgAAAAAAAAAAACAAAAgAAAA=</HashCode>
+      <FileName>CapaNegocio\ClienteServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentaRoad_Semestre3.CapaNegocio.ProveedorServicio">
+    <Position X="46.75" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAQAAAAAAIAAAQAAAAAQAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>CapaNegocio\ProveedorServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsuariosService">
+    <Position X="50" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAICgAAAAAQAAAAAAAEAAABAABAAgAAAA=</HashCode>
+      <FileName>CapaNegocio\UsuarioServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

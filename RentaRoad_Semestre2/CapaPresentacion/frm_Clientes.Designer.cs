@@ -33,28 +33,31 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Clientes));
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgListaClientes = new DataGridView();
             groupBox2 = new GroupBox();
-            comboBox5 = new ComboBox();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            label2 = new Label();
+            btnBuscarNombre = new Button();
+            btnBuscarLicencia = new Button();
+            txtLicencia = new TextBox();
+            txtTelefono = new TextBox();
+            btnBuscarTelefono = new Button();
+            txtCedula = new TextBox();
+            btnBuscarCedula = new Button();
+            txtNombre = new TextBox();
             label25 = new Label();
-            button5 = new Button();
+            btnGuardar = new Button();
             label7 = new Label();
-            textBox19 = new TextBox();
+            txtDireccion = new TextBox();
             label22 = new Label();
             label26 = new Label();
             label27 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            eliminar = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnCargar = new Button();
+            clmCedula = new DataGridViewTextBoxColumn();
+            clmNombre = new DataGridViewTextBoxColumn();
+            clmLicencia = new DataGridViewTextBoxColumn();
+            clmTelefono = new DataGridViewTextBoxColumn();
+            clmDireccion = new DataGridViewTextBoxColumn();
+            clmEliminar = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgListaClientes).BeginInit();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,10 +72,10 @@
             label1.TabIndex = 65;
             label1.Text = "Clientes";
             // 
-            // dataGridView1
+            // dgListaClientes
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgListaClientes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgListaClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
@@ -80,9 +83,9 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column6, Column4, Column5, eliminar });
+            dgListaClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgListaClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgListaClientes.Columns.AddRange(new DataGridViewColumn[] { clmCedula, clmNombre, clmLicencia, clmTelefono, clmDireccion, clmEliminar });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
@@ -90,10 +93,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(11, 401);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
+            dgListaClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            dgListaClientes.Location = new Point(11, 401);
+            dgListaClientes.Margin = new Padding(2);
+            dgListaClientes.Name = "dgListaClientes";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 11F);
@@ -101,24 +104,29 @@
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(1066, 333);
-            dataGridView1.TabIndex = 84;
+            dgListaClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgListaClientes.RowHeadersWidth = 51;
+            dgListaClientes.RowTemplate.Height = 24;
+            dgListaClientes.Size = new Size(1066, 333);
+            dgListaClientes.TabIndex = 84;
+            dgListaClientes.CellClick += dgListaClientes_seleccionarCliente;
+            dgListaClientes.CellDoubleClick += dgListaClientes_eliminarClientes;
+            dgListaClientes.CellEndEdit += dgListaClientes_actualizarCliente;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboBox5);
-            groupBox2.Controls.Add(comboBox4);
-            groupBox2.Controls.Add(comboBox3);
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(comboBox2);
-            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(btnBuscarNombre);
+            groupBox2.Controls.Add(btnBuscarLicencia);
+            groupBox2.Controls.Add(txtLicencia);
+            groupBox2.Controls.Add(txtTelefono);
+            groupBox2.Controls.Add(btnBuscarTelefono);
+            groupBox2.Controls.Add(txtCedula);
+            groupBox2.Controls.Add(btnBuscarCedula);
+            groupBox2.Controls.Add(txtNombre);
             groupBox2.Controls.Add(label25);
-            groupBox2.Controls.Add(button5);
+            groupBox2.Controls.Add(btnGuardar);
             groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(textBox19);
+            groupBox2.Controls.Add(txtDireccion);
             groupBox2.Controls.Add(label22);
             groupBox2.Controls.Add(label26);
             groupBox2.Controls.Add(label27);
@@ -132,67 +140,97 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Datos del Cliente";
             // 
-            // comboBox5
+            // btnBuscarNombre
             // 
-            comboBox5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(189, 135);
-            comboBox5.Margin = new Padding(4, 3, 4, 3);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(180, 25);
-            comboBox5.TabIndex = 94;
+            btnBuscarNombre.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarNombre.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarNombre.ForeColor = Color.White;
+            btnBuscarNombre.Image = (Image)resources.GetObject("btnBuscarNombre.Image");
+            btnBuscarNombre.ImageAlign = ContentAlignment.MiddleRight;
+            btnBuscarNombre.Location = new Point(632, 18);
+            btnBuscarNombre.Margin = new Padding(3, 2, 3, 2);
+            btnBuscarNombre.Name = "btnBuscarNombre";
+            btnBuscarNombre.Size = new Size(35, 35);
+            btnBuscarNombre.TabIndex = 119;
+            btnBuscarNombre.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarNombre.UseVisualStyleBackColor = false;
+            btnBuscarNombre.Click += btnBuscarNombre_Click;
             // 
-            // comboBox4
+            // btnBuscarLicencia
             // 
-            comboBox4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(85, 99);
-            comboBox4.Margin = new Padding(4, 3, 4, 3);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(180, 25);
-            comboBox4.TabIndex = 82;
+            btnBuscarLicencia.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarLicencia.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarLicencia.ForeColor = Color.White;
+            btnBuscarLicencia.Image = (Image)resources.GetObject("btnBuscarLicencia.Image");
+            btnBuscarLicencia.ImageAlign = ContentAlignment.MiddleRight;
+            btnBuscarLicencia.Location = new Point(351, 130);
+            btnBuscarLicencia.Margin = new Padding(3, 2, 3, 2);
+            btnBuscarLicencia.Name = "btnBuscarLicencia";
+            btnBuscarLicencia.Size = new Size(35, 35);
+            btnBuscarLicencia.TabIndex = 118;
+            btnBuscarLicencia.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarLicencia.UseVisualStyleBackColor = false;
+            btnBuscarLicencia.Click += btnBuscarLicencia_Click;
             // 
-            // comboBox3
+            // txtLicencia
             // 
-            comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(85, 61);
-            comboBox3.Margin = new Padding(4, 3, 4, 3);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(180, 25);
-            comboBox3.TabIndex = 81;
+            txtLicencia.Location = new Point(165, 134);
+            txtLicencia.Name = "txtLicencia";
+            txtLicencia.Size = new Size(180, 26);
+            txtLicencia.TabIndex = 117;
             // 
-            // comboBox1
+            // txtTelefono
             // 
-            comboBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(160, 25);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(466, 25);
-            comboBox1.TabIndex = 80;
+            txtTelefono.Location = new Point(85, 97);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(180, 26);
+            txtTelefono.TabIndex = 116;
             // 
-            // comboBox2
+            // btnBuscarTelefono
             // 
-            comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(85, 171);
-            comboBox2.Margin = new Padding(4, 3, 4, 3);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(128, 25);
-            comboBox2.TabIndex = 79;
+            btnBuscarTelefono.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarTelefono.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarTelefono.ForeColor = Color.White;
+            btnBuscarTelefono.Image = (Image)resources.GetObject("btnBuscarTelefono.Image");
+            btnBuscarTelefono.ImageAlign = ContentAlignment.MiddleRight;
+            btnBuscarTelefono.Location = new Point(271, 93);
+            btnBuscarTelefono.Margin = new Padding(3, 2, 3, 2);
+            btnBuscarTelefono.Name = "btnBuscarTelefono";
+            btnBuscarTelefono.Size = new Size(35, 35);
+            btnBuscarTelefono.TabIndex = 115;
+            btnBuscarTelefono.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarTelefono.UseVisualStyleBackColor = false;
+            btnBuscarTelefono.Click += btnBuscarTelefono_Click;
             // 
-            // label2
+            // txtCedula
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(11, 173);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(54, 16);
-            label2.TabIndex = 78;
-            label2.Text = "Estado:";
+            txtCedula.Location = new Point(85, 55);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(180, 26);
+            txtCedula.TabIndex = 114;
+            // 
+            // btnBuscarCedula
+            // 
+            btnBuscarCedula.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarCedula.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarCedula.ForeColor = Color.White;
+            btnBuscarCedula.Image = (Image)resources.GetObject("btnBuscarCedula.Image");
+            btnBuscarCedula.ImageAlign = ContentAlignment.MiddleRight;
+            btnBuscarCedula.Location = new Point(271, 51);
+            btnBuscarCedula.Margin = new Padding(3, 2, 3, 2);
+            btnBuscarCedula.Name = "btnBuscarCedula";
+            btnBuscarCedula.Size = new Size(35, 35);
+            btnBuscarCedula.TabIndex = 113;
+            btnBuscarCedula.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarCedula.UseVisualStyleBackColor = false;
+            btnBuscarCedula.Click += btnBuscarCedula_Click;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(160, 22);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(466, 26);
+            txtNombre.TabIndex = 95;
             // 
             // label25
             // 
@@ -206,21 +244,22 @@
             label25.TabIndex = 76;
             label25.Text = "Teléfono:";
             // 
-            // button5
+            // btnGuardar
             // 
-            button5.BackColor = Color.FromArgb(0, 80, 200);
-            button5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(544, 252);
-            button5.Margin = new Padding(2);
-            button5.Name = "button5";
-            button5.Size = new Size(127, 39);
-            button5.TabIndex = 62;
-            button5.Text = "Guardar";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
+            btnGuardar.BackColor = Color.FromArgb(0, 80, 200);
+            btnGuardar.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
+            btnGuardar.ImageAlign = ContentAlignment.MiddleRight;
+            btnGuardar.Location = new Point(544, 252);
+            btnGuardar.Margin = new Padding(2);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(127, 39);
+            btnGuardar.TabIndex = 62;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // label7
             // 
@@ -234,22 +273,22 @@
             label7.TabIndex = 62;
             label7.Text = "Licencia de conducir:";
             // 
-            // textBox19
+            // txtDireccion
             // 
-            textBox19.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox19.Location = new Point(98, 205);
-            textBox19.Margin = new Padding(2);
-            textBox19.Multiline = true;
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(377, 85);
-            textBox19.TabIndex = 58;
+            txtDireccion.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDireccion.Location = new Point(98, 182);
+            txtDireccion.Margin = new Padding(2);
+            txtDireccion.Multiline = true;
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(377, 85);
+            txtDireccion.TabIndex = 58;
             // 
             // label22
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.Black;
-            label22.Location = new Point(11, 204);
+            label22.Location = new Point(11, 181);
             label22.Margin = new Padding(2, 0, 2, 0);
             label22.Name = "label22";
             label22.Size = new Size(73, 16);
@@ -280,56 +319,73 @@
             label27.TabIndex = 52;
             label27.Text = "Cédula:";
             // 
-            // Column1
+            // btnCargar
             // 
-            Column1.HeaderText = "Cédula";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            btnCargar.BackColor = Color.FromArgb(0, 80, 200);
+            btnCargar.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCargar.ForeColor = Color.White;
+            btnCargar.ImageAlign = ContentAlignment.MiddleRight;
+            btnCargar.Location = new Point(171, 23);
+            btnCargar.Margin = new Padding(2);
+            btnCargar.Name = "btnCargar";
+            btnCargar.Size = new Size(76, 39);
+            btnCargar.TabIndex = 120;
+            btnCargar.Text = "Cargar";
+            btnCargar.UseVisualStyleBackColor = false;
+            btnCargar.Click += btnCargar_Click;
             // 
-            // Column2
+            // clmCedula
             // 
-            Column2.HeaderText = "Nombre completo";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmCedula.HeaderText = "Cédula";
+            clmCedula.MinimumWidth = 6;
+            clmCedula.Name = "clmCedula";
+            clmCedula.ReadOnly = true;
             // 
-            // Column6
+            // clmNombre
             // 
-            Column6.HeaderText = "Licencia de conducir";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
+            clmNombre.HeaderText = "Nombre completo";
+            clmNombre.MinimumWidth = 6;
+            clmNombre.Name = "clmNombre";
             // 
-            // Column4
+            // clmLicencia
             // 
-            Column4.HeaderText = "Teléfono";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
+            clmLicencia.HeaderText = "Licencia de conducir";
+            clmLicencia.MinimumWidth = 6;
+            clmLicencia.Name = "clmLicencia";
+            clmLicencia.ReadOnly = true;
             // 
-            // Column5
+            // clmTelefono
             // 
-            Column5.HeaderText = "Dirección";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
+            clmTelefono.HeaderText = "Teléfono";
+            clmTelefono.MinimumWidth = 6;
+            clmTelefono.Name = "clmTelefono";
             // 
-            // eliminar
+            // clmDireccion
             // 
-            eliminar.HeaderText = "Eliminar";
-            eliminar.Name = "eliminar";
+            clmDireccion.HeaderText = "Dirección";
+            clmDireccion.MinimumWidth = 6;
+            clmDireccion.Name = "clmDireccion";
             // 
-            // ControlCliente
+            // clmEliminar
+            // 
+            clmEliminar.HeaderText = "Eliminar";
+            clmEliminar.Name = "clmEliminar";
+            clmEliminar.ReadOnly = true;
+            // 
+            // frm_Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 745);
+            Controls.Add(btnCargar);
             Controls.Add(groupBox2);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgListaClientes);
             Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "ControlCliente";
+            Name = "frm_Clientes";
             Text = "ControlCliente";
             Load += ControlCliente_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgListaClientes).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
@@ -340,26 +396,29 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgListaClientes;
         private GroupBox groupBox2;
-        private ComboBox comboBox5;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Label label2;
         private Label label25;
-        private Button button5;
+        private Button btnGuardar;
         private Label label7;
-        private TextBox textBox19;
+        private TextBox txtDireccion;
         private Label label22;
         private Label label26;
         private Label label27;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn eliminar;
+        private TextBox txtNombre;
+        private TextBox txtCedula;
+        private Button btnBuscarCedula;
+        private TextBox txtTelefono;
+        private Button btnBuscarTelefono;
+        private Button btnBuscarLicencia;
+        private TextBox txtLicencia;
+        private Button btnBuscarNombre;
+        private Button btnCargar;
+        private DataGridViewTextBoxColumn clmCedula;
+        private DataGridViewTextBoxColumn clmNombre;
+        private DataGridViewTextBoxColumn clmLicencia;
+        private DataGridViewTextBoxColumn clmTelefono;
+        private DataGridViewTextBoxColumn clmDireccion;
+        private DataGridViewTextBoxColumn clmEliminar;
     }
 }

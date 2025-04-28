@@ -117,26 +117,66 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmCedula.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmNombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmLicencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmTelefono.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmDireccion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmEliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnBuscarNombre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnBuscarLicencia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnBuscarTelefono.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnBuscarCedula.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         cQAAEnEB89x6jgAAAWtJREFUSEu9lD1Ow0AQhSOuwSGgQCZGyOIESDQgzsAhaCiAC/CjUCBBlYIKCUSD

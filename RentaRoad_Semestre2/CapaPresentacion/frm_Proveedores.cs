@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.IdentityModel.Tokens;
 using RentaRoad_Semestre3.CapaDatos.Modelos;
 using RentaRoad_Semestre3.CapaDatos.Repositorios;
 using RentaRoad_Semestre3.CapaNegocio;
@@ -27,14 +28,15 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             _proveedorService = new ProveedorServicio(repo);
 
             actualizarDatagrid();
-
         }
 
-        private void actualizarDatagrid()
+        private void actualizarDatagrid(List<Proveedor>? lista = null)
         {
             /* Actualizar la lista de proveedores en el datagrid */
+            if (lista.IsNullOrEmpty())
+                lista = _proveedorService.ObtenerTodosProveedores();
+
             dgListaProveedores.Rows.Clear();
-            List<Proveedor> lista = _proveedorService.ObtenerTodosProveedores();
             foreach (Proveedor proveedor in lista)
             {
                 dgListaProveedores.Rows.Add(
@@ -49,6 +51,32 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            /* Evento cuando se guardan datos de un cliente desde los controles */
+
+            Proveedor? proveedorExistente = _proveedorService.ObtenerTodosProveedores()
+                .FirstOrDefault(p => p.RucProveedor == txtRUC.Text);
+
+            // Si el cliente ya existe, solo actualiza los datos
+            if (proveedorExistente != null)
+            {
+                if (proveedorExistente.RucProveedor != txtRUC.Text)
+                {
+                    MessageBox.Show("No se puede asignar otra código RUC al proveedor");
+                    return;
+                }
+
+                proveedorExistente.NombreProveedor = txtNombre.Text;
+                proveedorExistente.TelefonoProveedor = txtTelefono.Text;
+                proveedorExistente.CorreoProveedor = txtCorreo.Text;
+                proveedorExistente.FechaModificacion = DateTime.Now;
+                proveedorExistente.EstaHabilitado = chbEstaHabilitado.Checked;
+
+                _proveedorService.ActualizarProveedor(proveedorExistente);
+                MessageBox.Show("Se actualizo correctamente el proveedor");
+                actualizarDatagrid();
+                return;
+            }
+
             try
             {
                 Proveedor provee = new Proveedor
@@ -65,7 +93,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 _proveedorService.CrearProveedor(provee);
                 MessageBox.Show("Proveedor agregado.");
 
-                actualizarDatagrid(); 
+                actualizarDatagrid();
             }
             catch (Exception ex)
             {
@@ -100,7 +128,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 _proveedorService.ActualizarProveedor(proveeExistente);
                 MessageBox.Show("Proveedor actualizado.");
 
-                this.BeginInvoke(new MethodInvoker(actualizarDatagrid));
+                actualizarDatagrid();
             }
             catch (Exception ex)
             {
@@ -123,14 +151,14 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                     return;
 
                 DataGridViewRow fila_actual = dgListaProveedores.Rows[e.RowIndex];
-                string? rucProveedor = fila_actual.Cells["dgCodigoRuc"].Value.ToString();
 
                 try
                 {
+                    string rucProveedor = fila_actual.Cells["dgCodigoRuc"].Value.ToString();
                     _proveedorService.EliminarProveedor(rucProveedor);
                     MessageBox.Show("Proveedor eliminado.");
 
-                    this.BeginInvoke(new MethodInvoker(actualizarDatagrid));
+                    actualizarDatagrid();
                 }
                 catch (Exception ex)
                 {
@@ -154,6 +182,66 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             txtTelefono.Text = filaActual.Cells["dgTelefono"].Value.ToString();
             txtCorreo.Text = filaActual.Cells["dgCorreo"].Value.ToString();
             chbEstaHabilitado.Checked = bool.Parse(filaActual.Cells["dgEstado"].Value.ToString());
+        }
+
+        private void frm_Proveedores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarRUC_Click(object sender, EventArgs e)
+        {
+            string rucInser = txtRUC.Text;
+            List<Proveedor>? coincidenciaProveedores = _proveedorService.ObtenerTodosProveedores().Where(c => c.RucProveedor.Contains(rucInser)).ToList();
+            mostrarCoincidenciasProveedores(coincidenciaProveedores);
+        }
+
+        private void mostrarCoincidenciasProveedores(List<Proveedor> coincidencias)
+        {
+            if (coincidencias.IsNullOrEmpty())
+            {
+                MessageBox.Show("No se encontro coincidencias");
+                actualizarDatagrid();
+                return;
+            }
+
+            if (coincidencias.Count == 1)
+            {
+                Proveedor? proveedor = coincidencias.First();
+
+                txtRUC.Text = proveedor.RucProveedor;
+                txtNombre.Text = proveedor.NombreProveedor;
+                txtCorreo.Text = proveedor.CorreoProveedor;
+                txtTelefono.Text = proveedor.TelefonoProveedor;
+            }
+
+            actualizarDatagrid(coincidencias);
+        }
+
+        private void btnCorreo_Click(object sender, EventArgs e)
+        {
+            string correoInser = txtCorreo.Text;
+            List<Proveedor>? coincidenciaProveedores = _proveedorService.ObtenerTodosProveedores().Where(c => c.CorreoProveedor.Contains(correoInser)).ToList();
+            mostrarCoincidenciasProveedores(coincidenciaProveedores);
+        }
+
+        private void btnNombre_Click(object sender, EventArgs e)
+        {
+            string nombreInser = txtNombre.Text;
+            List<Proveedor>? coincidenciaProveedores = _proveedorService.ObtenerTodosProveedores().Where(c => c.NombreProveedor.Contains(nombreInser)).ToList();
+            mostrarCoincidenciasProveedores(coincidenciaProveedores);
+        }
+
+        private void btnTelefono_Click(object sender, EventArgs e)
+        {
+            string telefonoInser = txtTelefono.Text;
+            List<Proveedor>? coincidenciaProveedores = _proveedorService.ObtenerTodosProveedores().Where(c => c.TelefonoProveedor.Contains(telefonoInser)).ToList();
+            mostrarCoincidenciasProveedores(coincidenciaProveedores);
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            actualizarDatagrid();
         }
     }
 }

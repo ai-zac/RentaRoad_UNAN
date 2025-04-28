@@ -29,13 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Proveedores));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             label1 = new Label();
             btnGuardar = new Button();
             groupBox3 = new GroupBox();
+            btnTelefono = new Button();
+            btnNombre = new Button();
+            btnCorreo = new Button();
+            btnBuscarRUC = new Button();
             txtTelefono = new TextBox();
             label4 = new Label();
             groupBox2 = new GroupBox();
@@ -54,6 +58,7 @@
             dgCorreo = new DataGridViewTextBoxColumn();
             dgEstado = new DataGridViewTextBoxColumn();
             dgEliminar = new DataGridViewTextBoxColumn();
+            btnCargar = new Button();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgListaProveedores).BeginInit();
@@ -89,6 +94,10 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(btnTelefono);
+            groupBox3.Controls.Add(btnNombre);
+            groupBox3.Controls.Add(btnCorreo);
+            groupBox3.Controls.Add(btnBuscarRUC);
             groupBox3.Controls.Add(txtTelefono);
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(groupBox2);
@@ -108,6 +117,70 @@
             groupBox3.TabIndex = 86;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del proveedor";
+            // 
+            // btnTelefono
+            // 
+            btnTelefono.BackColor = Color.FromArgb(0, 80, 200);
+            btnTelefono.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTelefono.ForeColor = Color.White;
+            btnTelefono.Image = (Image)resources.GetObject("btnTelefono.Image");
+            btnTelefono.ImageAlign = ContentAlignment.MiddleRight;
+            btnTelefono.Location = new Point(388, 126);
+            btnTelefono.Margin = new Padding(3, 2, 3, 2);
+            btnTelefono.Name = "btnTelefono";
+            btnTelefono.Size = new Size(35, 35);
+            btnTelefono.TabIndex = 117;
+            btnTelefono.TextAlign = ContentAlignment.MiddleLeft;
+            btnTelefono.UseVisualStyleBackColor = false;
+            btnTelefono.Click += btnTelefono_Click;
+            // 
+            // btnNombre
+            // 
+            btnNombre.BackColor = Color.FromArgb(0, 80, 200);
+            btnNombre.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNombre.ForeColor = Color.White;
+            btnNombre.Image = (Image)resources.GetObject("btnNombre.Image");
+            btnNombre.ImageAlign = ContentAlignment.MiddleRight;
+            btnNombre.Location = new Point(642, 92);
+            btnNombre.Margin = new Padding(3, 2, 3, 2);
+            btnNombre.Name = "btnNombre";
+            btnNombre.Size = new Size(35, 35);
+            btnNombre.TabIndex = 116;
+            btnNombre.TextAlign = ContentAlignment.MiddleLeft;
+            btnNombre.UseVisualStyleBackColor = false;
+            btnNombre.Click += btnNombre_Click;
+            // 
+            // btnCorreo
+            // 
+            btnCorreo.BackColor = Color.FromArgb(0, 80, 200);
+            btnCorreo.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCorreo.ForeColor = Color.White;
+            btnCorreo.Image = (Image)resources.GetObject("btnCorreo.Image");
+            btnCorreo.ImageAlign = ContentAlignment.MiddleRight;
+            btnCorreo.Location = new Point(446, 58);
+            btnCorreo.Margin = new Padding(3, 2, 3, 2);
+            btnCorreo.Name = "btnCorreo";
+            btnCorreo.Size = new Size(35, 35);
+            btnCorreo.TabIndex = 115;
+            btnCorreo.TextAlign = ContentAlignment.MiddleLeft;
+            btnCorreo.UseVisualStyleBackColor = false;
+            btnCorreo.Click += btnCorreo_Click;
+            // 
+            // btnBuscarRUC
+            // 
+            btnBuscarRUC.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarRUC.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarRUC.ForeColor = Color.White;
+            btnBuscarRUC.Image = (Image)resources.GetObject("btnBuscarRUC.Image");
+            btnBuscarRUC.ImageAlign = ContentAlignment.MiddleRight;
+            btnBuscarRUC.Location = new Point(446, 24);
+            btnBuscarRUC.Margin = new Padding(3, 2, 3, 2);
+            btnBuscarRUC.Name = "btnBuscarRUC";
+            btnBuscarRUC.Size = new Size(35, 35);
+            btnBuscarRUC.TabIndex = 114;
+            btnBuscarRUC.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarRUC.UseVisualStyleBackColor = false;
+            btnBuscarRUC.Click += btnBuscarRUC_Click;
             // 
             // txtTelefono
             // 
@@ -220,38 +293,38 @@
             // 
             dgListaProveedores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgListaProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgListaProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Microsoft Tai Le", 11F, FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgListaProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgListaProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgListaProveedores.Columns.AddRange(new DataGridViewColumn[] { dgCodigoRuc, dgNombre, dgTelefono, dgCorreo, dgEstado, dgEliminar });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 11F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgListaProveedores.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Window;
+            dataGridViewCellStyle10.Font = new Font("Microsoft Tai Le", 11F);
+            dataGridViewCellStyle10.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            dgListaProveedores.DefaultCellStyle = dataGridViewCellStyle10;
             dgListaProveedores.Location = new Point(11, 316);
             dgListaProveedores.Margin = new Padding(2);
             dgListaProveedores.Name = "dgListaProveedores";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgListaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = SystemColors.Control;
+            dataGridViewCellStyle11.Font = new Font("Microsoft Tai Le", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dgListaProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dgListaProveedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 11F);
-            dgListaProveedores.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Font = new Font("Microsoft Tai Le", 11F);
+            dgListaProveedores.RowsDefaultCellStyle = dataGridViewCellStyle12;
             dgListaProveedores.RowTemplate.Height = 24;
             dgListaProveedores.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgListaProveedores.Size = new Size(1066, 418);
@@ -265,6 +338,7 @@
             dgCodigoRuc.HeaderText = "Código RUC";
             dgCodigoRuc.MinimumWidth = 6;
             dgCodigoRuc.Name = "dgCodigoRuc";
+            dgCodigoRuc.ReadOnly = true;
             // 
             // dgNombre
             // 
@@ -295,11 +369,27 @@
             dgEliminar.Name = "dgEliminar";
             dgEliminar.ReadOnly = true;
             // 
+            // btnCargar
+            // 
+            btnCargar.BackColor = Color.FromArgb(0, 80, 200);
+            btnCargar.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCargar.ForeColor = Color.White;
+            btnCargar.ImageAlign = ContentAlignment.MiddleRight;
+            btnCargar.Location = new Point(218, 36);
+            btnCargar.Margin = new Padding(2);
+            btnCargar.Name = "btnCargar";
+            btnCargar.Size = new Size(76, 39);
+            btnCargar.TabIndex = 121;
+            btnCargar.Text = "Cargar";
+            btnCargar.UseVisualStyleBackColor = false;
+            btnCargar.Click += btnCargar_Click;
+            // 
             // frm_Proveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 745);
+            Controls.Add(btnCargar);
             Controls.Add(groupBox3);
             Controls.Add(dgListaProveedores);
             Controls.Add(label1);
@@ -307,6 +397,7 @@
             MinimumSize = new Size(700, 345);
             Name = "frm_Proveedores";
             Text = "ControlProveedores";
+            Load += frm_Proveedores_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -343,5 +434,10 @@
         private DataGridViewTextBoxColumn dgCorreo;
         private DataGridViewTextBoxColumn dgEstado;
         private DataGridViewTextBoxColumn dgEliminar;
+        private Button btnCargar;
+        private Button btnCorreo;
+        private Button btnBuscarRUC;
+        private Button btnTelefono;
+        private Button btnNombre;
     }
 }

@@ -130,6 +130,46 @@
         SVi8XBuyWp7vxetc31RarW+wl768KnEpDgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnTelefono.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnNombre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnCorreo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnBuscarRUC.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAANNJREFUSEvtjrEJAlEQRE+MBGswMDYQ1AoEQbAOazDSLqxAsAkDIzuwBg0NxUCd
+        XRxYjn/s3nkGog8ex+zNLj/7UwePhG+TOpq3EvkjUyj0oJ1fYSk2kMtNGSToQnbGMojCpZamYiaQ3RBD
+        WGaB3YYmB5aXmnzOUPpHTQ483tbks4DccWFxpslnB6V/0+SwguGXAHY7mgJUOR7mDiNL7Jw0lYCL4lYG
+        hjm0/8PYsj1QZJjU0gHaOV3DMPnl2vi+w3toD/dhrVygHB5o+gCj1/enybInPNttkzcKxJcAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <metadata name="dgCodigoRuc.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

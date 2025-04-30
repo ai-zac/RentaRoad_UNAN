@@ -231,9 +231,6 @@ public partial class RentaRoadDbContext : DbContext
             entity.Property(e => e.PorcentajeDescuentoContrato)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("Porcentaje_Descuento_Contrato");
-            entity.Property(e => e.RutaFirmaContrato)
-                .HasMaxLength(100)
-                .HasColumnName("Ruta_Firma_Contrato");
             entity.Property(e => e.TipoPagoContrato)
                 .HasMaxLength(15)
                 .IsUnicode(false)
@@ -525,6 +522,7 @@ public partial class RentaRoadDbContext : DbContext
             entity.Property(e => e.FechaCreacion)
                 .HasColumnType("datetime")
                 .HasColumnName("Fecha_Creacion");
+            entity.Property(e => e.FechaLimiteRecuperacion).HasColumnType("datetime");
             entity.Property(e => e.FechaModificacion)
                 .HasColumnType("datetime")
                 .HasColumnName("Fecha_Modificacion");
@@ -534,6 +532,9 @@ public partial class RentaRoadDbContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("nombre_usuario");
             entity.Property(e => e.TelefonoUsuario).HasColumnName("Telefono_Usuario");
+            entity.Property(e => e.TokenRecuperacion)
+                .HasMaxLength(200)
+                .IsUnicode(false);
 
             entity.HasOne(d => d.IdCargoEmpleadoNavigation).WithMany(p => p.Usuarios)
                 .HasForeignKey(d => d.IdCargoEmpleado)

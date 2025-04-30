@@ -25,8 +25,6 @@ public partial class Contrato
 
     public decimal PorcentajeDescuentoContrato { get; set; }
 
-    public byte[] RutaFirmaContrato { get; set; } = null!;
-
     public bool EstaFinalizadoContrato { get; set; }
 
     public virtual Auto FkAutoNavigation { get; set; } = null!;

@@ -18,17 +18,22 @@ namespace RentaRoad_Semestre3
 {
     public partial class frm_Home : Form
     {
-        public frm_Home(Usuario usuarioLogeado)
+        private Usuario usuarioLogeado;
+
+        public frm_Home(Usuario usuarioIngresado)
         {
             InitializeComponent();
             menuNavegacion.Renderer = new customRenderUIColors();
             AbrirFormHijo(new frm_AperturaCaja());
+
+            usuarioLogeado = usuarioIngresado;
 
             if (!usuarioLogeado.EsAdministrador)
             {
                 optionUsuarios.Visible = false;
                 optionMatenimiento.Visible = false;
             }
+
 
             mostrarMenusSegunCargo(usuarioLogeado.IdCargoEmpleadoNavigation);
         }
@@ -38,7 +43,7 @@ namespace RentaRoad_Semestre3
         private void optionRenta_Click(object sender, EventArgs e)
         {
             indicarItemMenuSeleccionado(sender);
-            AbrirFormHijo(new frm_Renta());
+            AbrirFormHijo(new frm_Renta(usuarioLogeado));
         }
 
         private void optionAdquisicion_Click(object sender, EventArgs e)

@@ -124,7 +124,8 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 Port = 587,
                 Credentials = new NetworkCredential(correoSalida, correoSalidaPass),
                 EnableSsl = true,
-                UseDefaultCredentials = false
+                UseDefaultCredentials = false,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
             };
 
             string asuntoCorreo = "Recuperación de contraseña";

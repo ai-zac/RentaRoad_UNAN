@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.IdentityModel.Tokens;
@@ -75,6 +76,16 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 MessageBox.Show("Se actualizo correctamente el proveedor");
                 actualizarDatagrid();
                 return;
+            }
+            
+            string cedulaRUC = txtRUC.Text;
+            string patronRUC = @"^\d{3}-\d{6}-\d{4}[A-Z]{1}$";
+
+            if (!Regex.IsMatch(cedulaRUC, patronRUC))
+            {
+                MessageBox.Show("El formato de cedula no es correcto");
+                txtRUC.Clear();
+                txtRUC.Focus();
             }
 
             try

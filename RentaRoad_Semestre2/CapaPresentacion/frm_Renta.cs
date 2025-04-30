@@ -15,14 +15,20 @@ using RentaRoad_Semestre3.CapaPresentacion ;
 
 namespace RentaRoad_Semestre3.CapaPresentacion
 {
+
     public partial class frm_Renta : Form
     {
+        private Usuario usuarioEncargado;
+
         private UsuariosService _usuarioService;
         private AutoServicio _autoService;
         private ClienteServicio _clienteService;
         private ContratoServicio _contratoService;
+        private ColorServicio _colorService;
+        private MarcaServicio _marcaService;
+        private ModeloServicio _modeloService;
 
-        public frm_Renta()
+        public frm_Renta(Usuario usuarioIngresado)
         {
             InitializeComponent();
 
@@ -39,6 +45,18 @@ namespace RentaRoad_Semestre3.CapaPresentacion
 
             ContratoRepositorio repoCr = new ContratoRepositorio(context);
             _contratoService = new ContratoServicio(repoCr);
+
+            ColorRepositorio repoC = new ColorRepositorio(context);
+            _colorService = new ColorServicio(repoC);
+
+            MarcaRepositorio repoMa = new MarcaRepositorio(context);
+            _marcaService = new MarcaServicio(repoMa);
+
+            ModeloRepositorio repoMo = new ModeloRepositorio(context);
+            _modeloService = new ModeloServicio(repoMo);
+
+
+            usuarioEncargado = usuarioIngresado;
         }
 
         private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
@@ -84,9 +102,9 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            txtMarca.Text = autoSelec.DetalleAdquisicion.FkMarcaNavigation.NombreMarca.ToString();
-            txtmodelo.Text = autoSelec.DetalleAdquisicion.FkModeloNavigation.NombreModelo.ToString();
-            txtcolor.Text = autoSelec.DetalleAdquisicion.FkColorNavigation.NombreColor.ToString();
+            txtMarca.Text = _marcaService.ObtenerPorID(autoSelec.FkMarca).NombreMarca;
+            txtmodelo.Text = _modeloService.ObtenerPorID(autoSelec.FkModelo).NombreModelo;
+            txtcolor.Text = _colorService.ObtenerPorID(autoSelec.FkColor).NombreColor;
             txtAño.Text = autoSelec.AñoSalidaAuto.ToString();
             txtprecio.Text = autoSelec.CostoRentaAuto.ToString();
             txtasientos.Text = autoSelec.CantidadAsientosAuto.ToString();
@@ -136,15 +154,24 @@ namespace RentaRoad_Semestre3.CapaPresentacion
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             txtnombrecliente.Enabled = true;
+            txtnombrecliente.ReadOnly = false;
+ 
             txtcedula.Enabled = true;
+            txtcedula.ReadOnly = false;
+
             txtlicencia.Enabled = true;
+            txtlicencia.ReadOnly = false;
+
             txtdireccion.Enabled = true;
+            txtdireccion.ReadOnly = false;
 
             btnGuardarCliente.Visible = true;
         }
 
         private void btnNuevoContrato_Click(object sender, EventArgs e)
         {
+
+            MessageBox.Show(usuarioEncargado.NombreUsuario.ToString());
             Action<Control.ControlCollection> func = null;
 
             func = (controls) =>
@@ -184,8 +211,7 @@ namespace RentaRoad_Semestre3.CapaPresentacion
                 return;
             }
 
-            Usuario? usuario = _usuarioService.ObtenerTodos().FirstOrDefault(u => u.IdUsuario == 1);
-            if (usuario  == null)
+            if (usuarioEncargado == null)
             {
                 MessageBox.Show("Usuario no reconocido");
                 return;
@@ -195,18 +221,17 @@ namespace RentaRoad_Semestre3.CapaPresentacion
             {
                 FkCedulaClienteNavigation = cliente,
                 FkAutoNavigation = auto,
-                IdUsuarioNavigation = usuario,
+                IdUsuarioNavigation = usuarioEncargado,
                 FechaCreacionContrato = DateTime.Now,
                 TipoPagoContrato = "tarjeta",
                 MontoTotalContrato = decimal.Parse(txtTotal.Text),
                 CantidadDiasRentaContrato = int.Parse(txtCantidadDias.Text),
                 MontoGarantiaContrato = decimal.Parse(txtGarantia.Text),
                 PorcentajeDescuentoContrato = decimal.Parse(txtDescuentos.Text),
-                RutaFirmaContrato = new byte[0x7B],
                 EstaFinalizadoContrato = false,
             };
 
-            _contratoService.CrearContrato(contrato);
+            // _contratoService.CrearContrato(contrato);
         }
 
         private void txtPagoCordobas_TextChanged(object sender, EventArgs e)

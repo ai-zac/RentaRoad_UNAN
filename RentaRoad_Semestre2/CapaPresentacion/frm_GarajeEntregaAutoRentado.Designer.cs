@@ -29,34 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeEntregaAutoRentado));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             btnBuscarContrato = new Button();
             groupBox7 = new GroupBox();
-            textBox4 = new TextBox();
+            txtCantidadMulta = new TextBox();
             label2 = new Label();
-            textBox19 = new TextBox();
+            txtAtrasoDias = new TextBox();
             label13 = new Label();
-            textBox18 = new TextBox();
+            txtCantidadDias = new TextBox();
             label26 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
+            dtpHasta = new DateTimePicker();
+            dtpDesde = new DateTimePicker();
             label27 = new Label();
             label28 = new Label();
             groupBox6 = new GroupBox();
-            textBox7 = new TextBox();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            textBox3 = new TextBox();
-            label6 = new Label();
+            txtPlaca = new TextBox();
             button3 = new Button();
             button8 = new Button();
-            comboBox4 = new ComboBox();
-            label19 = new Label();
-            comboBox11 = new ComboBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
+            txtMarca = new TextBox();
+            txtModelo = new TextBox();
             label20 = new Label();
             label23 = new Label();
             label24 = new Label();
@@ -74,6 +67,9 @@
             label7 = new Label();
             label8 = new Label();
             panel1 = new Panel();
+            chbNecesitaMantenimiento = new CheckBox();
+            txtColor = new TextBox();
+            label3 = new Label();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -83,12 +79,13 @@
             // 
             // btnBuscarContrato
             // 
+            btnBuscarContrato.Anchor = AnchorStyles.None;
             btnBuscarContrato.BackColor = Color.FromArgb(0, 80, 200);
             btnBuscarContrato.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBuscarContrato.ForeColor = Color.White;
             btnBuscarContrato.Image = (Image)resources.GetObject("btnBuscarContrato.Image");
             btnBuscarContrato.ImageAlign = ContentAlignment.MiddleRight;
-            btnBuscarContrato.Location = new Point(17, 15);
+            btnBuscarContrato.Location = new Point(378, 65);
             btnBuscarContrato.Margin = new Padding(2);
             btnBuscarContrato.Name = "btnBuscarContrato";
             btnBuscarContrato.Size = new Size(143, 35);
@@ -100,108 +97,108 @@
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(textBox4);
+            groupBox7.Controls.Add(txtCantidadMulta);
             groupBox7.Controls.Add(label2);
-            groupBox7.Controls.Add(textBox19);
+            groupBox7.Controls.Add(txtAtrasoDias);
             groupBox7.Controls.Add(label13);
-            groupBox7.Controls.Add(textBox18);
+            groupBox7.Controls.Add(txtCantidadDias);
             groupBox7.Controls.Add(label26);
-            groupBox7.Controls.Add(dateTimePicker2);
-            groupBox7.Controls.Add(dateTimePicker1);
+            groupBox7.Controls.Add(dtpHasta);
+            groupBox7.Controls.Add(dtpDesde);
             groupBox7.Controls.Add(label27);
             groupBox7.Controls.Add(label28);
             groupBox7.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox7.Location = new Point(17, 54);
+            groupBox7.Location = new Point(17, 15);
             groupBox7.Margin = new Padding(2);
             groupBox7.Name = "groupBox7";
             groupBox7.Padding = new Padding(2);
-            groupBox7.Size = new Size(525, 149);
+            groupBox7.Size = new Size(386, 191);
             groupBox7.TabIndex = 95;
             groupBox7.TabStop = false;
             groupBox7.Text = "Plazo de renta";
             // 
-            // textBox4
+            // txtCantidadMulta
             // 
-            textBox4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(258, 99);
-            textBox4.Margin = new Padding(2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(58, 22);
-            textBox4.TabIndex = 40;
+            txtCantidadMulta.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCantidadMulta.Location = new Point(253, 149);
+            txtCantidadMulta.Margin = new Padding(2);
+            txtCantidadMulta.Name = "txtCantidadMulta";
+            txtCantidadMulta.Size = new Size(58, 22);
+            txtCantidadMulta.TabIndex = 40;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(172, 93);
+            label2.Location = new Point(167, 143);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(71, 32);
             label2.TabIndex = 39;
             label2.Text = "Multa\r\npor mora:";
             // 
-            // textBox19
+            // txtAtrasoDias
             // 
-            textBox19.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox19.Location = new Point(107, 99);
-            textBox19.Margin = new Padding(2);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(58, 22);
-            textBox19.TabIndex = 38;
+            txtAtrasoDias.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAtrasoDias.Location = new Point(102, 149);
+            txtAtrasoDias.Margin = new Padding(2);
+            txtAtrasoDias.Name = "txtAtrasoDias";
+            txtAtrasoDias.Size = new Size(58, 22);
+            txtAtrasoDias.TabIndex = 38;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(21, 93);
+            label13.Location = new Point(16, 143);
             label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
             label13.Size = new Size(70, 32);
             label13.TabIndex = 37;
             label13.Text = "Atraso de\r\nentrega:";
             // 
-            // textBox18
+            // txtCantidadDias
             // 
-            textBox18.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox18.Location = new Point(463, 44);
-            textBox18.Margin = new Padding(2);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(58, 22);
-            textBox18.TabIndex = 36;
+            txtCantidadDias.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCantidadDias.Location = new Point(102, 95);
+            txtCantidadDias.Margin = new Padding(2);
+            txtCantidadDias.Name = "txtCantidadDias";
+            txtCantidadDias.Size = new Size(58, 22);
+            txtCantidadDias.TabIndex = 36;
             // 
             // label26
             // 
             label26.AutoSize = true;
             label26.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.Black;
-            label26.Location = new Point(378, 38);
+            label26.Location = new Point(17, 89);
             label26.Margin = new Padding(2, 0, 2, 0);
             label26.Name = "label26";
             label26.Size = new Size(69, 32);
             label26.TabIndex = 34;
             label26.Text = "Cantidad\r\nde días:";
             // 
-            // dateTimePicker2
+            // dtpHasta
             // 
-            dateTimePicker2.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker2.Location = new Point(79, 58);
-            dateTimePicker2.Margin = new Padding(2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(285, 22);
-            dateTimePicker2.TabIndex = 33;
+            dtpHasta.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpHasta.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpHasta.Location = new Point(79, 58);
+            dtpHasta.Margin = new Padding(2);
+            dtpHasta.Name = "dtpHasta";
+            dtpHasta.Size = new Size(285, 22);
+            dtpHasta.TabIndex = 33;
             // 
-            // dateTimePicker1
+            // dtpDesde
             // 
-            dateTimePicker1.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(79, 28);
-            dateTimePicker1.Margin = new Padding(2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(285, 22);
-            dateTimePicker1.TabIndex = 32;
+            dtpDesde.CalendarFont = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDesde.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDesde.Location = new Point(79, 28);
+            dtpDesde.Margin = new Padding(2);
+            dtpDesde.Name = "dtpDesde";
+            dtpDesde.Size = new Size(285, 22);
+            dtpDesde.TabIndex = 32;
             // 
             // label27
             // 
@@ -229,18 +226,14 @@
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(textBox7);
-            groupBox6.Controls.Add(textBox5);
-            groupBox6.Controls.Add(label5);
-            groupBox6.Controls.Add(textBox3);
-            groupBox6.Controls.Add(label6);
+            groupBox6.Controls.Add(txtColor);
+            groupBox6.Controls.Add(label3);
+            groupBox6.Controls.Add(chbNecesitaMantenimiento);
+            groupBox6.Controls.Add(txtPlaca);
             groupBox6.Controls.Add(button3);
             groupBox6.Controls.Add(button8);
-            groupBox6.Controls.Add(comboBox4);
-            groupBox6.Controls.Add(label19);
-            groupBox6.Controls.Add(comboBox11);
-            groupBox6.Controls.Add(textBox15);
-            groupBox6.Controls.Add(textBox16);
+            groupBox6.Controls.Add(txtMarca);
+            groupBox6.Controls.Add(txtModelo);
             groupBox6.Controls.Add(label20);
             groupBox6.Controls.Add(label23);
             groupBox6.Controls.Add(label24);
@@ -250,61 +243,19 @@
             groupBox6.Margin = new Padding(2);
             groupBox6.Name = "groupBox6";
             groupBox6.Padding = new Padding(2);
-            groupBox6.Size = new Size(525, 264);
+            groupBox6.Size = new Size(386, 264);
             groupBox6.TabIndex = 93;
             groupBox6.TabStop = false;
             groupBox6.Text = "Datos del Auto";
             // 
-            // textBox7
+            // txtPlaca
             // 
-            textBox7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(92, 35);
-            textBox7.Margin = new Padding(2);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(152, 22);
-            textBox7.TabIndex = 69;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(399, 157);
-            textBox5.Margin = new Padding(2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(68, 22);
-            textBox5.TabIndex = 68;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(320, 147);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(63, 32);
-            label5.TabIndex = 67;
-            label5.Text = "Total de \r\nmulta:";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(399, 100);
-            textBox3.Margin = new Padding(2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(68, 22);
-            textBox3.TabIndex = 66;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(320, 90);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(64, 32);
-            label6.TabIndex = 65;
-            label6.Text = "Costo de\r\nseguro:";
+            txtPlaca.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPlaca.Location = new Point(92, 35);
+            txtPlaca.Margin = new Padding(2);
+            txtPlaca.Name = "txtPlaca";
+            txtPlaca.Size = new Size(152, 22);
+            txtPlaca.TabIndex = 69;
             // 
             // button3
             // 
@@ -338,65 +289,35 @@
             button8.TextAlign = ContentAlignment.MiddleLeft;
             button8.UseVisualStyleBackColor = false;
             // 
-            // comboBox4
+            // txtMarca
             // 
-            comboBox4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox4.Location = new Point(158, 172);
-            comboBox4.Margin = new Padding(2);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(118, 25);
-            comboBox4.TabIndex = 55;
+            txtMarca.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMarca.Location = new Point(92, 69);
+            txtMarca.Margin = new Padding(2);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(152, 22);
+            txtMarca.TabIndex = 24;
             // 
-            // label19
+            // txtModelo
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.Black;
-            label19.Location = new Point(15, 177);
-            label19.Margin = new Padding(2, 0, 2, 0);
-            label19.Name = "label19";
-            label19.Size = new Size(107, 16);
-            label19.TabIndex = 54;
-            label19.Text = "Disponibilidad:";
-            // 
-            // comboBox11
-            // 
-            comboBox11.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox11.Location = new Point(158, 138);
-            comboBox11.Margin = new Padding(2);
-            comboBox11.Name = "comboBox11";
-            comboBox11.Size = new Size(118, 25);
-            comboBox11.TabIndex = 52;
-            // 
-            // textBox15
-            // 
-            textBox15.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox15.Location = new Point(92, 69);
-            textBox15.Margin = new Padding(2);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(152, 22);
-            textBox15.TabIndex = 24;
-            // 
-            // textBox16
-            // 
-            textBox16.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox16.Location = new Point(92, 102);
-            textBox16.Margin = new Padding(2);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(152, 22);
-            textBox16.TabIndex = 23;
+            txtModelo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtModelo.Location = new Point(92, 102);
+            txtModelo.Margin = new Padding(2);
+            txtModelo.Name = "txtModelo";
+            txtModelo.Size = new Size(272, 22);
+            txtModelo.TabIndex = 23;
             // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.Black;
-            label20.Location = new Point(15, 144);
+            label20.Location = new Point(13, 174);
             label20.Margin = new Padding(2, 0, 2, 0);
             label20.Name = "label20";
-            label20.Size = new Size(112, 16);
+            label20.Size = new Size(169, 16);
             label20.TabIndex = 19;
-            label20.Text = "Estado del auto:";
+            label20.Text = "Necesita mantenimiento:";
             // 
             // label23
             // 
@@ -442,7 +363,7 @@
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label4);
             groupBox1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(585, 15);
+            groupBox1.Location = new Point(426, 15);
             groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(2);
@@ -512,35 +433,35 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { descripcion, costoDaño });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.Location = new Point(585, 175);
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridView1.Location = new Point(426, 167);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Microsoft Tai Le", 10F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Microsoft Tai Le", 10F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(419, 253);
             dataGridView1.TabIndex = 69;
@@ -560,7 +481,7 @@
             // textBox6
             // 
             textBox6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(703, 437);
+            textBox6.Location = new Point(544, 429);
             textBox6.Margin = new Padding(2);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(101, 22);
@@ -571,12 +492,12 @@
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(582, 440);
+            label7.Location = new Point(423, 432);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(93, 19);
+            label7.Size = new Size(98, 19);
             label7.TabIndex = 69;
-            label7.Text = "Total costo:";
+            label7.Text = "Total multa:";
             // 
             // label8
             // 
@@ -593,25 +514,54 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
-            panel1.Controls.Add(btnBuscarContrato);
             panel1.Controls.Add(textBox6);
+            panel1.Controls.Add(groupBox7);
             panel1.Controls.Add(groupBox6);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(groupBox7);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(groupBox1);
-            panel1.Location = new Point(37, 122);
+            panel1.Location = new Point(109, 119);
             panel1.MaximumSize = new Size(1023, 520);
-            panel1.MinimumSize = new Size(1023, 520);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1023, 520);
+            panel1.Size = new Size(884, 520);
             panel1.TabIndex = 97;
+            // 
+            // chbNecesitaMantenimiento
+            // 
+            chbNecesitaMantenimiento.AutoSize = true;
+            chbNecesitaMantenimiento.Location = new Point(187, 177);
+            chbNecesitaMantenimiento.Name = "chbNecesitaMantenimiento";
+            chbNecesitaMantenimiento.Size = new Size(15, 14);
+            chbNecesitaMantenimiento.TabIndex = 70;
+            chbNecesitaMantenimiento.UseVisualStyleBackColor = true;
+            // 
+            // txtColor
+            // 
+            txtColor.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtColor.Location = new Point(92, 140);
+            txtColor.Margin = new Padding(2);
+            txtColor.Name = "txtColor";
+            txtColor.Size = new Size(152, 22);
+            txtColor.TabIndex = 72;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(15, 143);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(46, 16);
+            label3.TabIndex = 71;
+            label3.Text = "Color:";
             // 
             // frm_GarajeEntregaAutoRentado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1088, 745);
+            Controls.Add(btnBuscarContrato);
             Controls.Add(label8);
             Controls.Add(panel1);
             Margin = new Padding(4, 3, 4, 3);
@@ -636,22 +586,19 @@
 
         private System.Windows.Forms.Button btnBuscarContrato;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtAtrasoDias;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtCantidadDias;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
@@ -660,21 +607,20 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCantidadMulta;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private Panel panel1;
-        private TextBox textBox7;
+        private TextBox txtPlaca;
         private DataGridViewTextBoxColumn descripcion;
         private DataGridViewTextBoxColumn costoDaño;
+        private TextBox txtColor;
+        private Label label3;
+        private CheckBox chbNecesitaMantenimiento;
     }
 }

@@ -30,32 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GarajeListaAutos));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             ofdImagenAuto = new OpenFileDialog();
             label32 = new Label();
-            pictureBox1 = new PictureBox();
+            pibImagenAuto = new PictureBox();
             groupBox3 = new GroupBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox7 = new ComboBox();
-            comboBox3 = new ComboBox();
+            chbPlacaVerificada = new CheckBox();
+            chbHabilitado = new CheckBox();
+            chbDisponibilidad = new CheckBox();
+            chbFuncional = new CheckBox();
+            btnBuscarPlaca = new Button();
+            txtPlaca = new TextBox();
+            txtModelo = new TextBox();
+            txtMarca = new TextBox();
+            cmbColor = new ComboBox();
             label29 = new Label();
-            textBox13 = new TextBox();
-            comboBox9 = new ComboBox();
+            txtNumeroAsientos = new TextBox();
             label5 = new Label();
             btnNuevoModelo = new Button();
             btnNuevaMarca = new Button();
             btnNuevoColor = new Button();
-            button2 = new Button();
-            comboBox5 = new ComboBox();
+            btnGuardar = new Button();
             label3 = new Label();
-            comboBox2 = new ComboBox();
             label2 = new Label();
-            textBox10 = new TextBox();
-            textBox6 = new TextBox();
+            txtPrecioRenta = new TextBox();
+            txtAñoSalida = new TextBox();
             label15 = new Label();
             label14 = new Label();
             label11 = new Label();
@@ -63,21 +64,21 @@
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
-            dataGridView1 = new DataGridView();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            eliminar = new DataGridViewTextBoxColumn();
+            dgListaAutos = new DataGridView();
             label31 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            clPlaca = new DataGridViewTextBoxColumn();
+            clMarca = new DataGridViewTextBoxColumn();
+            clModelo = new DataGridViewTextBoxColumn();
+            clColor = new DataGridViewTextBoxColumn();
+            clAño = new DataGridViewTextBoxColumn();
+            clAsientos = new DataGridViewTextBoxColumn();
+            clPrecio = new DataGridViewTextBoxColumn();
+            clEstado = new DataGridViewTextBoxColumn();
+            clDisponibilidad = new DataGridViewTextBoxColumn();
+            clEliminar = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)pibImagenAuto).BeginInit();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgListaAutos).BeginInit();
             SuspendLayout();
             // 
             // ofdImagenAuto
@@ -96,38 +97,38 @@
             label32.TabIndex = 90;
             label32.Text = "Vista previa";
             // 
-            // pictureBox1
+            // pibImagenAuto
             // 
-            pictureBox1.BackColor = Color.DarkGray;
-            pictureBox1.Location = new Point(719, 87);
-            pictureBox1.Margin = new Padding(4, 3, 4, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 277);
-            pictureBox1.TabIndex = 88;
-            pictureBox1.TabStop = false;
+            pibImagenAuto.BackColor = Color.DarkGray;
+            pibImagenAuto.Location = new Point(719, 87);
+            pibImagenAuto.Margin = new Padding(4, 3, 4, 3);
+            pibImagenAuto.Name = "pibImagenAuto";
+            pibImagenAuto.Size = new Size(251, 277);
+            pibImagenAuto.TabIndex = 88;
+            pibImagenAuto.TabStop = false;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(button1);
-            groupBox3.Controls.Add(textBox1);
-            groupBox3.Controls.Add(textBox3);
-            groupBox3.Controls.Add(textBox2);
-            groupBox3.Controls.Add(comboBox7);
-            groupBox3.Controls.Add(comboBox3);
+            groupBox3.Controls.Add(chbPlacaVerificada);
+            groupBox3.Controls.Add(chbHabilitado);
+            groupBox3.Controls.Add(chbDisponibilidad);
+            groupBox3.Controls.Add(chbFuncional);
+            groupBox3.Controls.Add(btnBuscarPlaca);
+            groupBox3.Controls.Add(txtPlaca);
+            groupBox3.Controls.Add(txtModelo);
+            groupBox3.Controls.Add(txtMarca);
+            groupBox3.Controls.Add(cmbColor);
             groupBox3.Controls.Add(label29);
-            groupBox3.Controls.Add(textBox13);
-            groupBox3.Controls.Add(comboBox9);
+            groupBox3.Controls.Add(txtNumeroAsientos);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(btnNuevoModelo);
             groupBox3.Controls.Add(btnNuevaMarca);
             groupBox3.Controls.Add(btnNuevoColor);
-            groupBox3.Controls.Add(button2);
-            groupBox3.Controls.Add(comboBox5);
+            groupBox3.Controls.Add(btnGuardar);
             groupBox3.Controls.Add(label3);
-            groupBox3.Controls.Add(comboBox2);
             groupBox3.Controls.Add(label2);
-            groupBox3.Controls.Add(textBox10);
-            groupBox3.Controls.Add(textBox6);
+            groupBox3.Controls.Add(txtPrecioRenta);
+            groupBox3.Controls.Add(txtAñoSalida);
             groupBox3.Controls.Add(label15);
             groupBox3.Controls.Add(label14);
             groupBox3.Controls.Add(label11);
@@ -145,66 +146,93 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del Auto";
             // 
-            // button1
+            // chbPlacaVerificada
             // 
-            button1.BackColor = Color.FromArgb(0, 80, 200);
-            button1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(280, 24);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(35, 35);
-            button1.TabIndex = 112;
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
+            chbPlacaVerificada.AutoSize = true;
+            chbPlacaVerificada.Location = new Point(533, 181);
+            chbPlacaVerificada.Name = "chbPlacaVerificada";
+            chbPlacaVerificada.Size = new Size(15, 14);
+            chbPlacaVerificada.TabIndex = 116;
+            chbPlacaVerificada.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // chbHabilitado
             // 
-            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(122, 30);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 22);
-            textBox1.TabIndex = 84;
+            chbHabilitado.AutoSize = true;
+            chbHabilitado.Location = new Point(533, 137);
+            chbHabilitado.Name = "chbHabilitado";
+            chbHabilitado.Size = new Size(15, 14);
+            chbHabilitado.TabIndex = 115;
+            chbHabilitado.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // chbDisponibilidad
             // 
-            textBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(122, 88);
-            textBox3.Margin = new Padding(2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(152, 22);
-            textBox3.TabIndex = 83;
+            chbDisponibilidad.AutoSize = true;
+            chbDisponibilidad.Location = new Point(533, 103);
+            chbDisponibilidad.Name = "chbDisponibilidad";
+            chbDisponibilidad.Size = new Size(15, 14);
+            chbDisponibilidad.TabIndex = 114;
+            chbDisponibilidad.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // chbFuncional
             // 
-            textBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(122, 58);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(152, 22);
-            textBox2.TabIndex = 82;
+            chbFuncional.AutoSize = true;
+            chbFuncional.Location = new Point(533, 68);
+            chbFuncional.Name = "chbFuncional";
+            chbFuncional.Size = new Size(15, 14);
+            chbFuncional.TabIndex = 113;
+            chbFuncional.UseVisualStyleBackColor = true;
             // 
-            // comboBox7
+            // btnBuscarPlaca
             // 
-            comboBox7.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox7.Location = new Point(124, 118);
-            comboBox7.Margin = new Padding(2);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(152, 25);
-            comboBox7.TabIndex = 80;
+            btnBuscarPlaca.BackColor = Color.FromArgb(0, 80, 200);
+            btnBuscarPlaca.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarPlaca.ForeColor = Color.White;
+            btnBuscarPlaca.Image = (Image)resources.GetObject("btnBuscarPlaca.Image");
+            btnBuscarPlaca.Location = new Point(280, 24);
+            btnBuscarPlaca.Margin = new Padding(3, 2, 3, 2);
+            btnBuscarPlaca.Name = "btnBuscarPlaca";
+            btnBuscarPlaca.Size = new Size(35, 35);
+            btnBuscarPlaca.TabIndex = 112;
+            btnBuscarPlaca.TextAlign = ContentAlignment.MiddleLeft;
+            btnBuscarPlaca.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
+            // txtPlaca
             // 
-            comboBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "No disponible", "En tramite", "Disponible" });
-            comboBox3.Location = new Point(527, 174);
-            comboBox3.Margin = new Padding(4, 3, 4, 3);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(118, 25);
-            comboBox3.TabIndex = 77;
+            txtPlaca.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPlaca.Location = new Point(122, 30);
+            txtPlaca.Margin = new Padding(2);
+            txtPlaca.Name = "txtPlaca";
+            txtPlaca.Size = new Size(152, 22);
+            txtPlaca.TabIndex = 84;
+            // 
+            // txtModelo
+            // 
+            txtModelo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtModelo.Location = new Point(122, 88);
+            txtModelo.Margin = new Padding(2);
+            txtModelo.Name = "txtModelo";
+            txtModelo.ReadOnly = true;
+            txtModelo.Size = new Size(152, 22);
+            txtModelo.TabIndex = 83;
+            // 
+            // txtMarca
+            // 
+            txtMarca.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMarca.Location = new Point(122, 58);
+            txtMarca.Margin = new Padding(2);
+            txtMarca.Name = "txtMarca";
+            txtMarca.ReadOnly = true;
+            txtMarca.Size = new Size(152, 22);
+            txtMarca.TabIndex = 82;
+            // 
+            // cmbColor
+            // 
+            cmbColor.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbColor.Location = new Point(124, 118);
+            cmbColor.Margin = new Padding(2);
+            cmbColor.Name = "cmbColor";
+            cmbColor.Size = new Size(152, 25);
+            cmbColor.TabIndex = 80;
             // 
             // label29
             // 
@@ -214,29 +242,18 @@
             label29.Location = new Point(412, 170);
             label29.Margin = new Padding(2, 0, 2, 0);
             label29.Name = "label29";
-            label29.Size = new Size(71, 32);
+            label29.Size = new Size(96, 32);
             label29.TabIndex = 76;
-            label29.Text = "Estado\r\nde placa:";
+            label29.Text = "La placa esta\r\nverificada:";
             // 
-            // textBox13
+            // txtNumeroAsientos
             // 
-            textBox13.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox13.Location = new Point(124, 180);
-            textBox13.Margin = new Padding(2);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(74, 22);
-            textBox13.TabIndex = 75;
-            // 
-            // comboBox9
-            // 
-            comboBox9.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox9.FormattingEnabled = true;
-            comboBox9.Items.AddRange(new object[] { "Habilitado", "Inhabilitado" });
-            comboBox9.Location = new Point(527, 130);
-            comboBox9.Margin = new Padding(4, 3, 4, 3);
-            comboBox9.Name = "comboBox9";
-            comboBox9.Size = new Size(118, 25);
-            comboBox9.TabIndex = 71;
+            txtNumeroAsientos.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumeroAsientos.Location = new Point(124, 180);
+            txtNumeroAsientos.Margin = new Padding(2);
+            txtNumeroAsientos.Name = "txtNumeroAsientos";
+            txtNumeroAsientos.Size = new Size(74, 22);
+            txtNumeroAsientos.TabIndex = 75;
             // 
             // label5
             // 
@@ -246,9 +263,9 @@
             label5.Location = new Point(412, 134);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(54, 16);
+            label5.Size = new Size(110, 16);
             label5.TabIndex = 70;
-            label5.Text = "Estado:";
+            label5.Text = "Esta Habilitado:";
             // 
             // btnNuevoModelo
             // 
@@ -301,30 +318,21 @@
             btnNuevoColor.UseVisualStyleBackColor = false;
             btnNuevoColor.Click += btnNuevoColor_Click;
             // 
-            // button2
+            // btnGuardar
             // 
-            button2.BackColor = Color.FromArgb(0, 80, 200);
-            button2.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleRight;
-            button2.Location = new Point(531, 217);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(114, 39);
-            button2.TabIndex = 63;
-            button2.Text = "Guardar";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // comboBox5
-            // 
-            comboBox5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox5.Location = new Point(527, 96);
-            comboBox5.Margin = new Padding(2);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(118, 25);
-            comboBox5.TabIndex = 55;
+            btnGuardar.BackColor = Color.FromArgb(0, 80, 200);
+            btnGuardar.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
+            btnGuardar.ImageAlign = ContentAlignment.MiddleRight;
+            btnGuardar.Location = new Point(531, 217);
+            btnGuardar.Margin = new Padding(2);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(114, 39);
+            btnGuardar.TabIndex = 63;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -334,18 +342,9 @@
             label3.Location = new Point(412, 100);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(107, 16);
+            label3.Size = new Size(110, 16);
             label3.TabIndex = 54;
-            label3.Text = "Disponibilidad:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox2.Location = new Point(527, 60);
-            comboBox2.Margin = new Padding(2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(118, 25);
-            comboBox2.TabIndex = 52;
+            label3.Text = "Esta disponible:";
             // 
             // label2
             // 
@@ -359,23 +358,23 @@
             label2.TabIndex = 49;
             label2.Text = "Año:";
             // 
-            // textBox10
+            // txtPrecioRenta
             // 
-            textBox10.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox10.Location = new Point(527, 30);
-            textBox10.Margin = new Padding(2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(89, 22);
-            textBox10.TabIndex = 25;
+            txtPrecioRenta.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPrecioRenta.Location = new Point(527, 30);
+            txtPrecioRenta.Margin = new Padding(2);
+            txtPrecioRenta.Name = "txtPrecioRenta";
+            txtPrecioRenta.Size = new Size(89, 22);
+            txtPrecioRenta.TabIndex = 25;
             // 
-            // textBox6
+            // txtAñoSalida
             // 
-            textBox6.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(124, 150);
-            textBox6.Margin = new Padding(2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(152, 22);
-            textBox6.TabIndex = 21;
+            txtAñoSalida.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAñoSalida.Location = new Point(124, 150);
+            txtAñoSalida.Margin = new Padding(2);
+            txtAñoSalida.Name = "txtAñoSalida";
+            txtAñoSalida.Size = new Size(152, 22);
+            txtAñoSalida.TabIndex = 21;
             // 
             // label15
             // 
@@ -385,9 +384,9 @@
             label15.Location = new Point(412, 65);
             label15.Margin = new Padding(2, 0, 2, 0);
             label15.Name = "label15";
-            label15.Size = new Size(112, 16);
+            label15.Size = new Size(102, 16);
             label15.TabIndex = 19;
-            label15.Text = "Estado del auto:";
+            label15.Text = "Esta funcional:";
             // 
             // label14
             // 
@@ -461,10 +460,10 @@
             label7.TabIndex = 11;
             label7.Text = "Color:";
             // 
-            // dataGridView1
+            // dgListaAutos
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgListaAutos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgListaAutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Microsoft Tai Le", 10F, FontStyle.Bold);
@@ -472,91 +471,26 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column2, Column1, Column6, Column3, Column4, Column5, Column7, Column9, Column8, eliminar });
-            dataGridView1.Location = new Point(11, 395);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 11.25F);
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(1066, 339);
-            dataGridView1.TabIndex = 87;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Placa";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Marca";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Modelo";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Color";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Año fabricación";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "No. Asientos";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Precio renta";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Estado";
-            Column9.MinimumWidth = 6;
-            Column9.Name = "Column9";
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Disponibilidad";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
-            // 
-            // eliminar
-            // 
-            eliminar.HeaderText = "Eliminar";
-            eliminar.Name = "eliminar";
+            dgListaAutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgListaAutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgListaAutos.Columns.AddRange(new DataGridViewColumn[] { clPlaca, clMarca, clModelo, clColor, clAño, clAsientos, clPrecio, clEstado, clDisponibilidad, clEliminar });
+            dgListaAutos.Location = new Point(11, 395);
+            dgListaAutos.Margin = new Padding(2);
+            dgListaAutos.Name = "dgListaAutos";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgListaAutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgListaAutos.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 11.25F);
+            dgListaAutos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgListaAutos.RowTemplate.Height = 24;
+            dgListaAutos.Size = new Size(1066, 339);
+            dgListaAutos.TabIndex = 87;
             // 
             // label31
             // 
@@ -569,6 +503,69 @@
             label31.TabIndex = 92;
             label31.Text = "Garaje";
             // 
+            // clPlaca
+            // 
+            clPlaca.HeaderText = "Placa";
+            clPlaca.MinimumWidth = 6;
+            clPlaca.Name = "clPlaca";
+            // 
+            // clMarca
+            // 
+            clMarca.HeaderText = "Marca";
+            clMarca.MinimumWidth = 6;
+            clMarca.Name = "clMarca";
+            // 
+            // clModelo
+            // 
+            clModelo.HeaderText = "Modelo";
+            clModelo.MinimumWidth = 6;
+            clModelo.Name = "clModelo";
+            // 
+            // clColor
+            // 
+            clColor.HeaderText = "Color";
+            clColor.MinimumWidth = 6;
+            clColor.Name = "clColor";
+            // 
+            // clAño
+            // 
+            clAño.HeaderText = "Año fabricación";
+            clAño.MinimumWidth = 6;
+            clAño.Name = "clAño";
+            // 
+            // clAsientos
+            // 
+            clAsientos.HeaderText = "No. Asientos";
+            clAsientos.MinimumWidth = 6;
+            clAsientos.Name = "clAsientos";
+            // 
+            // clPrecio
+            // 
+            clPrecio.HeaderText = "Precio renta";
+            clPrecio.MinimumWidth = 6;
+            clPrecio.Name = "clPrecio";
+            // 
+            // clEstado
+            // 
+            clEstado.HeaderText = "Estado";
+            clEstado.MinimumWidth = 6;
+            clEstado.Name = "clEstado";
+            // 
+            // clDisponibilidad
+            // 
+            clDisponibilidad.HeaderText = "Disponibilidad";
+            clDisponibilidad.MinimumWidth = 6;
+            clDisponibilidad.Name = "clDisponibilidad";
+            clDisponibilidad.ReadOnly = true;
+            // 
+            // clEliminar
+            // 
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 192, 192);
+            clEliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            clEliminar.HeaderText = "Eliminar";
+            clEliminar.Name = "clEliminar";
+            clEliminar.ReadOnly = true;
+            // 
             // frm_GarajeListaAutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -576,17 +573,17 @@
             ClientSize = new Size(1088, 745);
             Controls.Add(label31);
             Controls.Add(label32);
-            Controls.Add(pictureBox1);
+            Controls.Add(pibImagenAuto);
             Controls.Add(groupBox3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgListaAutos);
             Margin = new Padding(4, 3, 4, 3);
             Name = "frm_GarajeListaAutos";
             Text = "Control del garaje";
             Load += ControlAutos_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pibImagenAuto).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgListaAutos).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -595,26 +592,22 @@
         #endregion
         private System.Windows.Forms.OpenFileDialog ofdImagenAuto;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pibImagenAuto;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.TextBox txtNumeroAsientos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnNuevoModelo;
         private System.Windows.Forms.Button btnNuevaMarca;
         private System.Windows.Forms.Button btnNuevoColor;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPrecioRenta;
+        private System.Windows.Forms.TextBox txtAñoSalida;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
@@ -622,19 +615,23 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgListaAutos;
         private System.Windows.Forms.Label label31;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn eliminar;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox txtPlaca;
+        private Button btnBuscarPlaca;
+        private CheckBox chbPlacaVerificada;
+        private CheckBox chbHabilitado;
+        private CheckBox chbDisponibilidad;
+        private CheckBox chbFuncional;
+        private DataGridViewTextBoxColumn clPlaca;
+        private DataGridViewTextBoxColumn clMarca;
+        private DataGridViewTextBoxColumn clModelo;
+        private DataGridViewTextBoxColumn clColor;
+        private DataGridViewTextBoxColumn clAño;
+        private DataGridViewTextBoxColumn clAsientos;
+        private DataGridViewTextBoxColumn clPrecio;
+        private DataGridViewTextBoxColumn clEstado;
+        private DataGridViewTextBoxColumn clDisponibilidad;
+        private DataGridViewTextBoxColumn clEliminar;
     }
 }
